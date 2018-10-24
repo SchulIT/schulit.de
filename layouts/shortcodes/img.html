@@ -1,0 +1,14 @@
+<figure class="figure text-center">
+    {{ with .Get "link" }}
+        <a href="{{.}}">
+    {{ end }}
+        <img class="figure-img img-fluid" src="{{ .Get "src" }}" alt="{{ .Get "caption" }}" />
+    {{ if .Get "link"}}
+        </a>
+    {{ end }}
+    {{ if .Get "caption" }}
+    <figcaption class="figure-caption">
+        {{ .Get "caption" }}
+    </figcaption>
+    {{ end }}
+</figure>

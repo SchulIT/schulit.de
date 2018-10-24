@@ -1,0 +1,168 @@
+/*@font-face {
+	font-family: 'Source Sans Pro';
+	font-style: normal;
+	font-weight: 400;
+	src: url("../fonts/SourceSansPro-Regular.eot");
+	src: local("Source Sans Pro Regular"),
+		local("SourceSansPro-Regular"),
+		url("../fonts/SourceSansPro-Regular.eot") format("embedded-opentype"),
+		url("../fonts/SourceSansPro-Regular.woff2") format("woff2"),
+		url("../fonts/SourceSansPro-Regular.woff") format("woff"),
+		url("../fonts/SourceSansPro-Regular.ttf") format("truetype"),
+		url("../fonts/SourceSansPro-Regular.svg") format("svg");
+}*/
+
+
+//$enable-shadows: true;
+//$enable-gradients: true;
+
+// Import Bootstrap
+@import '../../node_modules/bootstrap/scss/bootstrap';
+
+// Import FontAwesome
+@import '../../node_modules/font-awesome/scss/font-awesome';
+
+// Import Callouts
+@import './callouts.scss';
+
+html {
+	position: relative;
+	min-height: 100%;
+}
+
+body {
+	margin: 0;
+	margin-bottom: 160px;
+}
+
+footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+h1, h2, h3, h4 {
+	font-weight: 300;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	.heading-link {
+		display: none;
+		margin-left: 5px;
+		font-size: 80%;
+	}
+
+	&:hover {
+		.heading-link {
+			display: inline-block;
+		}
+	}
+}
+
+main.container {
+	margin-top: 10px;
+
+	ol.breadcrumb {
+		background: none;
+		padding-left: 0;
+	}
+
+	.card-deck {
+		margin-bottom: 10px;
+	}
+
+	.pages {
+		>.card {
+			margin-bottom: 10px;
+		}
+	}
+}
+
+.blog-post {
+	margin-bottom: 5px;
+
+	.post-meta {
+		@extend .text-secondary;
+	}
+
+	h2.post-title {
+		font-size: 2.25rem;
+	}
+
+	.table-of-contents {
+		margin-left: 10px;
+		margin-bottom: 10px;
+
+		ul {
+			list-style: none;
+			margin:0px;
+			padding: 0px;
+
+			ul {
+				margin-left: 10px;
+			}
+		}
+	}
+
+	p {
+		text-align: justify;
+	}
+
+	.figure {
+		display: table;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	table {
+		margin-bottom: 10px;
+	}
+
+	h1 {
+		font-size: 1.75rem;
+	}
+
+	h2 {
+		font-size: 1.5rem;
+	}
+
+	h3 {
+		font-size: 1.25rem;
+	}
+
+	h4 {
+		font-size: 1rem;
+	}
+
+	h5 {
+
+	}
+
+	h6 {
+
+	}
+}
+
+.highlight {
+	pre {
+		padding: 5px;
+	}
+}
+
+nav.pagination {
+	margin-top: 10px;
+}
+
+.sidebar {
+	.card {
+		margin-bottom: 10px;
+	}
+}
+
+footer {
+	background-color: #f8f8f8;
+	border-top: 1px solid #e5e5e5;
+	padding: 2rem 0;
+	text-align: center;
+	color: #999;
+}

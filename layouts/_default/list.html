@@ -1,0 +1,74 @@
+{{ define "main" }}
+
+<main class="container">
+        <div class="bd-callout bd-callout-warning">
+            <h4><i class="fa fa-exclamation-triangle"></i> Im Aufbau</h4>
+            <p>
+                Dieses Kompendium ist noch im Aufbau. Artikel werden nach und nach ergänzt!
+            </p>
+        </div>
+    </main>
+
+<main class="container">
+    {{ partial "breadcrumb" . }}
+
+    <div class="blog-post">
+        <h2 class="post-title">
+            {{ .Title }}
+        </h2>
+        
+        {{ .Content }}
+    </div>
+
+    {{ if .Pages }}
+        <div class="pages">
+            {{ range (sort .Pages "Params.ordering") }}
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="{{ .URL }}">{{ .LinkTitle }}</a></h5>
+                        <p class="card-text">
+                            {{ .Summary }}
+                        </p>
+                        <a href="{{ .URL }}" class="card-link">weiterlesen</a>
+                    </div>
+                </div>
+            {{ end }}
+        </div>
+    {{ end }}
+
+    {{ if .Sections }}
+        {{ $length := ( len .Sections ) }}
+        <div class="pages">
+            {{ range $counter, $element := (sort .Sections "Params.ordering") }}
+                {{ if eq (mod $counter 2) 0 }}
+                <div class="card-deck">
+                {{ end }}
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <a href="{{ .URL }}">{{ .LinkTitle }}</a>
+                            </h5>
+
+                            <p class="card-text">
+                                {{ .Summary }}
+                            </p>
+
+                            {{ $numPages := len .Pages }}
+                            {{ range first 5 (sort .Pages "Params.ordering" )}}
+                            <a href="{{ .URL }}" class="card-link" title="{{ trim (plainify .Summary) "\n" }}">{{ .LinkTitle }}</a>
+                            {{ end }}
+                            {{ if gt $numPages 5 }}
+                            <a href="{{ .URL }}">...</a>
+                            {{ end }}
+                        </div>
+                    </div>
+                {{ if or (eq (mod $counter 2) 1) (eq $counter $length) }}
+                </div>
+                {{ end }}
+                {{ end }}
+            </div>
+        </div>
+    {{ end }}
+</main>
+
+{{ end }}

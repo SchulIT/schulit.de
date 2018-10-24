@@ -1,0 +1,9 @@
+<p>
+    <a href="#{{ .Get "id" }}" data-toggle="collapse" class="btn btn-primary" role="button" aria-expanded="false">
+        {{ .Get "link" }}
+    </a>
+</p>
+
+<div class="collapse" id="{{ .Get "id" }}">
+    {{ .Inner }}
+</div>

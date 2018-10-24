@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="{{ $.Site.LanguageCode | default "en" }}">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{ .Site.Title }} {{ with .Title }} | {{ . }}{{ end }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="{{ "/build/app.css" | absURL }}">
+</head>
+
+<body>
+    <div class="container">
+        <header class="py-3">
+            <div class="row flex-nowrap justify-content-between align-items-center">
+                <div class="col-8">
+                    <h1><a href="/">SchoolIT</a></h1>
+                </div>
+
+                <div class="col-4 d-flex justify-content-end">
+                    <a href="/blog/index.xml" class="btn btn-outline-secondary btn-sm"><i class="fa fa-rss"></i></a>
+                </div>
+        </header>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="nav">
+                <ul class="navbar-nav mr-auto">
+                    {{ $currentPage := . }}
+                    {{ range .Site.Menus.main }}
+                        {{ $isCurrent := or ( and (ne .URL "/") (hasPrefix $currentPage.URL .URL)) (eq $currentPage.URL .URL) }}
+                        <li class="nav-item {{ if $isCurrent }}active{{ end }}">
+                            <a class="nav-link" href="{{ .URL }}">{{ .Name }} </a>
+                        </li>
+                    {{ end }}
+                </ul>
+            </div>
+        </nav>
+    </div>

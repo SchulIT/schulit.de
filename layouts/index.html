@@ -1,0 +1,87 @@
+{{ define "main" }}
+
+<main class="container">
+    <div class="bd-callout bd-callout-warning">
+        <h4><i class="fa fa-exclamation-triangle"></i> Im Aufbau</h4>
+        <p>
+            Diese Webseite befindet sich im Aufbau. Artikel werden in den nächsten Wochen und Monaten hinzugefügt.
+        </p>
+    </div>
+</main>
+
+<main class="container">
+    <div class="jumbotron">
+        <h2 class="display-4">Willkommen!</h2>
+        <p class="lead"></p>
+    </div>
+</main>
+
+<main class="container">
+    <div class="card-deck">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Blog</h5>
+                <p class="card-text">
+                    Was passiert hier?
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Office 365</h5>
+                <p class="card-text">
+                    Was passiert hier?
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">SCCM</h5>
+                <p class="card-text">
+                    Was passiert hier?
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Software</h5>
+                <p class="card-text">
+                    Was passiert hier?
+                </p>
+            </div>
+        </div>
+    </div>
+</main>
+
+{{ $blog := first 2 (where .Site.RegularPages "Section" "blog").ByPublishDate.Reverse}}
+
+<main class="container">
+    <h2>Aus dem Blog</h2>
+
+    <div class="card-deck">
+        {{ range $blog }}
+            <div class="card blog-post">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <a href="{{ .URL }}">{{ .LinkTitle }}</a>
+                    </h5>
+
+                    <p class="post-meta">
+                        <i class="fa fa-calendar"></i> {{ .Date.Format "2. January 2006" }}
+                    </p>
+
+                    <p class="card-text">
+                        {{ .Summary }}
+                    </p>
+                </div>
+            </div>
+        {{ end }}
+    </div>
+
+    <a href="/blog">Zum Blog</a>
+</main>
+
+{{ end }}

@@ -1,0 +1,18 @@
+baseURL = "http://example.org/"
+languageCode = "de"
+title = "SchoolIT"
+enableEmoji = true
+enableGitInfo = true
+
+[blackfriday]
+    hrefTargetBlank = true
+    
+[taxonomies]
+    tag = "tags"
+    archive = "archives"
+
+[[menu.main]]
+    identifier = "index"
+    name = "Startseite"
+    url = "/"
+    weight = -10

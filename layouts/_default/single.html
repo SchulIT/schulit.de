@@ -1,0 +1,50 @@
+{{ define "main" }}
+
+<main class="container">
+    <div class="bd-callout bd-callout-warning">
+        <h4><i class="fa fa-exclamation-triangle"></i> Im Aufbau</h4>
+        <p>
+            Dieses Kompendium ist noch im Aufbau. Artikel werden nach und nach ergänzt!
+        </p>
+    </div>
+</main>
+
+<main class="container">
+    {{ partial "breadcrumb" . }}
+
+    <div class="blog-post">
+        <h2 class="post-title">
+            {{ .LinkTitle }}
+        </h2>
+
+        {{ if eq .Type "static" }}
+        <div class="table-of-contents float-right">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Inhalt</h5>
+                    
+                    {{.TableOfContents}}
+                </div>
+            </div>
+        </div>
+        {{ end }}
+
+        {{ if ne .Type "static" }}
+        <p class="post-meta">
+            <i class="fa fa-calendar"></i> {{ .Date.Format "2. January 2006" }}
+
+            {{ if .Params.tags }}
+            <i class="fa fa-tags"></i>
+                {{ $length := (len .Params.tags )}}
+                {{ range $counter, $tag := .Params.tags }}
+                    <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>{{ if ne $counter (sub $length 1) }}, {{ end }}
+                {{ end }}
+            {{ end }}
+        </p>
+        {{ end }}
+        
+        {{ .Content }}
+    </div>
+</main>
+
+{{ end }}

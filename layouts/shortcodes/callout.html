@@ -1,0 +1,9 @@
+<div class="bd-callout bd-callout-{{ .Get "type" }}">
+    {{ if .Get "title" }}
+    <h4>{{ .Get "title" }} </h4>
+    {{ end }}
+
+    <p>
+        {{ .Inner }}
+    </p>
+</div>
