@@ -1,0 +1,116 @@
+<SecurityPolicy Name="Endpoint Protection-Domänencontroller" Description="Leistungsoptimierte Microsoft Endpoint Protection-Serverrollenrichtlinie für Arbeitsauslastungen von Active Directory-Domänencontrollern. In dieser Richtlinie sind Einstellungen der Standardrichtlinie für Serverarbeitsauslastungen mit Einstellungen kombiniert, die für Domänencontroller optimiert sind. Die Richtlinie kann auf Domänencontroller unter Windows Server 2003, Windows Server 2003 R2, Windows Server 2008 und Windows Server 2008 R2 angewendet werden." xmlns="http://forefront.microsoft.com/FEP/2010/01/PolicyData">
+  <PolicySection Name="FEP.AmPolicy" Disabled="false">
+    <LocalGroupPolicySettings>
+      <AddKey Name="SOFTWARE\Policies\Microsoft\Microsoft Antimalware" Disabled="false">
+        <AddValue Name="DisableLocalAdminMerge" Type="REG_DWORD" Disabled="false">0</AddValue>
+        <AddValue Name="RandomizeScheduleTaskTimes" Type="REG_DWORD" Disabled="false">0</AddValue>
+        <AddValue Name="PUAProtection" Type="REG_DWORD" Disabled="false">1</AddValue>
+      </AddKey>
+      <AddKey Name="SOFTWARE\Policies\Microsoft\Microsoft Antimalware\Scan" Disabled="false">
+        <AddValue Name="AvgCPULoadFactor" Type="REG_DWORD" Disabled="false">30</AddValue>
+        <AddValue Name="CheckForSignaturesBeforeRunningScan" Type="REG_DWORD" Disabled="false">1</AddValue>
+        <AddValue Name="DisableScanningNetworkFiles" Type="REG_DWORD" Disabled="false">1</AddValue>
+        <AddValue Name="DisableArchiveScanning" Type="REG_DWORD" Disabled="false">0</AddValue>
+        <AddValue Name="DisableEmailScanning" Type="REG_DWORD" Disabled="false">1</AddValue>
+        <AddValue Name="DisableScanningMappedNetworkDrivesForFullScan" Type="REG_DWORD" Disabled="false">1</AddValue>
+        <AddValue Name="DisableRemovableDriveScanning" Type="REG_DWORD" Disabled="false">1</AddValue>
+        <AddValue Name="DisableRestorePoint" Type="REG_DWORD" Disabled="false">1</AddValue>
+        <AddValue Name="DisableCatchupQuickScan" Type="REG_DWORD" Disabled="false">1</AddValue>
+        <AddValue Name="DisableCatchupFullScan" Type="REG_DWORD" Disabled="false">1</AddValue>
+        <AddValue Name="LocalSettingOverrideAvgCPULoadFactor" Type="REG_DWORD" Disabled="false">1</AddValue>
+        <AddValue Name="LocalSettingOverrideScanParameters" Type="REG_DWORD" Disabled="false">1</AddValue>
+        <AddValue Name="LocalSettingOverrideScheduleDay" Type="REG_DWORD" Disabled="false">1</AddValue>
+        <AddValue Name="LocalSettingOverrideScheduleQuickScanTime" Type="REG_DWORD" Disabled="false">1</AddValue>
+        <AddValue Name="LocalSettingOverrideScheduleTime" Type="REG_DWORD" Disabled="false">1</AddValue>
+        <AddValue Name="ScanParameters" Type="REG_DWORD" Disabled="false">1</AddValue>
+        <AddValue Name="ScheduleQuickScanTime" Type="REG_DWORD" Disabled="false">0</AddValue>
+        <AddValue Name="ScheduleTime" Type="REG_DWORD" Disabled="false">120</AddValue>
+        <AddValue Name="ScheduleDay" Type="REG_DWORD" Disabled="false">8</AddValue>
+        <AddValue Name="ScanOnlyIfIdle" Type="REG_DWORD" Disabled="false">1</AddValue>
+        <AddValue Name="DisableReparsePointScanning" Type="REG_DWORD" Disabled="false">1</AddValue>
+      </AddKey>
+      <AddKey Name="SOFTWARE\Policies\Microsoft\Microsoft Antimalware\Quarantine" Disabled="false">
+        <AddValue Name="LocalSettingOverridePurgeItemsAfterDelay" Type="REG_DWORD" Disabled="false">1</AddValue>
+        <AddValue Name="PurgeItemsAfterDelay" Type="REG_DWORD" Disabled="false">0</AddValue>
+      </AddKey>
+      <AddKey Name="SOFTWARE\Policies\Microsoft\Microsoft Antimalware\Real-time protection" Disabled="false">
+        <AddValue Name="DisableRealtimeMonitoring" Type="REG_DWORD" Disabled="false">0</AddValue>
+        <AddValue Name="RealTimeScanDirection" Type="REG_DWORD" Disabled="false">0</AddValue>
+        <AddValue Name="LocalSettingOverrideDisableRealTimeMonitoring" Type="REG_DWORD" Disabled="false">1</AddValue>
+        <AddValue Name="LocalSettingOverrideDisableIntrusionPreventionSystem" Type="REG_DWORD" Disabled="false">1</AddValue>
+        <AddValue Name="LocalSettingOverrideDisableDisableOnAccessProtection" Type="REG_DWORD" Disabled="false">1</AddValue>
+        <AddValue Name="LocalSettingOverrideDisableIOAVProtection" Type="REG_DWORD" Disabled="false">1</AddValue>
+        <AddValue Name="LocalSettingOverrideDisableBehaviorMonitoring" Type="REG_DWORD" Disabled="false">1</AddValue>
+        <AddValue Name="LocalSettingOverrideRealTimeScanDirection" Type="REG_DWORD" Disabled="false">1</AddValue>
+        <AddValue Name="DisableIntrusionPreventionSystem" Type="REG_DWORD" Disabled="false">1</AddValue>
+        <AddValue Name="DisableIOAVProtection" Type="REG_DWORD" Disabled="false">0</AddValue>
+        <AddValue Name="DisableBehaviorMonitoring" Type="REG_DWORD" Disabled="false">1</AddValue>
+        <AddValue Name="DisableOnAccessProtection" Type="REG_DWORD" Disabled="false">0</AddValue>
+        <AddValue Name="DisableScriptScanning" Type="REG_DWORD" Disabled="false">0</AddValue>
+      </AddKey>
+      <AddKey Name="SOFTWARE\Policies\Microsoft\Microsoft Antimalware\Threats\ThreatSeverityDefaultAction" Disabled="false">
+        <AddValue Name="5" Type="REG_SZ" Disabled="false">2</AddValue>
+        <AddValue Name="4" Type="REG_SZ" Disabled="false">2</AddValue>
+        <AddValue Name="2" Type="REG_SZ" Disabled="false">2</AddValue>
+        <AddValue Name="1" Type="REG_SZ" Disabled="false">2</AddValue>
+      </AddKey>
+      <AddKey Name="SOFTWARE\Policies\Microsoft\Microsoft Antimalware\Signature Updates" Disabled="false">
+        <AddValue Name="SignatureUpdateInterval" Type="REG_DWORD" Disabled="false">0</AddValue>
+        <AddValue Name="SignatureUpdateCatchupInterval" Type="REG_DWORD" Disabled="false">1</AddValue>
+        <AddValue Name="FallbackOrder" Type="REG_SZ" Disabled="false">AMDefinitionFallbackOrderFromCM|InternalDefinitionUpdateServer|MicrosoftUpdateServer|MMPC</AddValue>
+        <AddValue Name="DefinitionUpdateFileSharesSources" Type="REG_SZ" Disabled="false">
+        </AddValue>
+        <AddValue Name="ScheduleDay" Type="REG_DWORD" Disabled="false">0</AddValue>
+        <AddValue Name="ScheduleTime" Type="REG_DWORD" Disabled="false">120</AddValue>
+        <AddValue Name="AuGracePeriod" Type="REG_DWORD" Disabled="false">4320</AddValue>
+      </AddKey>
+      <AddKey Name="SOFTWARE\Policies\Microsoft\Microsoft Antimalware\Exclusions\Paths" Disabled="false">
+        <AddValue Name="%allusersprofile%\NTUser.pol" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="%systemroot%\system32\GroupPolicy\registry.pol" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="%windir%\Security\database\*.chk" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="%windir%\Security\database\*.edb" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="%windir%\Security\database\*.jrs" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="%windir%\Security\database\*.log" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="%windir%\Security\database\*.sdb" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="%windir%\SoftwareDistribution\Datastore\Datastore.edb" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="%windir%\SoftwareDistribution\Datastore\Logs\edb.chk" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="%windir%\SoftwareDistribution\Datastore\Logs\edb*.log" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="%windir%\SoftwareDistribution\Datastore\Logs\Edbres00001.jrs" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="%windir%\SoftwareDistribution\Datastore\Logs\Edbres00002.jrs" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="%windir%\SoftwareDistribution\Datastore\Logs\Res1.log" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="%windir%\SoftwareDistribution\Datastore\Logs\Res2.log" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="%windir%\SoftwareDistribution\Datastore\Logs\tmp.edb" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="%systemroot%\ntds\ntds.dit" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="%systemroot%\ntds\EDB*.log" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="%systemroot%\ntds\Edbres*.jrs" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="%systemroot%\ntds\EDB.chk" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="%systemroot%\ntds\TEMP.edb" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="%systemroot%\ntds\*.pat" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="%systemroot%\SYSVOL\domain\DO_NOT_REMOVE_NtFrs_PreInstall_Directory" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="%systemroot%\SYSVOL\staging" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="%systemroot%\SYSVOL\staging areas" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="%systemroot%\SYSVOL\sysvol" Type="REG_SZ" Disabled="false">0</AddValue>
+      </AddKey>
+      <AddKey Name="SOFTWARE\Policies\Microsoft\Microsoft Antimalware\Exclusions\Processes" Disabled="false">
+        <AddValue Name="%systemroot%\System32\ntfrs.exe" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="%systemroot%\System32\dfsr.exe" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="%systemroot%\System32\dfsrs.exe" Type="REG_SZ" Disabled="false">0</AddValue>
+      </AddKey>
+      <AddKey Name="SOFTWARE\Policies\Microsoft\Microsoft Antimalware\SpyNet" Disabled="false">
+        <AddValue Name="LocalSettingOverrideSpyNetReporting" Type="REG_DWORD" Disabled="false">1</AddValue>
+        <AddValue Name="SpyNetReporting" Type="REG_DWORD" Disabled="false">0</AddValue>
+        <AddValue Name="SubmitSamplesConsent" Type="REG_DWORD" Disabled="false">0</AddValue>
+        <AddValue Name="LocalSettingOverrideSubmitSamplesConsent" Type="REG_DWORD" Disabled="false">0</AddValue>
+      </AddKey>
+      <AddKey Name="SOFTWARE\Policies\Microsoft\Microsoft Antimalware\MpEngine" Disabled="false">
+        <AddValue Name="MpCloudBlockLevel" Type="REG_DWORD" Disabled="false">0</AddValue>
+        <AddValue Name="MpBafsExtendedTimeout" Type="REG_DWORD" Disabled="false">0</AddValue>
+      </AddKey>
+      <AddKey Name="SOFTWARE\Policies\Microsoft\Microsoft Antimalware\UX Configuration" Disabled="false">
+        <AddValue Name="Notification_Suppress" Type="REG_DWORD" Disabled="false">1</AddValue>
+        <AddValue Name="DisablePrivacyMode" Type="REG_DWORD" Disabled="false">1</AddValue>
+        <AddValue Name="UILockdown" Type="REG_DWORD" Disabled="false">0</AddValue>
+      </AddKey>
+    </LocalGroupPolicySettings>
+  </PolicySection>
+</SecurityPolicy>

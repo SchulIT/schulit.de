@@ -1,0 +1,30 @@
+<SecurityPolicy Name="Einstellungen für Hyper-V Hosts" Description="Enthält Empfehlungen von Microsoft: https://support.microsoft.com/en-us/help/3105657/recommended-antivirus-exclusions-for-hyper-v-hosts" xmlns="http://forefront.microsoft.com/FEP/2010/01/PolicyData">
+  <PolicySection Name="FEP.AmPolicy" Disabled="false">
+    <LocalGroupPolicySettings>
+      <AddKey Name="SOFTWARE\Policies\Microsoft\Microsoft Antimalware\Exclusions\Paths" Disabled="false">
+        <AddValue Name="%windir%\SoftwareDistribution\Datastore\Datastore.edb" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="%windir%\SoftwareDistribution\Datastore\Logs\Res*.log" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="%windir%\SoftwareDistribution\Datastore\Logs\Res*.jrs" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="%windir%\SoftwareDistribution\Datastore\Logs\Edb.chk" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="%windir%\SoftwareDistribution\Datastore\Logs\Tmp.edb" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="%windir%\Security\Database\*.edb" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="%windir%\Security\Database\*.sdb" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="%windir%\Security\Database\*.log" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="%windir%\Security\Database\*.chk" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="%windir%\Security\Database\*.jrs" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="%ALLUSERSPROFILE%\NTuser.pol" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="%SystemRoot%\System32\GroupPolicy\Machine\registry.pol" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="%SystemRoot%\System32\GroupPolicy\User\registry.pol" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="C:\Files" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="C:\ProgramData\Microsoft\Windows\Hyper-V" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="C:\Users\Public\Documents\Hyper-V\Virtual Hard Disks" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="C:\ProgramData\Microsoft\Windows\Hyper-V\Snapshots" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="C:\ClusterStorage" Type="REG_SZ" Disabled="false">0</AddValue>
+      </AddKey>
+      <AddKey Name="SOFTWARE\Policies\Microsoft\Microsoft Antimalware\Exclusions\Processes" Disabled="false">
+        <AddValue Name="%windir%\system32\Vmms.exe" Type="REG_SZ" Disabled="false">0</AddValue>
+        <AddValue Name="%windir%\system32\Vmwp.exe" Type="REG_SZ" Disabled="false">0</AddValue>
+      </AddKey>
+    </LocalGroupPolicySettings>
+  </PolicySection>
+</SecurityPolicy>
