@@ -1,6 +1,6 @@
 <div class="bd-callout bd-callout-{{ .Get "type" }}">
     {{ if .Get "title" }}
-    <h4>{{ .Get "title" }} </h4>
+    <h4>{{ with .Get "icon"}}<i class="fa fa-{{.}}"></i> {{ end }}{{.Get "title" }} </h4>
     {{ end }}
 
     <p>

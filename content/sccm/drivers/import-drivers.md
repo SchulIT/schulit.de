@@ -1,6 +1,7 @@
 ---
 title: Treiber ins SCCM importieren
 type: static
+toc: false
 ---
 
 Diese Anleitung zeigt, wie man neue Treiber in das SCCM importiert.
@@ -23,7 +24,7 @@ Anschließend mit "Weiter" bestätigen und warten, bis das SCCM alle Treiber gef
 
 {{< img src="/images/sccm/drivers/import/step-2.png" >}}
 
-{{< callout type="info" title="Basiswissen: Treiber-Kategorien" >}}
+{{< callout type="info" title="Basiswissen: Treiber-Kategorien" icon="info-circle" >}}
     <p>
         Da man in der Regel Treiber für mehrere Geräte einpflegen muss, ist es ratsam, dass man importierte Treiber kategorisiert. Hier bietet sich an, mindestens eine Kategorie für jeden Gerätetypen festzulegen. Das ist besonders interessant für das automatische Installieren von Treibern bei der Installation des Betriebssystems: über Kategorien lassen sich später gesteuert nur eine Teilmenge aller verfügbaren Treiber installieren!
     </p>
@@ -57,7 +58,7 @@ Anschließend wieder alles kontrollieren:
 
 {{< img src="/images/sccm/drivers/import/step-8.png" >}}
 
-{{< callout type="info" title="Basiswissen: Treiber ins Startabbild importieren" >}}
+{{< callout type="info" title="Basiswissen: Treiber ins Startabbild importieren" icon="info-circle" >}}
     Es ist möglich, Treiber bereits in das Startabbild zu integrieren. Dies ist nötig, wenn Windows PE einen Treiber (für Netzwerk oder SATA-Controller) nicht mitbringen. Ist das nicht der Fall, sollten die Treiber nicht in das Startabbild integriert werden.
 {{< /callout >}}
 
@@ -77,6 +78,6 @@ Nach wenigen Augenblicken ist es damit fertig:
 
 {{< img src="/images/sccm/drivers/import/step-finish.png" >}}
 
-{{< callout type="success" title="Fertig" >}}
+{{< callout type="success" title="Fertig" icon="check" >}}
     Die Treiber sind nun im SCCM eingebunden und können bei der Installation eines Betriebssystems installiert werden. 
 {{< /callout >}}
