@@ -33,6 +33,8 @@ Encore
     // uncomment if you're having problems with a jQuery plugin
     .autoProvidejQuery()
 
+    .enableSingleRuntimeChunk()
+
     /*.addPlugin(
         new GoogleFontsPlugin({
             path: '../assets/fonts/',
