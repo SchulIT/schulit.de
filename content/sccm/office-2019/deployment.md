@@ -2,63 +2,49 @@
 title: Verteilung
 ordering: 2
 type: static
+toc: false
 ---
+
+Die Verteilung von Office 2019 ist mithilfe des SCCMs mit wenigen Mausklicks erledigt. 
 
 <!--more-->
 
-# Vorgehensweise
+In der SCCM Konsole navigiert man zu "Softwarebibliothek" > "Übersicht" > "Office 365-Clientverwaltung". Hier darf man sich nicht davon täuschen lassen, dass überall von Office 365 gesprochen wird. 
 
-Zunächst muss das Office Deployment Tool heruntergeladen werden. Dabei handelt es sich lediglich um einen Installer, der später genutzt wird, um Office auf einem Computer zu installieren.
+In der Übersicht klickt man auf den Button "Office 365-Installationsprogramm":
 
-Zusätzlich braucht man eine Konfigurationsdatei, welche das ODT nutzt, um (a) Office herunterzuladen und (b) es zu installieren.
+{{< img src="/images/sccm/office-2019/deployment/step-1.png" >}}
 
-Es soll das Verzeichnis `C:\SCCM\Applications\Microsoft Office\2019` verwendet werden , in dem sich am Ende der Anleitung alle Installationsdateien für Office 2019 befinden. 
+Es öffnet sich der Assistent für Microsoft Office 365-Clientinstallation:
 
-# Office Deployment Tool
+{{< img src="/images/sccm/office-2019/deployment/step-2.png" >}}
 
-Zunächst muss das Office Deployment Tool heruntergeladen von der [Microsoft Webseite](https://www.microsoft.com/en-us/download/details.aspx?id=49117) heruntergeladen werden. Anschließend das Installationsprogramm starten und die Lizenzbedingungen lesen sowie akzeptieren. Als Verzeichnis `C:\SCCM\Applications\Microsoft Office\2019` angeben. Anschließend in dem Verzeichnis die drei XML-Dateien löschen, es wird lediglich die `setup.exe` benötigt.
+Dort trägt man zunächst den Namen der Anwendung ein, unter die gewünschte Office 2019-Variante angelegt wird. Außerdem wählt man einen Inhaltsordner, welcher einer Freigabe auf dem SCCM-Server entsprechen sollte. **Wichtig:** Der Ordner muss leer sein!
 
-# Konfigurations-Datei erstellen
+Anschließend bestätigt man mit "Weiter" und öffnet das Office-Anpassungstool:
 
-Anschließend erstellt man auf [config.office.com](https://config.office.com) eine Konfigurationsdatei. Diese passt man nach den eigenen Bedürfnissen an.
+{{< img src="/images/sccm/office-2019/deployment/step-3.png" >}}
 
-## Installationsoptionen
+Im Anpassungstool konfiguriert man nun das Office Paket. Dort lassen sich die verschiedenen Office-Versionen (Standard oder Professional für Office 2019 oder Office 365), Sprachen und Office-Anwendungen auswählen, die installiert werden sollen. Auch lässt sich die Aktivierungsmethode (KMS oder MAK) auswählen. Das Logging sowie Anpinnen an die Taskbar haben wir deaktiviert. 
 
-Unter "Installation" > "Installationsoptionen" lässt sich einstellen, wie Office installiert werden soll. Hier wählt man am besten eine Freigabe im eigenen Netzwerk (bspw. `\\sccm01\Applications\Microsoft Office\2019`, was dem Verzeichnis `C:\SCCM\Applications\Microsoft Office\2019` auf dem SCCM-Server entspricht). Ein "Fallback auf CDN für fehlende Sprachen" muss nicht aktiviert werden:
+{{< img src="/images/sccm/office-2019/deployment/step-4.png" >}}
 
-{{< img src="/images/sccm/office-2019/deployment/config-install.png" >}}
+Hat man alles konfiguriert, klickt man oben rechts auf "Überprüfen" und schaut, ob alle Angaben korrekt sind:
 
-{{< callout type="info" title="Unbeaufsichtigte Installation" icon="info-circle" >}}
-    Möchte man die Installation unbeaufsichtigt durchführen, muss die Option "Dem Benutzer Installation anzeigen" deaktiviert werden (siehe Screenshot).
-{{< /callout >}}
+{{< img src="/images/sccm/office-2019/deployment/step-5.png" >}}
 
-## Optionen für Update und Upgrade
+Ist etwas nicht korrekt, schließt man die Überprüfung und korrigiert die Angaben. Anderenfalls auf "Übermitteln" klicken und im Assistenten auf "Weiter" klicken. 
 
-Unter "Installation" > "Optionen für Update und Upgrade" konfiguriert man anschließend, wie sich Office aktualisiert. Eine aktualisierung über WSUS ist leider mit Office 2019 nicht mehr möglich. Nutzt man das SCCM, wählt man "Configuration Manager" hier aus. Anderenfalls das CDN, aber dann laden alle Clients das Update separat aus dem Internet herunter. 
+Nun kann man die Anwendung direkt bereitstellen, wenn man möchte (in diesem Fall entscheiden wir uns gegen eine unmittelbare Bereitstellung).
 
-## Export
+{{< img src="/images/sccm/office-2019/deployment/step-6.png" >}}
 
-Hat man alles konfiguriert, kann man die Konfigurationsdatei über "Exportieren" (oben) herunterladen. Diesen zur `setup.exe` in den Ordner kopieren.
+Man überprüft alle Angaben...
 
-# Installationsdateien herunterladen
+{{< img src="/images/sccm/office-2019/deployment/step-7.png" >}}
 
-Nun eine Powershell öffnen und in den Ordner mit der `setup.exe` und `configuration.xml`. Folgendes Kommando ausführen:
+... und dann startet schließlich auch der Download:
 
-    PS> .\setup.exe /download configuration.xml
+{{< img src="/images/sccm/office-2019/deployment/step-8.png" >}}
 
-{{< callout type="warning" title="Hinweis" >}}
-    Das Programm erzeugt während des Herunterladens keine Ausgabe. 
-{{< /callout >}}
-
-Im Anschluss gibt es einen Ordner "Office", welcher ca. 2,4 GB groß ist (Stand: November 2018). 
-
-# Office installieren (ohne SCCM)
-
-Die Installation kann nun auf dem Computer mittels des Kommandos
-
-    PS> .\setup.exe /configure configuration.xml
-
-gestartet werden.
-
-# Office installieren (mit SCCM)
-
+{{< img src="/images/sccm/office-2019/deployment/step-9.png" >}}
