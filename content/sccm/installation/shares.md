@@ -1,7 +1,7 @@
 ---
 title: Netzwerk-Freigaben
 type: static
-ordering: 3
+ordering: 6
 ---
 
 Das SCCM benötigt einige Netzwerkfreigaben, auf denen Dateien freigegeben werden.

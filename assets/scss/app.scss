@@ -93,6 +93,8 @@ main.container {
 		margin-left: 10px;
 		margin-bottom: 10px;
 
+		max-width: 300px;
+
 		ul {
 			list-style: none;
 			margin:0px;
@@ -165,4 +167,8 @@ footer {
 	padding: 2rem 0;
 	text-align: center;
 	color: #999;
+}
+
+#search-results {
+	margin-top: 10px;
 }

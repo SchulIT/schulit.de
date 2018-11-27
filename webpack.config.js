@@ -18,6 +18,7 @@ Encore
      * and one CSS file (e.g. app.css) if you JavaScript imports CSS.
      */
     .addEntry('app', './assets/js/app.js')
+    .addEntry('search', './assets/js/search.js')
 
     .cleanupOutputBeforeBuild()
     .enableSourceMaps(!Encore.isProduction())
@@ -33,7 +34,7 @@ Encore
     // uncomment if you're having problems with a jQuery plugin
     .autoProvidejQuery()
 
-    .enableSingleRuntimeChunk()
+    .disableSingleRuntimeChunk()
 
     /*.addPlugin(
         new GoogleFontsPlugin({

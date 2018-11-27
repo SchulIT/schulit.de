@@ -2,6 +2,7 @@
 title: Datenschutz
 linktitle: Datenschutz
 type: static
+toc: false
 ---
 
-Foo
+Bei der Nutzung dieser Webseite werden keine personenbezogenen Daten erhoben.

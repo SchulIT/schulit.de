@@ -1,5 +1,5 @@
 ---
 title: Manuell Updates verteilen
-ordering: 1
+ordering: 4
 type: static
 ---

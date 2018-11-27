@@ -1,5 +1,72 @@
-{{ partial "header.html" . }}
+<!DOCTYPE html>
+<html lang="{{ $.Site.LanguageCode | default "en" }}">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{ .Site.Title }} {{ with .Title }} | {{ . }}{{ end }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="{{ "/build/app.css" | absURL }}">
+</head>
+
+<body>
+    <div class="container">
+        <header class="py-3">
+            <div class="row flex-nowrap justify-content-between align-items-center">
+                <div class="col-8">
+                    <h1><a href="/">SchoolIT</a></h1>
+                </div>
+
+                <div class="col-4 d-flex justify-content-end">
+                    <form action="/search" class="mr-1">
+                        <div class="input-group">
+                            <input type="text" class="form-control form-control-sm" name="s" placeholder="Suchen...">
+                            <div class="input-group-append">
+                                <button type="submit" class="btn btn-sm btn-outline-secondary">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <a href="/blog/index.xml" class="btn btn-outline-secondary btn-sm" title="RSS-Feed"><i class="fa fa-rss"></i></a>
+                </div>
+            </div>
+        </header>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="nav">
+                <ul class="navbar-nav mr-auto">
+                    {{ $currentPage := . }}
+                    {{ range .Site.Menus.main }}
+                        {{ $isCurrent := or ( and (ne .URL "/") (hasPrefix $currentPage.URL .URL)) (eq $currentPage.URL .URL) }}
+                        <li class="nav-item {{ if $isCurrent }}active{{ end }}">
+                            <a class="nav-link" href="{{ .URL }}">{{ .Name }} </a>
+                        </li>
+                    {{ end }}
+                </ul>
+            </div>
+        </nav>
+    </div>
 
 {{ block "main" . }}{{ end }}
 
-{{ partial "footer.html" . }}
+    <footer>
+        <p>© 2018 SchoolIT</p>
+        <p><a href="https://github.com/schoolit-de" target="_blank"><i class="fa fa-github"></i> GitHub</a> 
+            - <a href="/blog/index.xml"><i class="fa fa-rss"></i> RSS-Feed</a>
+            - <a href="{{ "/impressum" | absURL }}">Impressum</a> 
+            - <a href="{{ "/datenschutz" | absURL }}">Datenschutz</a>
+        </p>
+    </footer>
+    
+    <script src="{{ "/build/app.js" | absURL }}"></script>
+
+    {{ block "javascript" . }}{{ end }}
+</body>
+
+</html>

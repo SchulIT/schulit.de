@@ -16,3 +16,6 @@ enableGitInfo = true
     name = "Startseite"
     url = "/"
     weight = -10
+
+[outputs]
+    home = [ "HTML", "JSON" ]

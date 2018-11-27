@@ -1,6 +1,6 @@
 ---
 title: Automatisches Verteilen von Updates
-ordering: 1
+ordering: 3
 type: static
 ---
 
