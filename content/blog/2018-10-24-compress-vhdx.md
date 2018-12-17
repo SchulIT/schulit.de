@@ -11,7 +11,9 @@ Bei VHDX-Festplatten mit dynamischer Größe wächst die eigentliche Größe auf
 Mit einem PowerShell-Cmdlet lässt sich jedoch die VHDX-Datei auf die eigentliche Größe komprimieren:
 
 {{< highlight powershell >}}
+PS> Mount-VHD -Path <VHDX-Datei> -ReadOnly
 PS> Optimize-VHD -Path <VHDX-Datei> -Mode Full
+PS> Dismount-VHD -Path <VHDX-Datei>
 {{< /highlight >}}
 
 ---
