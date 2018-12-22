@@ -1,0 +1,32 @@
+kind: pipeline
+name: build-and-deploy
+
+steps:
+    - name: build-assets
+      image: node:lts-alpine
+      commands:
+      - yarn install
+      - yarn encore production
+      
+    - name: build-hugo
+      image: jojomi/hugo
+      commands:
+      - hugo
+      environment:
+        HUGO_BASEURL: https://schoolit.mmarnitz.de
+        HUGO_DESTINATION: /output
+
+    - name: deploy
+      image: drillster/drone-rsync
+      environment:
+        PLUGIN_TARGET: /srv/http/schoolit
+        PLUGIN_SOURCE: ./output
+        PLUGIN_PORT:
+            from_secret: ssh_port
+        PLUGIN_HOSTS:
+            from_secret: ssh_host
+        PLUGIN_USER:
+            from_secret: ssh_user
+        PLUGIN_KEY:
+            from_secret: ssh_key
+    
