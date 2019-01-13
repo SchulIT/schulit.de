@@ -118,6 +118,8 @@ main.container {
 
 	table {
 		margin-bottom: 10px;
+		@extend .table;
+		@extend .table-striped;
 	}
 
 	h1 {
