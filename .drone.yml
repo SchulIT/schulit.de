@@ -5,7 +5,7 @@ steps:
     - name: build-assets
       image: node:lts-alpine
       commands:
-      - yarn install --verbose
+      - yarn install --production --verbose
       - yarn encore production
       
     - name: build-hugo
