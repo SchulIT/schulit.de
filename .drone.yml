@@ -23,7 +23,7 @@ steps:
           from_secret: ssh_host
         key:
           from_secret: ssh_key
-        username:
+        user:
           from_secret: ssh_user
         port:
           from_secret: ssh_port
