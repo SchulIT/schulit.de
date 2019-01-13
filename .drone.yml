@@ -14,4 +14,19 @@ steps:
       - hugo
       environment:
         HUGO_BASEURL: https://schoolit.mmarnitz.de
-        HUGO_DESTINATION: /output
+        HUGO_DESTINATION: ./output
+
+    - name: deploy
+      image: drillster/drone-rsync
+      settings:
+        hosts:
+          from_secret: ssh_host
+        key:
+          from_secret: ssh_key
+        username:
+          from_secret: ssh_user
+        port:
+          from_secret: ssh_port
+        source: ./output
+        target: /srv/http/schoolit
+
