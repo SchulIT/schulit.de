@@ -1,4 +1,4 @@
-baseURL = "http://example.org/"
+baseURL = "https://schoolit.mmarnitz.de"
 languageCode = "de"
 title = "SchoolIT"
 enableEmoji = true
