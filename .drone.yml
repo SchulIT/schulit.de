@@ -10,9 +10,8 @@ steps:
       
     - name: build-hugo
       image: jojomi/hugo
-      environment:
-        HUGO_BASEURL: https://schoolit.mmarnitz.de
-        HUGO_DESTINATION: /output
+      commands:
+      - hugo -b https://schoolit.mmarnitz.de -d ./output
 
     - name: deploy
       image: drillster/drone-rsync
@@ -25,6 +24,6 @@ steps:
           from_secret: ssh_user
         port:
           from_secret: ssh_port
-        source: /output
+        source: ./output
         target: /srv/http/schoolit
         recursive: true
