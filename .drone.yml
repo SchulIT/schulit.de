@@ -10,8 +10,6 @@ steps:
       
     - name: build-hugo
       image: jojomi/hugo
-      commands:
-      - hugo
       environment:
         HUGO_BASEURL: https://schoolit.mmarnitz.de
         HUGO_DESTINATION: /output
