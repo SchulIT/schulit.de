@@ -13,7 +13,7 @@
                     </h2>
 
                     <p class="post-meta">
-                        <i class="fa fa-calendar"></i> {{ .Date.Format "2. January 2006" }}
+                        <i class="fa fa-calendar"></i> {{ .Date.Day }}. {{ index $.Site.Data.months (printf "%d" .Date.Month) }} {{ .Date.Year }}
                         
                         {{ if .Params.tags }}
                         <i class="fa fa-tags"></i>
