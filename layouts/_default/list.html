@@ -58,7 +58,7 @@
                             <a href="{{ .URL }}" class="card-link" title="{{ trim (plainify .Summary) "\n" }}">{{ .LinkTitle }}</a>
                             {{ end }}
                             {{ if gt $numPages 5 }}
-                            <a href="{{ .URL }}">...</a>
+                            <a href="{{ .URL }}"><span class="badge badge-primary">+{{ sub (len .Pages)  5 }} weitere</span></a>
                             {{ end }}
                         </div>
                     </div>
