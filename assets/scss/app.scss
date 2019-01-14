@@ -78,6 +78,18 @@ main.container {
 	}
 }
 
+.pages {
+	.card {
+		.card-link {
+			margin-right: $card-spacer-x;
+
+			+ .card-link {
+				margin-left: 0;
+			}
+		  }
+	}
+}
+
 .blog-post {
 	margin-bottom: 5px;
 
