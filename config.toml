@@ -1,6 +1,6 @@
-baseURL = "https://schoolit.mmarnitz.de"
+baseURL = "https://schulit.mmarnitz.de"
 languageCode = "de"
-title = "SchoolIT"
+title = "SchulIT"
 enableEmoji = true
 enableGitInfo = true
 

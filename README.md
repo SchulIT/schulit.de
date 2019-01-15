@@ -1,6 +1,6 @@
-# SchoolIT Website
+# SchulIT Website
 
-[![Build Status](https://drone.mmarnitz.de/api/badges/marcel/schoolit/status.svg)](https://drone.mmarnitz.de/marcel/schoolit)
+[![Build Status](https://drone.mmarnitz.de/api/badges/marcel/schulit/status.svg)](https://drone.mmarnitz.de/marcel/schulit)
 
 ## Build
 
