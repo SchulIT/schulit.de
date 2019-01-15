@@ -157,6 +157,45 @@ main.container {
 	h6 {
 
 	}
+
+	+ .comments {
+		.textarea-wrapper {
+			margin-bottom: 5px;
+
+			.textarea {
+				height: 100px;
+				@extend textarea;
+				@extend .form-control;
+			}
+		}
+		
+		.auth-section {
+			@extend .row;
+
+			.input-wrapper {
+				@extend .col-md-4;
+			}
+
+			.post-action {
+				margin-left: 15px;
+			}
+		}
+
+		input[type=text],
+		input[type=email] {
+			@extend .form-control;
+		}
+
+		input[type=button] {
+			@extend .btn;
+			@extend .btn-secondary;
+		}
+
+		input[type=submit] {
+			@extend .btn;
+			@extend .btn-primary;
+		}
+	}
 }
 
 .highlight {

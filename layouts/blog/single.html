@@ -1,3 +1,9 @@
+{{ define "javascript" }}
+{{ if (ne .Params.comments false) }}
+<script data-isso="https://isso.mmarnitz.de/" data-isso-css="false" src="https://isso.mmarnitz.de/js/embed.min.js"></script>
+{{ end}}
+{{ end }}
+
 {{ define "main" }}
 
 <main class="container">
@@ -31,6 +37,14 @@
                 {{ end }}
                 
                 {{ .Content }}
+            </div>
+
+            <div class="comments">
+                <h1>Kommentare</h1>
+
+                <section id="isso-thread">
+
+                </section>
             </div>
         </div>
 
