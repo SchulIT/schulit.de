@@ -206,11 +206,22 @@ main.container {
 					.author {
 						font-weight: bold;
 					}
+
+					.spacer {
+						margin: 0px 4px;
+					}
+				}
+
+				.isso-comment-footer {
+					.edit {
+						margin-right: 5px;
+					}
 				}
 
 				.avatar {
 					float: left;
 					width: 7%;
+					margin-right: 5px;
 				}
 			}
 		}
