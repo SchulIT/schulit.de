@@ -195,6 +195,25 @@ main.container {
 			@extend .btn;
 			@extend .btn-primary;
 		}
+
+		#isso-thread {
+			.isso-comment {
+				.isso-comment-header {
+					.permalink {
+						@extend .text-muted;
+					}
+
+					.author {
+						font-weight: bold;
+					}
+				}
+
+				.avatar {
+					float: left;
+					width: 7%;
+				}
+			}
+		}
 	}
 }
 
