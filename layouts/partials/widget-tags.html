@@ -4,7 +4,7 @@
         
         <p class="card-text">
             {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
-                <a class="badge badge-primary" href="{{ "tags" | absURL }}/{{ $name | urlize }}">{{ $name }}</a>
+                <a class="badge badge-primary" href="{{ "/blog/tags" | relURL }}/{{ $name | urlize }}">{{ $name }}</a>
             {{ end }}
         </p>
     </div>

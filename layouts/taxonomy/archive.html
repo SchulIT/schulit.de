@@ -1,13 +1,23 @@
 {{ define "main" }}
-{{ $paginator := .Paginate (where .Site.RegularPages "Section" "blog").ByPublishDate.Reverse }}
+
+{{ $archive := lower .Title }}
+{{ $year := index (split $archive "/") 0 }}
+{{ $month := strings.TrimLeft 0 (index (split $archive "/") 1) }}
 
 <main class="container">
-    {{ partial "breadcrumb" . }}
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">{{ .Site.Title }}</a></li>
+            <li class="breadcrumb-item"><a href="{{ "/blog/" | relURL }}">Blog</a></li>
+            <li class="breadcrumb-item">{{ index $.Site.Data.months $month }} {{ $year }}</li>
+        </ol>
+    </nav>
 
     <div class="row">
         <div class="col-md-8">
+            {{ $paginator := .Paginate .Data.Pages }}
             {{ range $paginator.Pages }}
-                <div class="blog-post">
+            <div class="blog-post">
                     <h2 class="post-title">
                         <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
                     </h2>
@@ -26,7 +36,6 @@
                     <p>
                         {{ .Summary }}
                     </p>
-                    <a href="{{ .URL }}">weiterlesen</a>
                 </div>
             {{ end }}
 

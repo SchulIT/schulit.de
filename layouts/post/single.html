@@ -10,7 +10,7 @@
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="/">{{ .Site.Title }}</a></li>
-            <li class="breadcrumb-item"><a href="{{ "/" | absURL }}">Blog</a></li>
+            <li class="breadcrumb-item"><a href="{{ "/blog/" | relURL }}">Blog</a></li>
             <li class="breadcrumb-item">{{ .Title }}</li>
         </ol>
     </nav>
@@ -30,7 +30,7 @@
                     <i class="fa fa-tags"></i>
                         {{ $length := (len .Params.tags )}}
                         {{ range $counter, $tag := .Params.tags }}
-                            <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>{{ if ne $counter (sub $length 1) }}, {{ end }}
+                            <a href="{{ "/blog/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>{{ if ne $counter (sub $length 1) }}, {{ end }}
                         {{ end }}
                     {{ end }}
                 </p>
@@ -48,10 +48,12 @@
             </div>
         </div>
 
-        <div class="col-md-4">
+        <div class="col-md-4 widgets">
             {{ partial "widget-about.html" }}
 
             {{ partial "widget-tags.html" . }}
+
+            {{ partial "widget-archive.html" . }}
         </div>
     </div>
 </main>

@@ -9,7 +9,11 @@ enableGitInfo = true
     
 [taxonomies]
     tag = "tags"
-    archive = "archives"
+    archive = "archive"
+
+[permalinks]
+    tags = "/blog/tags/:slug/"
+    archive = "/blog/:slug/"
 
 [[menu.main]]
     identifier = "index"

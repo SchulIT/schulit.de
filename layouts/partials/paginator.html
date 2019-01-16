@@ -1,0 +1,9 @@
+<div class="clearfix">
+    {{ if eq .HasNext true }}
+        <a href="{{ .Next.URL }}" class="btn btn-outline-primary btn-sm float-left"><i class="fa fa-arrow-left"></i> ältere</a> 
+    {{ end }}
+
+    {{ if eq .HasPrev true }}
+        <a href="{{ .Prev.URL }}" class="btn btn-outline-primary btn-sm float-right"><i class="fa fa-arrow-right"></i> neuere</a> 
+    {{ end }}
+</div>

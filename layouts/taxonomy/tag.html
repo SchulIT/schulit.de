@@ -3,36 +3,49 @@
 {{ $tag := lower .Title }}
 
 <main class="container">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">{{ .Site.Title }}</a></li>
+            <li class="breadcrumb-item"><a href="{{ "/blog/" | relURL }}">Blog</a></li>
+            <li class="breadcrumb-item">Tag "{{ $tag }}"</li>
+        </ol>
+    </nav>
+
     <div class="row">
         <div class="col-md-8">
-            {{ range $key, $value := .Site.Taxonomies.tags }}{{ if eq $key $tag }}{{ range $value.Pages }}
-                <div class="blog-post">
-                        <h2 class="post-title">
-                            <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
-                        </h2>
-    
-                        <p class="post-meta">
-                            <i class="fa fa-calendar"></i> {{ .Date.Format "2. January 2006" }}
-                            
-                            {{ if .Params.tags }}
-                            <i class="fa fa-tags"></i>
-                                {{ $length := (len .Params.tags )}}
-                                {{ range $counter, $tag := .Params.tags }}
-                                    <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>{{ if ne $counter (sub $length 1) }}, {{ end }}
-                                {{ end }}
+            {{ $paginator := .Paginate .Data.Pages }}
+            {{ range $paginator.Pages }}
+            <div class="blog-post">
+                    <h2 class="post-title">
+                        <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
+                    </h2>
+
+                    <p class="post-meta">
+                        <i class="fa fa-calendar"></i> {{ .Date.Day }}. {{ index $.Site.Data.months (printf "%d" .Date.Month) }} {{ .Date.Year }}
+                        
+                        {{ if .Params.tags }}
+                        <i class="fa fa-tags"></i>
+                            {{ $length := (len .Params.tags )}}
+                            {{ range $counter, $tag := .Params.tags }}
+                                <a href="{{ "/blog/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>{{ if ne $counter (sub $length 1) }}, {{ end }}
                             {{ end }}
-                        </p>
-                        <p>
-                            {{ .Summary }}
-                        </p>
-                    </div>
-            {{ end }}{{ end }}{{ end }}
+                        {{ end }}
+                    </p>
+                    <p>
+                        {{ .Summary }}
+                    </p>
+                </div>
+            {{ end }}
+
+            {{ partial "paginator.html" $paginator }}
         </div>
 
-        <div class="col-md-4">
+        <div class="col-md-4 widgets">
             {{ partial "widget-about.html" }}
 
-            {{ partial "widget-tags.html" }}
+            {{ partial "widget-tags.html" . }}
+
+            {{ partial "widget-archive.html" . }}
         </div>
     </div>
 </main>

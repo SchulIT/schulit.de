@@ -71,6 +71,14 @@ main.container {
 		margin-bottom: 10px;
 	}
 
+	.widgets {
+		.card {
+			+.card {
+				margin-top: 10px;
+			}
+		}
+	}
+
 	.pages {
 		>.card {
 			margin-bottom: 10px;
