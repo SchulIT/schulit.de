@@ -3,6 +3,7 @@ title: Datenschutz
 linktitle: Datenschutz
 type: static
 toc: false
+comments: false
 ---
 
 # 1. Datenschutz auf einen Blick

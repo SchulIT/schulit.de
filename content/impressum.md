@@ -3,6 +3,7 @@ title: Impressum
 linktitle: Impressum
 type: static
 toc: false
+comments: false
 ---
 
 # Angaben gemäß § 5 TMG
