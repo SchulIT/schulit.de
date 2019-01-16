@@ -11,7 +11,7 @@ steps:
     - name: build-hugo
       image: jojomi/hugo
       commands:
-      - hugo -b https://schulit.mmarnitz.de -d ./output
+      - hugo -b https://schulit.de -d ./output
 
     - name: deploy
       image: drillster/drone-rsync
