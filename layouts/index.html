@@ -9,7 +9,7 @@
 
 <main class="container">
     <div class="card-deck">
-        <div class="card">
+        <div class="card mb-3">
             <div class="card-body">
                 <h5 class="card-title">
                     <a href="/blog">Blog</a>
@@ -20,7 +20,9 @@
             </div>
         </div>
 
-        <div class="card">
+        <div class="w-100 d-none d-xs-block d-sm-none"><!-- wrap every 1 on xs--></div>
+
+        <div class="card mb-3">
             <div class="card-body">
                 <h5 class="card-title">
                     <a href="/office365">Office 365</a>
@@ -31,7 +33,9 @@
             </div>
         </div>
 
-        <div class="card">
+        <div class="w-100 d-none d-sm-block d-md-none"><!-- wrap every 2 on sm--></div>
+
+        <div class="card mb-3">
             <div class="card-body">
                 <h5 class="card-title">
                     <a href="/sccm">SCCM</a>
@@ -42,7 +46,9 @@
             </div>
         </div>
 
-        <div class="card">
+        <div class="w-100 d-none d-xs-block d-sm-none"><!-- wrap every 1 on xs--></div>
+
+        <div class="card mb-3">
             <div class="card-body">
                 <h5 class="card-title">
                     <a href="/software">Software</a>
@@ -62,7 +68,7 @@
 
     <div class="card-deck">
         {{ range $blog }}
-            <div class="card blog-post">
+            <div class="card blog-post mb-3">
                 <div class="card-body">
                     <h5 class="card-title">
                         <a href="{{ .URL }}">{{ .LinkTitle }}</a>
@@ -77,6 +83,8 @@
                     </p>
                 </div>
             </div>
+
+            <div class="w-100 d-none d-sm-block d-md-none"><!-- wrap every 1 on sm--></div>
         {{ end }}
     </div>
 
