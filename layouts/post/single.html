@@ -37,6 +37,13 @@
                 {{ end }}
                 
                 {{ .Content }}
+
+                {{ $commitSha := .GitInfo.AbbreviatedHash }}
+                {{ with .Lastmod }}
+                <p class="text-secondary">
+                    <i class="fa fa-calendar"></i> Letzte Änderung: {{ .Day }}. {{ index $.Site.Data.months (printf "%d" .Month) }} {{ .Year }} {{ .Hour }}:{{ .Minute }} ({{ $commitSha }})
+                </p>
+                {{ end }}
             </div>
 
             <div class="comments">
