@@ -46,6 +46,7 @@
                 {{ end }}
             </div>
 
+            {{ if (ne .Params.comments false) }}
             <div class="comments">
                 <h1>Kommentare</h1>
 
@@ -53,6 +54,7 @@
 
                 </section>
             </div>
+            {{ end }}
         </div>
 
         <div class="col-md-4 widgets">
