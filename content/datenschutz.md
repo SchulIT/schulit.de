@@ -168,6 +168,29 @@ auffordern, Ihre Einwilligung zur Speicherung widerrufen oder der Zweck für die
 (z. B. nach abgeschlossener Bearbeitung Ihres Anliegens). Zwingende gesetzliche Bestimmungen –
 insbesondere gesetzliche Aufbewahrungsfristen – bleiben unberührt.
 
+## Kommentarfunktion auf dieser Website
+Für die Kommentarfunktion auf dieser Seite werden neben Ihrem Kommentar auch Angaben zum Zeitpunkt
+der Erstellung des Kommentars und, wenn Sie nicht anonym posten, der von Ihnen gewählte Nutzername,
+E-Mail Adresse und Website gespeichert.
+
+### Speicherung der IP-Adresse
+
+Unsere Kommentarfunktion speichert die IP-Adressen der Nutzer, die Kommentare verfassen. Mithilfe der IP-Adresse
+wird eine einfache [Spam-Erkennung](https://posativ.org/isso/docs/configuration/server/#guard) umgesetzt. 
+
+### Speicherdauer der Kommentare
+
+Die Kommentare und die damit verbundenen Daten (z.B. IP-Adresse) werden gespeichert und verbleiben
+auf unserer Website, bis der kommentierte Inhalt vollständig gelöscht wurde oder die Kommentare aus
+rechtlichen Gründen gelöscht werden müssen (z.B. beleidigende Kommentare).
+
+### Rechtsgrundlage
+
+Die Speicherung der Kommentare erfolgt auf Grundlage Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Sie
+können eine von Ihnen erteilte Einwilligung jederzeit widerrufen. Dazu reicht eine formlose Mitteilung per EMail
+an uns. Die Rechtmäßigkeit der bereits erfolgten Datenverarbeitungsvorgänge bleibt vom Widerruf
+unberührt.
+
 ---
 
 Quelle: [e-recht24.de](https://www.e-recht24.de/)
