@@ -80,7 +80,7 @@ Das Programm steht auch als Bibliothek für .NET zur Verfügung. Es kann über N
 
 ## Verwenden
 
-Eine Dokumentation folgt demnächst. Aktuell sollte man sich den Quelltext studieren :wink:
+Eine Dokumentation folgt demnächst. Aktuell sollte man den Quelltext studieren :wink:
 
 # Entwicklung
 
