@@ -6,7 +6,7 @@
     <title>{{ .Site.Title }} {{ with .Title }} | {{ . }}{{ end }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="{{ "/build/app.css" | absURL }}">
+    <link rel="stylesheet" href="{{ (index .Site.Data.manifest "app.css") | absURL }}">
 </head>
 
 <body>
@@ -64,7 +64,7 @@
         </p>
     </footer>
     
-    <script src="{{ "/build/app.js" | absURL }}"></script>
+    <script src="{{ (index .Site.Data.manifest "app.js") | absURL }}"></script>
 
     {{ block "javascript" . }}{{ end }}
 </body>

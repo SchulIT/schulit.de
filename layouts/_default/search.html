@@ -1,5 +1,5 @@
 {{ define "javascript" }}
-    <script src="{{ "/build/search.js" | absURL }}"></script>
+    <script src="{{ (index .Site.Data.manifest "search.js") | absURL }}"></script>
 {{ end }}
 
 {{ define "main" }}

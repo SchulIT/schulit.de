@@ -1,5 +1,7 @@
 var Encore = require('@symfony/webpack-encore');
 
+var ManifestPlugin = require('webpack-manifest-plugin');
+
 Encore
     // directory where compiled assets will be stored
     .setOutputPath('static/build/')
@@ -23,7 +25,7 @@ Encore
     .cleanupOutputBeforeBuild()
     .enableSourceMaps(!Encore.isProduction())
     // enables hashed filenames (e.g. app.abc123.css)
-    //.enableVersioning(Encore.isProduction())
+    .enableVersioning(Encore.isProduction())
 
     // uncomment if you use TypeScript
     //.enableTypeScriptLoader()
@@ -44,6 +46,12 @@ Encore
             ]
         })
     )*/
+
+    .addPlugin(
+        new ManifestPlugin({
+            fileName: '../../data/manifest.json'
+        })
+    )
 ;
 
 module.exports = Encore.getWebpackConfig();
