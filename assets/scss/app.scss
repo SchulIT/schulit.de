@@ -166,6 +166,10 @@ main.container {
 
 	}
 
+	pre {
+		@extend kbd;
+	}
+
 	+ .comments {
 		.textarea-wrapper {
 			margin-bottom: 5px;
