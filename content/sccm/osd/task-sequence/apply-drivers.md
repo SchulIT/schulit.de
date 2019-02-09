@@ -4,7 +4,7 @@ type: static
 toc: false
 ---
 
-Foo
+Diese Anleitung zeigt, wie man Treiber während des Aufspielens des Betriebssystems automatisch installiert.
 
 <!--more-->
 
