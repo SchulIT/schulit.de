@@ -8,7 +8,7 @@ Office erstellt bei der Installation eine Installations-ID für den aktuellen Co
 <!--more-->
 
 {{< callout type="warning" title="Wichtig" >}}
-    Diese Anleitung *bezieht* sich auf Office 2016 (32-bit) auf einem 64-bit Betriebssystem. Es ergeben sich folgende Änderungen, falls eine andere Konfiguration genutzt wird:
+    Diese Anleitung bezieht sich auf Office 2016 (32-bit) auf einem 64-bit Betriebssystem. Es ergeben sich folgende Änderungen, falls eine andere Konfiguration genutzt wird:
 
     <ul>
         <li>64-bit Office auf 64-bit Windows oder 32-bit Office auf 32-bit Windows: <code>C:\Program Files (x86)</code> → <code>C:\Program Files</code></li>
@@ -17,7 +17,7 @@ Office erstellt bei der Installation eine Installations-ID für den aktuellen Co
     </ul>
 {{< /callout >}}
 
-#### Office zurücksetzen
+# Office zurücksetzen
 
 In der Task-Sequenz muss ein neuer Schritt erstellt werden. Dazu unter "Hinzufügen" > "Allgemein" > "Befehlszeile ausführen" anklicken:
 
@@ -30,7 +30,7 @@ Anschließend den Schritt in die Sektion "Betriebssystem einrichten" verschieben
 
 {{< img src="/images/sccm/osd/task-sequence/activate-office/step-2.png" >}}
 
-#### Office aktivieren
+# Office aktivieren
 
 In der Task-Sequenz muss ein neuer Schritt erstellt werden. Dazu unter "Hinzufügen" > "Allgemein" > "Befehlszeile ausführen" anklicken:
 
