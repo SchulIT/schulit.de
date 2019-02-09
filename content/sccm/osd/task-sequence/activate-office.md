@@ -3,7 +3,7 @@ title: Office aktivieren
 type: static
 ---
 
-Office erstellt bei der Installation eine Installations-ID für den aktuellen Computer. Hat man Office bereits in das Betriebssystemabbild integriert, so muss diese ID nun erneuert werden (sonst wird die ID auf allen Computern verwendet).
+Office erstellt bei der Installation eine Installations-ID für den aktuellen Computer. Hat man Office bereits in das Betriebssystemabbild integriert, so muss diese ID nun erneuert werden (sonst wird die ID auf allen Computern verwendet). 
 
 <!--more-->
 
@@ -17,29 +17,32 @@ Office erstellt bei der Installation eine Installations-ID für den aktuellen Co
     </ul>
 {{< /callout >}}
 
+{{< callout type="danger" title="Wichtig" >}}
+    Diese Anleitung setzt voraus, dass sich Office mittels KMS oder AD-basierter Aktivierung eigenständig aktivieren kann.
+{{< /callout >}}
+
 # Office zurücksetzen
 
-In der Task-Sequenz muss ein neuer Schritt erstellt werden. Dazu unter "Hinzufügen" > "Allgemein" > "Befehlszeile ausführen" anklicken:
-
-{{< img src="/images/sccm/osd/task-sequence/activate-office/step-1.png" >}}
-
-Anschließend den Schritt in die Sektion "Betriebssystem einrichten" verschieben (Drag & Drop) und folgendermaßen konfigurieren:
+In der Tasksequenz muss ein neuer Schritt erstellt werden. Dazu unter "Hinzufügen" > "Allgemein" > "Befehlszeile ausführen" anklicken. Anschließend den Schritt in die Sektion "Betriebssystem einrichten" verschieben (Drag & Drop) und folgendermaßen konfigurieren:
 
 * Name: Office 2016 zurücksetzen
 * Befehlszeile: `"C:\Program Files (x86)\Microsoft Office\Office16\OSPPREARM.EXE"`
 
-{{< img src="/images/sccm/osd/task-sequence/activate-office/step-2.png" >}}
+{{< img src="/images/sccm/osd/task-sequence/activate-office/ts-1.png" >}}
+
+Optional im Reiter "Optionen" die Option "Bei Fehler fortsetzen" aktivieren.
 
 # Office aktivieren
 
-In der Task-Sequenz muss ein neuer Schritt erstellt werden. Dazu unter "Hinzufügen" > "Allgemein" > "Befehlszeile ausführen" anklicken:
-
-{{< img src="/images/sccm/osd/task-sequence/activate-office/step-1.png" >}}
-
-Anschließend den Schritt in die Sektion "Betriebssystem einrichten" und nach den Schritt "Office 2016 zurücksetzen" verschieben (Drag & Drop) und folgendermaßen konfigurieren:
+In der Tasksequenz muss ein neuer Schritt erstellt werden. Dazu unter "Hinzufügen" > "Allgemein" > "Befehlszeile ausführen" anklicken und den Schritt nach dem Schritt "Office 2016 zurücksetzen" positionieren (Drag & Drop). Anschließend den Schritt in die Sektion "Betriebssystem einrichten" und nach den Schritt "Office 2016 zurücksetzen" verschieben (Drag & Drop) und folgendermaßen konfigurieren:
 
 * Name: Office 2016 aktivieren
 * Befehlszeile: `cscript "C:\Program Files (x86)\Microsoft Office\Office16\ospp.vbs" /act`
 
-{{< img src="/images/sccm/osd/task-sequence/activate-office/step-3.png" >}}
+{{< img src="/images/sccm/osd/task-sequence/activate-office/ts-2.png" >}}
 
+Optional im Reiter "Optionen" die Option "Bei Fehler fortsetzen" aktivieren.
+
+{{< callout type="success" title="Fertig" icon="check" >}}
+    Bei der ausgewählten Tasksequenz wird Office 2016 zurückgesetzt und neu aktiviert.
+{{< /callout >}}
