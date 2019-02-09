@@ -22,4 +22,5 @@ enableGitInfo = true
     weight = -10
 
 [outputs]
-    home = [ "HTML", "JSON" ]
+    home = [ "HTML", "JSON", "RSS" ]
+    section = [ "HTML" ]
