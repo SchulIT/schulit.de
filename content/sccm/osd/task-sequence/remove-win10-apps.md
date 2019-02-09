@@ -3,79 +3,65 @@ title: Windows 10 Apps löschen
 type: static
 ---
 
+Die Windows 10 Apps sind lästig und bei unseren verbindlichen Profilen (für Schüler) ohnehin nicht nützlich, sondern verzögern nur unnötig die Anmeldung am Computer. Daher können die Apps beim Aufspielen des Betriebssystems restlos entfernt werden.
+
 <!--more-->
 
-### Das Deinstallations-Skript
+# Das Deinstallations-Skript
 
-Das folgende Skript namens `RemoveWindows10Apps.ps1` in den Ordner `\\SCCM01\Scripts\Apps` kopieren:
+Das benötigte PowerShell-Skript herunterladen und unter `\\SCCM01\Scripts\Windows 10 Apps` ablegen. Dieses Skript löscht alle Windows 10 Apps außer den Store und den Taschenrechner.
 
-{{< highlight powershell >}}
-# Functions
-function Write-LogEntry {
-    param(
-        [parameter(Mandatory=$true, HelpMessage="Value added to the RemovedApps.log file.")]
-        [ValidateNotNullOrEmpty()]
-        [string]$Value,
+{{< file url="/files/sccm/osd/task-sequence/remove-win10-apps/RemoveWindows10Apps.ps1" name="RemoveWindows10Apps.ps1" >}}
 
-        [parameter(Mandatory=$false, HelpMessage="Name of the log file that the entry will written to.")]
-        [ValidateNotNullOrEmpty()]
-        [string]$FileName = "RemovedApps.log"
-    )
-    # Determine log file location
-    $LogFilePath = Join-Path -Path $env:windir -ChildPath "Temp\$($FileName)"
+# Skript paketieren
 
-    # Add value to log file
-    try {
-        Add-Content -Value $Value -LiteralPath $LogFilePath -ErrorAction Stop
-    }
-    catch [System.Exception] {
-        Write-Warning -Message "Unable to append log entry to RemovedApps.log file"
-    }
-}
+Nun muss ein Paket mit dem PowerShell-Skript erstellt werden.
 
-# Get a list of all apps
-Write-LogEntry -Value "Starting appx package removal"
-$AppArrayList = Get-AppxPackage -PackageTypeFilter Bundle -AllUsers | Select-Object -Property Name, PackageFullName | Sort-Object -Property Name
+## Paket erstellen
 
-# White list of appx packages to keep installed
-$WhiteListedApps = @(
-    "Microsoft.DesktopAppInstaller",
-    "Microsoft.WindowsCalculator"
-)
+Dazu nach "Softwarebibliothek" > "Übersicht"> "Anwendungsverwaltung" > "Pakete" navigieren und ein neues Paket erstellen. Dort zunächst einige Informationen eintragen:
 
-# Loop through the list of appx packages
-foreach ($App in $AppArrayList) {
-    # If application name not in appx package white list, remove AppxPackage and AppxProvisioningPackage
-    if (($App.Name -in $WhiteListedApps)) {
-        Write-LogEntry -Value "Skipping excluded application package: $($App.Name)"
-    }
-    else {
-        # Gather package names
-        $AppPackageFullName = Get-AppxPackage -Name $App.Name | Select-Object -ExpandProperty PackageFullName
-        $AppProvisioningPackageName = Get-AppxProvisionedPackage -Online | Where-Object { $_.DisplayName -like $App.Name } | Select-Object -ExpandProperty PackageName
+{{< img src="/images/sccm/osd/task-sequence/remove-win10-apps/step-1.png" >}}
 
-        # Attempt to remove AppxPackage
-        try {
-            Write-LogEntry -Value "Removing application package: $($AppPackageFullName)"
-            Remove-AppxPackage -Package $AppPackageFullName -ErrorAction Stop
-        }
-        catch [System.Exception] {
-            Write-Warning -Message $_.Exception.Message
-        }
+Als Typ wählt man "Kein Programm erstellen" aus:
 
-        # Attempt to remove AppxProvisioningPackage
-        if ($AppProvisioningPackageName -ne $null) {
-            try {
-                Write-LogEntry -Value "Removing application provisioning package: $($AppProvisioningPackageName)"
-                Remove-AppxProvisionedPackage -PackageName $AppProvisioningPackageName -Online -ErrorAction Stop
-            }
-            catch [System.Exception] {
-                Write-Warning -Message $_.Exception.Message
-            }
-        }
-    }
-}
-{{< /highlight >}}
+{{< img src="/images/sccm/osd/task-sequence/remove-win10-apps/step-2.png" >}}
 
-### Skript paketieren
+Nun solange auf "Weiter" klicken bis der Vorgang abgeschlossen ist:
 
+{{< img src="/images/sccm/osd/task-sequence/remove-win10-apps/finsih.png" >}}
+
+## Paket verteilen
+
+Nun muss das Paket noch an den Verteilungspunkt gesendet werden. Dazu das Paket auswählen und oben "Inhalt verteilen" anklicken. Im ersten Schritt des Assistenten muss nichts geändert werden:
+
+{{< img src="/images/sccm/osd/task-sequence/remove-win10-apps/distribute-1.png" >}}
+
+Nun wählt man den Verteilungspunkt aus (klick auf "Hinzufügen" > "Verteilungspunkt"). Dort wählt man den SCCM-Server aus:
+
+{{< img src="/images/sccm/osd/task-sequence/remove-win10-apps/distribute-2.png" >}}
+
+Anschließend mit "OK" bestätigen und dann solange auf "Weiter" klicken, bis der Vorgang abgeschlossen ist:
+
+{{< img src="/images/sccm/osd/task-sequence/remove-win10-apps/distribute-finish.png" >}}
+
+# Tasksequenz
+
+Im Tasksequenz-Editor erzeugt man einen neuen Schritt "PowerShell-Skript ausführen":
+
+{{< img src="/images/sccm/osd/task-sequence/remove-win10-apps/ts-1.png" >}}
+
+Diesen Schritt verschiebt man in den Bereich "Betriebssystem einrichten". Dann konfiguriert man Name, Wählt das zuvor erstellte Paket aus, ergänzt den Skriptnamen und wählt als Ausführungsrichtlinie "Bypass" aus:
+
+{{< img src="/images/sccm/osd/task-sequence/remove-win10-apps/ts-2.png" >}}
+
+Optional kann man im Reiter "Optionen" noch festlegen, dass die Tasksequenz bei Fehlern fortgesetzt wird:
+
+{{< img src="/images/sccm/osd/task-sequence/remove-win10-apps/ts-3.png" >}}
+
+{{< callout type="success" title="Fertig" icon="check" >}}
+    Bei der ausgewählten Tasksequenz werden nun alle Windows 10 Apps entfernt.
+{{< /callout >}}
+
+---
+Quelle für `RemoveWindows10Apps.ps1`: [GitHub](https://github.com/SCConfigMgr/ConfigMgr/blob/master/Operating%20System%20Deployment/Invoke-RemoveBuiltinApps.ps1)

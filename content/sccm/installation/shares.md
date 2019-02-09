@@ -24,14 +24,20 @@ Alle Freigaben befinden sich im Ordner `C:\SCCM`. Hier kann natürlich ein belie
 
 Die Zugriffsberechtigungen für die jeweiligen Ordner müssen folgendermaßen festgelegt werden. Dazu die Erweiterten Sicherheitseinstellungen für den jeweiligen Ordner öffnen (Rechtsklick auf den Ordner → Eigenschaften → Tab "Sicherheit" → "Erweitert").
 
-## Berechtigungen
+
+
+## Berechtigungen (NTFS)
 
 Der Besitzer der jeweiligen Ordner sollte der Benutzer `sccmadmin` (also der SCCM Administrator-Account) sein. Weiterhin sollte dieser Benutzer sowie `SYSTEM` Vollzugriff auf "diesen Ordner, Unterordner und Dateien" haben.
 
-## Freigabe
+{{< img src="/images/sccm/installation/shares/share-security.png" >}}
+
+## Berechtigungen (Freigabe)
 
 Unter dem Reiter "Freigabe" müssen die folgenden Berechtigungen erteilt werden:
 
 * `sccmadmin` hat `Vollzugriff`
 * `Jeder` kann `Lesen`
 
+{{< img src="/images/sccm/installation/shares/share-sccmadmin.png" >}}
+{{< img src="/images/sccm/installation/shares/share-everyone.png" >}}
