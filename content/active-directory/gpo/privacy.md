@@ -39,10 +39,9 @@ Die folgenden GPOs sollen helfen, den Informationsfluss von Windows und Office 2
 | Windows-Komponenten/App-Datenschutz > Windows-App-Zugriff auf vertrauenswürdige Geräte zulassen | Deaktiviert |
 | Windows-Komponenten/Datensammlung und Vorabversionen > Benutzersteuerung für Insider-Builds ein-/ausschalten | Deaktiviert |
 | Windows-Komponenten/Datensammlung und Vorabversionen > Feedbackbenachrichtigungen nicht mehr anzeigen | Aktiviert |
-| Windows-Komponenten/Datensammlung und Vorabversionen > Konfigurieren der Benutzeroberfläche der Telemetrie-Opt-in-Einstellung. | Deakviert |
-| Windows-Komponenten/Datensammlung und Vorabversionen > Konfigurieren von Telemetrie-Opt-in-Änderungsbenachrichtigungen. | Deakviert |
-| Windows-Komponenten/Datensammlung und Vorabversionen > Telemetrie zulassen | Deakviert |
-| Windows-Komponenten/Datensammlung und Vorabversionen > Übermitteln des Gerätenamens in Windows-Diagnosedaten zulassen | Deakviert |
+| Windows-Komponenten/Datensammlung und Vorabversionen > Konfigurieren der Benutzeroberfläche der Telemetrie-Opt-in-Einstellung. | Deaktiviert |
+| Windows-Komponenten/Datensammlung und Vorabversionen > Konfigurieren von Telemetrie-Opt-in-Änderungsbenachrichtigungen. | Deaktiviert |
+| Windows-Komponenten/Datensammlung und Vorabversionen > Übermitteln des Gerätenamens in Windows-Diagnosedaten zulassen | Deaktiviert |
 | Windows-Komponenten/Position und Sensoren > Positionskripting deaktivieren | Aktiviert |
 | Windows-Komponenten/Position und Sensoren > Sensoren deaktivieren | Aktiviert |
 | Windows-Komponenten/Position und Sensoren > Speicherort deaktivieren | Aktiviert |
@@ -57,6 +56,22 @@ Die folgenden GPOs sollen helfen, den Informationsfluss von Windows und Office 2
 | Windows-Komponenten/Suche > Websuche nicht zulassen | Aktiviert |
 | Windows-Komponenten/Windows-Fehlerberichterstattung > Keine zusätzlichen Daten senden | Aktiviert |
 | Windows-Komponenten/Windows-Fehlerberichterstattung > Windows-Fehlerberichterstattung deaktivieren | Aktiviert |
+
+### Telemetrie
+
+Die Telemetrie-Übertragung zu Microsoft sollte so restriktiv wie möglich gewählt werden. Für die Versionen Enterprise und Education lässt
+sich dazu die Option "0 -- Sicherheit" auswählen. Für alle anderen Versionen kann die Option "1 -- Einfach" verwendet werden.
+
+{{< callout type="danger" title="Achtung" icon="exclamation-triangle" >}}
+    Die Option "0 – Sicherheit" deaktiviert die Möglichkeit, Updates über Microsoft Update zu beziehen. In diesem Fall bedarf es eines eigenen
+    WSUS oder eines SCCMs, um die Windows 10 Geräte mit Updates zu versorgen.
+{{< /callout >}}
+
+| Richtlinie | Einstellung |
+|---|---|
+| Windows-Komponenten/Datensammlung und Vorabversionen > Telemetrie zulassen | Aktiviert |
+
+{{< img src="/images/active-directory/gpo/telemetry.png" >}}
 
 ## Benutzerrichtlinien
 
@@ -78,3 +93,9 @@ Folgende Einstellungen wurden für Office 2016 vorgenommen. Sie lassen sich verm
 | Microsoft Office 2016/Datenschutz/Trust Center > Programm zur Verbesserung der Benutzerfreundlichkeit aktivieren | Deaktiviert |
 | Microsoft Office 2016/Telemetriedashboard > Hochladen von Daten für den Office-Telemetrie-Agent aktivieren | Deaktiviert |
 | Microsoft Office 2016/Telemetriedashboard > Telemetrie-Datensammlung aktivieren | Deaktiviert |
+
+---
+Quellen: 
+
+* https://docs.microsoft.com/de-de/windows/privacy/configure-windows-diagnostic-data-in-your-organization
+* https://docs.microsoft.com/en-us/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services#how-to-configure-each-setting
