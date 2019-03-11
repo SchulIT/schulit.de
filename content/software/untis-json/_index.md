@@ -2,6 +2,7 @@
 title: UntisJson
 type: section
 ordering: 5
+github: https://github.com/schulit/untis-json
 ---
 
 Mithilfe von UntisJson lassen sich der Vertretungsplan sowie der Klausurplan aus dem Untis-GPO-Format in das menschen-leserliche (und weiterverarbeitbare) JSON-Format umgewandelt werden.

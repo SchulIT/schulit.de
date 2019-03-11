@@ -109,10 +109,12 @@ main.container {
 		font-size: 2.25rem;
 	}
 
-	.table-of-contents {
+	> .float-right {
 		margin-left: 10px;
 		margin-bottom: 10px;
+	}
 
+	.table-of-contents {
 		max-width: 300px;
 
 		ul {
