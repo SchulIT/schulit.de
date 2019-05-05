@@ -42,7 +42,10 @@
         
         {{ .Content }}
 
-        {{ $commitSha := .GitInfo.AbbreviatedHash }}
+        {{ $commitSha := .Hugo.Environment }}
+        {{ if (eq .Hugo.Environment "production") }}
+            {{ $commitSha := .GitInfo.AbbreviatedHash }}
+        {{ end }}
         {{ with .Lastmod }}
         <p class="text-secondary">
             <i class="fa fa-calendar"></i> Letzte Änderung: {{ .Day }}. {{ index $.Site.Data.months (printf "%d" .Month) }} {{ .Year }} {{ dateFormat "15:04" . }} ({{ $commitSha }})
