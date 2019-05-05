@@ -10,7 +10,9 @@ Das ADK muss mit jeder neuen Windows 10 Version ebenfalls aktualisiert werden, d
 
 # Altes Windows ADK deinstallieren
 
-Zunächst muss das aktuelle Windows ADK über die Systemsteuerung deinstalliert werden. Es heißt dort "Windows Assessment and Deployment Kit - Windows 10". 
+Zunächst muss das aktuelle Windows ADK über die Systemsteuerung deinstalliert werden. Es heißt dort "Windows Assessment and Deployment Kit - Windows 10". Ab dem ADK 1809 muss man zusätzlich auch den Windows PE-Teil entfernen:
+
+{{< img src="/images/sccm/maintenance/adk-update/adk-uninstall.png" >}}
 
 {{< callout type="danger" title="Wichtig" >}}
     Anschließend den SCCM-Server neustarten!
@@ -21,6 +23,8 @@ Zunächst muss das aktuelle Windows ADK über die Systemsteuerung deinstalliert 
 ## Download
 
 Zunächst das "Windows ADK for Windows 10, version XXXX" (XXXX durch den aktuellen Build ersetzen) sowie das "Windows PE add-on for the ADK" von [Microsoft](https://docs.microsoft.com/de-de/windows-hardware/get-started/adk-install) herunterladen.
+
+{{< img src="/images/sccm/maintenance/adk-update/adk-download.png" >}}
 
 
 ## Installation (ADK)
