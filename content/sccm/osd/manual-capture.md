@@ -45,10 +45,6 @@ Um die Größe des Image zu reduzieren, sollten einige Aufräum-Maßnahmen ergri
 2. Downloads-Ordner leeren
 3. Autostart überprüfen
 
-{{< callout type="info" >}}
-    asdasd
-{{< /callout >}}
-
 # Schritt 5: Prototyp aufzeichnen
 
 ## Aufzeichnungs-ISO erstellen
