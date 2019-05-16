@@ -1,6 +1,7 @@
 ---
 title: Prototyp aufzeichnen
 type: static
+ordering: 3
 ---
 
 Ist die Windows-Installation etwas komplizierter (oder man möchte viele Nicht-MSI-Programme installieren), bietet es sich an, zunächst einen Prototypen zu erstellen und diesen im Anschluss aufzuzeichnen.
@@ -41,9 +42,14 @@ Zwar lassen sich Updates auch beim Aufspielen des Images auf die Zielcomputer in
 
 Um die Größe des Image zu reduzieren, sollten einige Aufräum-Maßnahmen ergriffen werden:
 
-1. Datenträgerbereinigung aufrufen und alles säubern (als Administrator starten!)
-2. Downloads-Ordner leeren
-3. Autostart überprüfen
+* Datenträgerbereinigung aufrufen und alles säubern (als Administrator starten!)
+* Downloads-Ordner leeren
+* Papierkorb leeren
+* Autostart überprüfen
+
+{{< callout type="danger" title="Wichtig" >}}
+    Es sollte sichergestellt werden, dass kein Benutzer ohne Kennwort auf dem Computer existiert (abgesehen evtl. vom Administrator-Benutzer, dessen Passwort bei der Installation des Betriebssystems später gesetzt wird).
+{{< /callout >}}
 
 # Schritt 5: Prototyp aufzeichnen
 
@@ -71,7 +77,17 @@ Sofern der Prototyp eine virtuelle Maschine ist, sollte diese nun heruntergefahr
 
 ## Aufzeichnen
 
-Nun die Aufzeichnungs-ISO einlegen und die 
+Nun die Aufzeichnungs-ISO einlegen und die Datei "LaunchMedia.cmd" starten. Anschließend dem Assistenten folgen:
+
+{{< img caption="Schritt 1: Aufzeichnungstool starten" src="/images/sccm/osd/manual-capture/capture/step-1.png" >}}
+{{< img caption="Schritt 2: Zunächst auf Weiter klicken" src="/images/sccm/osd/manual-capture/capture/step-2.png" >}}
+{{< img caption="Schritt 3: Nun das Ziel für die WIM-Datei festlegen (auf dem SCCM-Server) und die Anmeldedaten eintragen" src="/images/sccm/osd/manual-capture/capture/step-3.png" >}}
+{{< img caption="Schritt 4: optionale Informationen eintragen" src="/images/sccm/osd/manual-capture/capture/step-4.png" >}}
+{{< img caption="Schritt 5: Zusammenfassung überprüfen und mit Fertig stellen den Aufzeichnungsprozess starten" src="/images/sccm/osd/manual-capture/capture/step-5.png" >}}
+{{< img caption="Zunächst wird sysprep vom SCCM ausgeführt..." src="/images/sccm/osd/manual-capture/capture/step-6.png" >}}
+{{< img caption="... und anschließend wird der Computer neugestartet." src="/images/sccm/osd/manual-capture/capture/step-7.png" >}}
+{{< img caption="Windows PE startet und zeichnet den Rechner auf. Dieser Prozess dauert einige Zeit." src="/images/sccm/osd/manual-capture/capture/step-8.png" >}}
+{{< img caption="Irgendwann ist das Aufzeichnen fertig" src="/images/sccm/osd/manual-capture/capture/finish.png" >}}
 
 ## Virtuelle Maschine zurücksetzen
 
@@ -79,13 +95,8 @@ Die virtuelle Maschine kann nun auf den Zeitpunkt vor dem Aufzeichnen zurückges
 
 # Weitere Schritte
 
-## Image im SCCM einbinden
-
-Nachdem nun das neue Betriebssystem-Image erstellt wurde, muss dieses im SCCM eingebunden werden. Dazu nach "Softwarebibliothek" > "Übersicht" > "Betriebssysteme" > "Betriebssystemabbilder" navigieren.
-
-Auf den Button "Betriebssystemabbild hinzufügen" klicken.
-
-TBC
+* [Abbild ins SCCM einbinden](../add-wim/)
+* [Task-Sequenz erstellen oder bearbeiten](../basic-task-sequence)
 
 {{< callout type="success" title="Fertig" >}}
     Das Image kann nun mithilfe einer Task-Sequenz verteilt werden!
