@@ -1,19 +1,21 @@
 require('../scss/app.scss');
 
+require('bootstrap.native');
 
-const $ = require('jquery');
-require('bootstrap');
+function createElementFromHtml(html) {
+    var template = document.createElement("template");
+    template.innerHTML = html.trim();
+  
+    return template.content.firstChild;
+  }
 
-// Enable jQuery access from outside Webpack
-global.$ = global.jQuery = $;
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.blog-post h1, .blog-post h2, .blog-post h3, .blog-post h4, .blog-post h5, .blog-post h6').forEach(function(el) {
+        let id = el.getAttribute('id');
 
-$(document).ready(function() {
-    $('.blog-post :header').each(function() {
-        var $this = $(this);
-
-        if($this.attr('id') !== null && $this.attr('id') !== undefined) {
-            var $link = $('<a href="#' + $this.attr('id') + '" class="heading-link"><i class="fa fa-link"></i></a>');
-            $this.append($link);
+        if(id !== null) {
+            let link = '<a href="#' + id + '" class="heading-link"><i class="fa fa-link"></i></a>';
+            el.appendChild(createElementFromHtml(link));
         }
     });
 });

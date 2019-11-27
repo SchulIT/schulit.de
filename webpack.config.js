@@ -34,7 +34,7 @@ Encore
     .enableSassLoader()
 
     // uncomment if you're having problems with a jQuery plugin
-    .autoProvidejQuery()
+    //.autoProvidejQuery()
 
     .disableSingleRuntimeChunk()
 
@@ -51,6 +51,15 @@ Encore
         new ManifestPlugin({
             fileName: '../../data/manifest.json'
         })
+    )
+
+    .addLoader(
+        {
+            test: /bootstrap\.native/,
+            use: {
+                loader: 'bootstrap.native-loader'
+            }
+        }
     )
 ;
 
