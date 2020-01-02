@@ -1,6 +1,6 @@
 ---
 title: "Windows Virtual Desktop deaktivieren"
-date: 2020-01-02T16:00:00
+date: 2020-01-02T14:00:00
 author: "Marcel Marnitz"
 type: post
 archive: "2020/01"
