@@ -7,7 +7,7 @@ archive: "2020/01"
 tags: [ "windows", "msi", "sccm" ]
 ---
 
-Nicht immer lässt sich das Erstellen von Verknüpfungen auf dem Desktop oder im Startmenü durch Schalter beim MSI-Installationsprogramm abschalten. Dann ist die Erstellung einer Transformationsdatei möglich, um das Installationsprogramm zu steuern.
+Nicht immer lässt sich das Erstellen von Verknüpfungen auf dem Desktop oder im Startmenü durch Schalter beim MSI-Installationsprogramm abschalten. Dann ist die Erstellung einer Transformationsdatei möglich, um das Installationsprogramm während der Installation zu verändern.
 
 <!--more-->
 
@@ -44,3 +44,11 @@ Anschließend kann die Transformationsdatei erstellt werden. Dazu im Menü auf "
 Im SCCM müssen nun beide Dateien (die originale MSI und die erzeugte MST-Datei) hinterlegt werden. Die Anwendung erstellt man wie eine normale MSI-Anwendung. Allerdings ergänzt man das "Installationsprogramm" am Ende mit `TRANSFORMS=transforms-datei.mst`, wobei `transforms-datei.mst` durch den vorhin gewählten Dateinamen zu ersetzen ist. Bei uns lautet das Installationsprogramm für TigerJython daher: 
 
 `msiexec /i "TigerJython.msi" /q TRANSFORMS=NoShortcuts.mst`
+
+Zwecks Testen sollte man einen sauberen Computer verwenden (eine virtuelle Maschine eignet sich hervorragend). Dort kann man die Installationsdatei gemeinsam mit der Transformationsdatei aufrufen und schauen, ob es das gewünschte tut. Als Tipp empfiehlt sich der Parameter `/L*v install.log`, welcher eine Logdatei mit nützlichen Informationen schreibt. Insbesondere im Falle eines Fehlers ist dies eine erste Anlaufstelle.
+
+# Abschließende Worte zu Orca
+
+Grundsätzlich lässt sich mit Orca die gesamte MSI-Installationsdatei bearbeiten. Allerdings ist dies nicht immer ratsam. Hier muss man also wissen, was man tut. Entfernt man etwas falsches, meldet das Installationsprogramm eine Fehlermeldung beim Starten.
+
+Aktuell benutzen wir Orca ausschließlich, um Verknüpfungen zu entfernen. So auch bei MySQL Workbench, wo man zusätzlich zu den obigen Schritten noch in der Tabelle "Directory" einen Eintrag ("MySQLStartMenuFolder") löschen muss.
