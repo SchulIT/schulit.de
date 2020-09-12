@@ -28,7 +28,7 @@
 
     {{ if .Pages }}
         <div class="pages">
-            {{ range (sort .Pages "Params.ordering") }}
+            {{ range (sort .RegularPages "Params.ordering") }}
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title"><a href="{{ .URL }}">{{ .LinkTitle }}</a></h5>
