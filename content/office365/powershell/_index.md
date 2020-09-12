@@ -1,5 +1,6 @@
 ---
 title: PowerShell
 type: section
-draft: true
 ---
+
+Mithilfe der PowerShell lassen sich viele Aufgaben für Office 365 komfortabel erledigen.
