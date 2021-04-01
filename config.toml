@@ -17,7 +17,7 @@ enableGitInfo = true
 
 [[menu.main]]
     identifier = "index"
-    name = "Startseite"
+    name = "Start"
     url = "/"
     weight = -10
 

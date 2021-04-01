@@ -1,29 +1,17 @@
-{{ define "javascript" }}
-{{ if (ne .Params.comments false) }}
-<script data-isso="https://isso.schulit.de/" data-isso-css="false" src="https://isso.schulit.de/js/embed.min.js"></script>
-{{ end}}
-{{ end }}
+{{ define "header" }}
 
-{{ define "main" }}
-
-<main class="container">
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="/">{{ .Site.Title }}</a></li>
-            <li class="breadcrumb-item"><a href="{{ "/blog/" | relURL }}">Blog</a></li>
-            <li class="breadcrumb-item">{{ .Title }}</li>
-        </ol>
-    </nav>
-
-    <div class="row">
-        <div class="col-md-8">
-            <div class="blog-post">
-                <h2 class="post-title">
-                    {{ .LinkTitle }}
-                </h2>
+<section class="bg-primary mb-4">
+    <div class="container py-5">
+        <div class="align-items-center">
+            <div class="text-center text-md-left mb-n4">
+                <h1 class="text-white font-weight-bold mb-4">
+                    {{ block "header_title" . }}
+                        {{ .Title }}
+                    {{ end }}
+                </h1>
 
                 {{ if ne .Type "static" }}
-                <p class="post-meta">
+                <div class="text-white">
                     <i class="fa fa-calendar"></i> {{ .Date.Day }}. {{ index $.Site.Data.months (printf "%d" .Date.Month) }} {{ .Date.Year }}
 
                     {{ if .Params.tags }}
@@ -33,28 +21,22 @@
                             <a href="{{ "/blog/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>{{ if ne $counter (sub $length 1) }}, {{ end }}
                         {{ end }}
                     {{ end }}
-                </p>
+                </div>
                 {{ end }}
-                
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }}
+
+{{ define "main" }}
+
+<main class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="blog-post">                
                 {{ .Content }}
-
-                {{ $commitSha := .GitInfo.AbbreviatedHash }}
-                {{ with .Lastmod }}
-                <p class="text-secondary">
-                    <i class="fa fa-calendar"></i> Letzte Änderung: {{ .Day }}. {{ index $.Site.Data.months (printf "%d" .Month) }} {{ .Year }} {{ dateFormat "15:04" . }} ({{ $commitSha }})
-                </p>
-                {{ end }}
             </div>
-
-            {{ if (ne .Params.comments false) }}
-            <div class="comments">
-                <h1>Kommentare</h1>
-
-                <section id="isso-thread">
-
-                </section>
-            </div>
-            {{ end }}
         </div>
 
         <div class="col-md-4 widgets">

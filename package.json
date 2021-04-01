@@ -1,15 +1,20 @@
 {
   "dependencies": {
-    "@symfony/webpack-encore": "^0.28.0",
-    "bootstrap": "^4.4.0",
-    "bootstrap.native": "^2.0.27",
-    "bootstrap.native-loader": "^2.0.0",
-    "font-awesome": "^4.7.0",
+    "@beyonk/google-fonts-webpack-plugin": "^1.5.0",
+    "@fortawesome/fontawesome-free": "^5.15.1",
+    "@symfony/webpack-encore": "^0.32.0",
+    "aos": "^2.3.4",
+    "bootstrap": "^4.5.0",
+    "bootswatch": "^4.6.0",
     "fuse.js": "^3.3.0",
     "hugo-lunr": "^0.0.4",
+    "jquery": "^3.6.0",
     "mark.js": "^8.11.1",
     "node-sass": "^4.9.3",
+    "popper.js": "^1.16.1",
     "sass-loader": "^7.1.0",
-    "uglify-js": "^3.7.0"
+    "slick-carousel": "^1.8.1",
+    "uglify-js": "^3.7.0",
+    "zoom-vanilla.js": "^2.0.6"
   }
 }

@@ -4,11 +4,25 @@ type: static
 menu: main
 weight: 6
 toc: false
-comments: false
+icon: fas fa-user-friends
+summary: ' '
 ---
 
-Mein Name ist Marcel Marnitz, angehender Lehrer für Mathematik und Informatik. Bereits seit einigen Jahren betreue ich die IT meiner ehemaligen Schule und habe mir gemeinsam mit den Kollegen ein breites Wissen für schulische IT angeeignet, welche ich auf dieser Webseite auch anderen Lehrkräften bereitstellen möchte, die mit schulischer IT beauftragt sind. In unserem Schulnetzwerk betreuen wir knapp 150 stationäre PCs sowie 60 Windows-Tablets. 
+{{< features >}}
+    {{< feature icon="far fa-id-card" header="Marcel Marnitz">}}
+        Kurzfassung: Baujahr 1992, Grundschule, Abitur, RWTH Aachen und dann wieder zurück zur Schule.
+    {{< /feature >}}
 
-Neben IT-Wissen möchte ich auch die in den letzten Jahren programmierte Software, welche sich seit mehr als 5 Jahren bewährt hat, quelloffen und kostenlos anderen Schulen bereitstellen. 
+    {{< feature icon="fas fa-chalkboard-teacher" header="Fächer">}}
+        In der Schule unterrichte ich Mathematik und Informatik sowie ITG.
+    {{< /feature >}}
 
-Dieser Blog wird übrigens mithilfe von [Hugo](https://gohugo.io/) erstellt.
+    {{< feature icon="fas fa-network-wired" header="IT-Arbeit" >}}
+        An meiner Schule betreue ich ca. 400 Computer (stationäre PCs, Laptops, Tablets) und insgesamt acht Windows Server.
+    {{< /feature >}}
+{{< /features >}}
+
+{{< story header="Erstellt mit Hugo" description="Dieser Blog wird mithilfe des statischen Websitegenerator Hugo erstellt." button="gohugo.io" link="https://gohugo.io">}}
+    {{< img src="/images/about/hugo.png" caption="© Hugo Authors" >}}
+{{< /story >}}
+

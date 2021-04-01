@@ -2,20 +2,19 @@
 {{ $paginator := .Paginate (where .Site.RegularPages "Section" "blog").ByPublishDate.Reverse }}
 
 <main class="container">
-    {{ partial "breadcrumb" . }}
-
     <div class="row">
         <div class="col-md-8">
             {{ range $paginator.Pages }}
                 <div class="blog-post">
-                    <h2 class="post-title">
+                    <h3 class="post-title">
                         <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
-                    </h2>
+                    </h3>
 
                     <p class="post-meta">
-                        <i class="fa fa-calendar"></i> {{ .Date.Day }}. {{ index $.Site.Data.months (printf "%d" .Date.Month) }} {{ .Date.Year }}
+                        <i class="fa fa-calendar-alt"></i> {{ .Date.Day }}. {{ index $.Site.Data.months (printf "%d" .Date.Month) }} {{ .Date.Year }}
                         
                         {{ if .Params.tags }}
+                        <span class="mx-1"></span>
                         <i class="fa fa-tags"></i>
                             {{ $length := (len .Params.tags )}}
                             {{ range $counter, $tag := .Params.tags }}
@@ -26,7 +25,6 @@
                     <p>
                         {{ .Summary }}
                     </p>
-                    <a href="{{ .URL }}">weiterlesen</a>
                 </div>
             {{ end }}
 

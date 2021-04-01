@@ -2,7 +2,7 @@
     {{ with .Get "link" }}
         <a href="{{.}}">
     {{ end }}
-        <img class="figure-img img-fluid" src="{{ .Get "src" }}" alt="{{ .Get "caption" }}" />
+        <img class="figure-img img-fluid" src="{{ .Get "src" }}" alt="{{ .Get "caption" }}" {{ if .Get "zoom" }}data-action="zoom"{{ end }} />
     {{ if .Get "link"}}
         </a>
     {{ end }}

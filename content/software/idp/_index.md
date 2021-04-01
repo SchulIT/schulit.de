@@ -1,12 +1,39 @@
 ---
-title: Identity Provider (IdP)
+title: Benutzerverwaltung & Single-Sign-On 
 ordering: 1
 type: chapter
 github: https://github.com/schulit/idp
+docs: https://schulit-idp.readthedocs.io/en/latest/
+summary: Über die Benutzerverwaltung werden alle Benutzer der SchulIT Suite eingeplegt. Das Single-Sign-On erlaubt das Anmelden an den verschiedenen Anwendungen.
+menu:
+    main:
+        parent: Software
+        weight: 1
 ---
 
-Der Identity Provider stellt die zentrale Benutzerverwaltung der Software Suite dar.
+{{< features >}}
+    {{< feature icon="fas fa-users" header="Zentrale Benutzerverwaltung" >}}
+        Alle Benutzer der SchulIT Suite werden an einem zentralen Ort verwaltet.
+    {{< /feature >}}
 
-<!--more-->
+    {{< feature icon="fas fa-user-tag" header="Rechteverwaltung" >}}
+        Einzelne Dienste oder Rollen können über Benutzertypen und -gruppen gesteuert werden.
+    {{< /feature >}}
 
-{{< construction >}}
+    {{< feature icon="fa fa-th" header="Eine Anmeldung - viele Dienste" >}}
+        Mittels SAML-Protokoll wird man bei allen freigeschalteten Anwendungen automatisch angemeldet. Das funktioniert auch mit externen Anwendungen, die SAML untersützen.
+    {{< /feature >}}
+
+    {{< feature icon="fas fa-qrcode" header="Selbst-Registrierung über Codes " >}}
+        Über Registrierungscodes können Personen (bspw. Eltern) ihre Registrierung selbstständig vornehmen.
+    {{< /feature >}}
+
+    {{< feature icon="fas fa-upload" header="Benutzerimport" >}}
+        Benutzer können mittels CSV-Datei oder über eine API-Schnittstelle automatisiert importiert werden.
+    {{< /feature >}}
+
+    {{< feature icon="far fa-address-book" header="Active Directory Anbindung" >}}
+        Eine Anbindung an ein lokales Active Directory ist möglich, sodass die ein Lehrkräfte und Lernende aus dem Active Directory importiert werden können.
+    {{< /feature >}}
+
+{{< /features >}}

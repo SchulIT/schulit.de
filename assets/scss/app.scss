@@ -1,49 +1,28 @@
-/*@font-face {
-	font-family: 'Source Sans Pro';
-	font-style: normal;
-	font-weight: 400;
-	src: url("../fonts/SourceSansPro-Regular.eot");
-	src: local("Source Sans Pro Regular"),
-		local("SourceSansPro-Regular"),
-		url("../fonts/SourceSansPro-Regular.eot") format("embedded-opentype"),
-		url("../fonts/SourceSansPro-Regular.woff2") format("woff2"),
-		url("../fonts/SourceSansPro-Regular.woff") format("woff"),
-		url("../fonts/SourceSansPro-Regular.ttf") format("truetype"),
-		url("../fonts/SourceSansPro-Regular.svg") format("svg");
-}*/
+$font-size-base: 1rem;
+$enable-responsive-font-sizes: true;
 
-
-//$enable-shadows: true;
-//$enable-gradients: true;
-
-// Import Bootstrap
+@import '../../node_modules/bootswatch/dist/flatly/variables';
 @import '../../node_modules/bootstrap/scss/bootstrap';
+@import 'flatly';
 
 // Import FontAwesome
-@import '../../node_modules/font-awesome/scss/font-awesome';
+@import '../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome';
+@import '../../node_modules/@fortawesome/fontawesome-free/scss/solid';
+@import '../../node_modules/@fortawesome/fontawesome-free/scss/regular';
+@import '../../node_modules/@fortawesome/fontawesome-free/scss/brands';
+
+@import '../../node_modules/aos/dist/aos.css';
+@import '../../node_modules/slick-carousel/slick/slick';
+@import '../../node_modules/slick-carousel/slick/slick-theme';
+
+@import "../../node_modules/zoom-vanilla.js/dist/zoom.css";
+
+body {
+  height: 100vh;
+}
 
 // Import Callouts
 @import './callouts.scss';
-
-html {
-	position: relative;
-	min-height: 100%;
-}
-
-body {
-	margin: 0;
-	margin-bottom: 160px;
-}
-
-footer {
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-}
-
-h1, h2, h3, h4 {
-	font-weight: 300;
-}
 
 h1, h2, h3, h4, h5, h6 {
 	.heading-link {
@@ -66,6 +45,8 @@ main.container {
 		background: none;
 		padding-left: 0;
 	}
+
+
 
 	.card-deck {
 		margin-bottom: 10px;
@@ -105,15 +86,6 @@ main.container {
 		@extend .text-secondary;
 	}
 
-	h2.post-title {
-		font-size: 2.25rem;
-	}
-
-	> .float-right {
-		margin-left: 10px;
-		margin-bottom: 10px;
-	}
-
 	.table-of-contents {
 		max-width: 300px;
 
@@ -128,7 +100,7 @@ main.container {
 		}
 	}
 
-	p {
+	> p {
 		text-align: justify;
 	}
 
@@ -144,101 +116,8 @@ main.container {
 		@extend .table-striped;
 	}
 
-	h1 {
-		font-size: 1.75rem;
-	}
-
-	h2 {
-		font-size: 1.5rem;
-	}
-
-	h3 {
-		font-size: 1.25rem;
-	}
-
-	h4 {
-		font-size: 1rem;
-	}
-
-	h5 {
-
-	}
-
-	h6 {
-
-	}
-
 	pre {
 		@extend kbd;
-	}
-
-	+ .comments {
-		.textarea-wrapper {
-			margin-bottom: 5px;
-
-			.textarea {
-				height: 100px;
-				@extend textarea;
-				@extend .form-control;
-			}
-		}
-		
-		.auth-section {
-			@extend .row;
-
-			.input-wrapper {
-				@extend .col-md-4;
-			}
-
-			.post-action {
-				margin-left: 15px;
-			}
-		}
-
-		input[type=text],
-		input[type=email] {
-			@extend .form-control;
-		}
-
-		input[type=button] {
-			@extend .btn;
-			@extend .btn-secondary;
-		}
-
-		input[type=submit] {
-			@extend .btn;
-			@extend .btn-primary;
-		}
-
-		#isso-thread {
-			.isso-comment {
-				.isso-comment-header {
-					.permalink {
-						@extend .text-muted;
-					}
-
-					.author {
-						font-weight: bold;
-					}
-
-					.spacer {
-						margin: 0px 4px;
-					}
-				}
-
-				.isso-comment-footer {
-					.edit {
-						margin-right: 5px;
-					}
-				}
-
-				.avatar {
-					float: left;
-					width: 7%;
-					margin-right: 5px;
-				}
-			}
-		}
 	}
 }
 
@@ -256,14 +135,6 @@ nav.pagination {
 	.card {
 		margin-bottom: 10px;
 	}
-}
-
-footer {
-	background-color: #f8f8f8;
-	border-top: 1px solid #e5e5e5;
-	padding: 2rem 0;
-	text-align: center;
-	color: #999;
 }
 
 #search-results {

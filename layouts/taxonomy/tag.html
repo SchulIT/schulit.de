@@ -1,16 +1,22 @@
+{{ define "header" }}
+<section class="bg-primary mb-4">
+    <div class="container py-5">
+        <div class="align-items-center">
+            <div class="text-center text-md-left mb-n4">
+                <h1 class="text-white font-weight-bold mb-4">
+                    <i class="fa fa-tag"></i> {{ .Title }}
+                </h1>
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }}
+
 {{ define "main" }}
 
 {{ $tag := lower .Title }}
 
 <main class="container">
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="/">{{ .Site.Title }}</a></li>
-            <li class="breadcrumb-item"><a href="{{ "/blog/" | relURL }}">Blog</a></li>
-            <li class="breadcrumb-item">Tag "{{ $tag }}"</li>
-        </ol>
-    </nav>
-
     <div class="row">
         <div class="col-md-8">
             {{ $paginator := .Paginate .Data.Pages }}

@@ -1,6 +1,8 @@
 ---
 title: Active Directory
 type: section
-menu: main
 weight: 2
+menu:
+    main:
+        parent: Anleitungen
 ---

@@ -1,11 +1,24 @@
 ---
 title: Active Directory Authentication Server
-ordering: 2
+ordering: 20
 type: section
+github: https://github.com/SchulIT/adauth-server
+docs: https://github.com/SchulIT/adauth-server/blob/master/README.md
+summary: Mithilfe des AD Auth Servers wird ermöglicht, dass Benutzer den Benutzernamen und das Passwort aus dem Active Directory nutzen können.
+menu:
+    main:
+        parent: Software
+        weight: 20
 ---
 
-Mithilfe des AD Auth Servers wird ermöglicht, dass Benutzer den Benutzernamen und das Passwort aus dem Active Directory nutzen können.
+{{< features >}}
+    {{< feature icon="fas fa-sign-in-alt" header="Single-Sign-On">}}
+        Ermöglicht die Nutzung der SchulIT Suite mit Benutzernamen und Passwort aus dem pädagogischen Netzwerk. 
+    {{< /feature >}}
 
-<!--more-->
+    {{< feature icon="fas fa-shield-alt" header="Höchste Sicherheit dank TLS">}}
+        Die Verbindung zum Active Directory Authentication Server wird mittels TLS abgesichert. Passwörter können somit während der Übertragung nicht entschlüsselt werden.
+    {{< /feature >}}
+{{< /features >}}
 
 {{< construction >}}

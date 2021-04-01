@@ -1,28 +1,7 @@
 {{ define "main" }}
 
 <main class="container">
-    {{ partial "breadcrumb" . }}
-
     <div class="blog-post">
-        <h2 class="post-title">
-            {{ .Title }}
-        </h2>
-
-        {{ if (isset .Params "github")  }}
-        <div class="float-right">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title"><i class="fa fa-github"></i> GitHub</h5>
-
-                    <p class="card-text">Die Entwicklung findet auf GitHub statt.</p>
-
-                    <a href="{{.Params.github}}" target="_blank" class="card-link"><i class="fa fa-external-link"></i> Projektseite</a>
-                    <a href="{{.Params.github}}/releases" target="_blank" class="card-link"><i class="fa fa-external-link"></i> Downloads</a>
-                </div>
-            </div>
-        </div>
-        {{ end }}
-        
         {{ .Content }}
     </div>
 
@@ -65,10 +44,6 @@
                             {{ end }}
                             {{ if gt $numPages 5 }}
                             <a href="{{ .URL }}"><span class="badge badge-primary">+{{ sub (len .Pages)  5 }} weitere</span></a>
-                            {{ end }}
-                            
-                            {{ range .Sections }}
-                                <a href="{{ .URL }}" class="card-link" title="{{ trim (plainify .Summary) "\n" }}">{{ .LinkTitle }}</a>
                             {{ end }}
                         </div>
                     </div>

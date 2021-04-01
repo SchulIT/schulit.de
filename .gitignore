@@ -6,6 +6,7 @@
 hugo*
 
 # Generated files at default location
+/output/
 /public/
 /resources/_gen
 

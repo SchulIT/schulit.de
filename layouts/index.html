@@ -1,70 +1,60 @@
+{{ define "header_title" }}
+    Schulische IT und Software für Schulen
+{{ end }}
+{{ define "header_description" }}
+    Auf diesen Seiten soll unser Wissen zu schulischer IT bereitgestellt sowie unsere Software für die digitale
+    Organisation des Schulalltags vorgestellt werden.
+{{ end }}
+{{ define "header_buttons" }}
+    <a href="/tutorials" class="btn btn-info">
+        <i class="far fa-file-alt"></i> Zu den Anleitungen
+    </a>
+
+    <a href="/software" class="btn btn-info">
+        <i class="fas fa-box-open"></i> Zur Software
+    </a>
+{{ end }}
+
 {{ define "main" }}
 
-<main class="container">
-    <div class="jumbotron">
-        <h2 class="display-4">Willkommen!</h2>
-        <p class="lead">Auf diesen Seiten sollen Anleitungen zu schulischer IT-Arbeit gesammelt und allen verfügbar gemacht werden!</p>
-    </div>
-</main>
-
-<main class="container">
-    <div class="card-deck">
-        <div class="card mb-3">
-            <div class="card-body">
-                <h5 class="card-title">
-                    <a href="/blog">Blog</a>
-                </h5>
-                <p class="card-text">
-                    Unsortierte Beiträge aus der IT-Welt der Schule.
+<section>
+    <div class="container mb-4">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mt-5 mt-md-0">
+                <h3 class="mt-4 h5">
+                    <i class="fas fa-code"></i> Open Source
+                </h3>
+                <p class="regular">
+                    Der Quelltext aller Programme steht frei zur Verfügung und kann verändert werden. Wir verwenden entweder die MIT oder AGPL.
                 </p>
             </div>
-        </div>
-
-        <div class="w-100 d-none d-xs-block d-sm-none"><!-- wrap every 1 on xs--></div>
-
-        <div class="card mb-3">
-            <div class="card-body">
-                <h5 class="card-title">
-                    <a href="/office365">Office 365</a>
-                </h5>
-                <p class="card-text">
-                    Nützliche Anleitungen für die Administration von Office 365.
+            <div class="col-lg-4 col-md-6 mt-5 mt-md-0">
+                <h3 class="mt-4 h5">
+                    <i class="fas fa-money-bill-wave"></i> Kostenlos
+                </h3>
+                <p class="regular">
+                    Alle Programme stehen kostenlos zur Verfügung. Das ist jetzt so und wird auch so bleiben.
                 </p>
             </div>
-        </div>
 
-        <div class="w-100 d-none d-sm-block d-md-none"><!-- wrap every 2 on sm--></div>
-
-        <div class="card mb-3">
-            <div class="card-body">
-                <h5 class="card-title">
-                    <a href="/sccm">SCCM</a>
-                </h5>
-                <p class="card-text">
-                    Anleitungen rund um das SCCM.
-                </p>
-            </div>
-        </div>
-
-        <div class="w-100 d-none d-xs-block d-sm-none"><!-- wrap every 1 on xs--></div>
-
-        <div class="card mb-3">
-            <div class="card-body">
-                <h5 class="card-title">
-                    <a href="/software">Software</a>
-                </h5>
-                <p class="card-text">
-                    Im Schulalltag verwendete Software open-source für jeden!
+            <div class="col-lg-4 col-md-6 mt-5 mt-md-0">
+                <h3 class="mt-4 h5">
+                    <i class="fas fa-chalkboard-teacher"></i> Von Lehrkräften für die Schule
+                </h3>
+                <p class="regular">
+                    Die Software wird von Lehrkräften entwickelt, um den Schulalltag zu erleichtern.
                 </p>
             </div>
         </div>
     </div>
-</main>
+</section>
 
 {{ $blog := first 2 (where .Site.RegularPages "Section" "blog").ByPublishDate.Reverse}}
 
 <main class="container">
-    <h2>Aus dem Blog</h2>
+    <h3 class="h5">
+        <i class="fas fa-rss"></i> Aus dem Blog
+    </h3>
 
     <div class="card-deck">
         {{ range $blog }}
@@ -87,8 +77,6 @@
             <div class="w-100 d-none d-sm-block d-md-none"><!-- wrap every 1 on sm--></div>
         {{ end }}
     </div>
-
-    <a href="/blog">Zum Blog</a>
 </main>
 
 {{ end }}

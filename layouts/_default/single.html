@@ -1,19 +1,7 @@
-{{ define "javascript" }}
-{{ if (ne .Params.comments false) }}
-<script data-isso="https://isso.schulit.de/" data-isso-css="false" src="https://isso.schulit.de/js/embed.min.js"></script>
-{{ end}}
-{{ end }}
-
 {{ define "main" }}
 
 <main class="container">
-    {{ partial "breadcrumb" . }}
-
     <div class="blog-post">
-        <h2 class="post-title">
-            {{ .LinkTitle }}
-        </h2>
-
         {{ if and (eq .Type "static") (ne .Params.toc false)  }}
         <div class="table-of-contents float-right">
             <div class="card">
@@ -41,28 +29,7 @@
         {{ end }}
         
         {{ .Content }}
-
-        {{ $commitSha := .Hugo.Environment }}
-        {{ if (eq .Hugo.Environment "production") }}
-            {{ $commitSha := .GitInfo.AbbreviatedHash }}
-        {{ end }}
-        {{ with .Lastmod }}
-        <p class="text-secondary">
-            <i class="fa fa-calendar"></i> Letzte Änderung: {{ .Day }}. {{ index $.Site.Data.months (printf "%d" .Month) }} {{ .Year }} {{ dateFormat "15:04" . }} ({{ $commitSha }})
-        </p>
-        {{ end }}
-
     </div>
-
-    {{ if (ne .Params.comments false) }}
-    <div class="comments">
-        <h1>Kommentare</h1>
-
-        <section id="isso-thread">
-
-        </section>
-    </div>
-    {{ end }}
 </main>
 
 {{ end }}

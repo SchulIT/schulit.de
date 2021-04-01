@@ -4,20 +4,21 @@ linktitle: Impressum
 type: static
 toc: false
 comments: false
+summary: ' '
 ---
 
 # Angaben gemäß § 5 TMG
 Marcel Marnitz  
-Mörgensstr. 1  
-52064 Aachen
+Veltmanplatz 8c  
+52062 Aachen
 
 # Kontakt
 E-Mail: [marcelmarnitz@outlook.com](mailto:marcelmarnitz@outlook.com)
 
 # Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV
 Marcel Marnitz  
-Mörgensstr. 1  
-52064 Aachen
+Veltmanplatz 8c  
+52062 Aachen
 
 ## Haftung für Inhalte
 Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den
