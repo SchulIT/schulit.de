@@ -4,6 +4,9 @@ ordering: 20
 type: section
 github: https://github.com/SchulIT/adauth-server
 docs: https://github.com/SchulIT/adauth-server/blob/master/README.md
+license:
+    text: MIT
+    link: https://github.com/SchulIT/adauth-server/blob/master/LICENSE.md
 summary: Mithilfe des AD Auth Servers wird ermöglicht, dass Benutzer den Benutzernamen und das Passwort aus dem Active Directory nutzen können.
 menu:
     main:

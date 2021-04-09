@@ -4,6 +4,9 @@ ordering: 2
 type: section
 github: https://github.com/schulit/icc
 docs: https://icc.readthedocs.org/
+license:
+    text: AGPL-3.0
+    link: https://github.com/SchulIT/icc/blob/master/LICENSE
 summary: Das ICC ist die zentrale Organisationsplatform für den schulischen Alltag. Es bildet den Schulalltag online ab und verknüpft alle verfügbaren Daten zu einer persönlichen Tagesagenda. 
 menu:
     main:
@@ -57,7 +60,7 @@ menu:
         Die Stammdaten können aus SchILD NRW importiert werden. Pläne können aus Untis importiert werden.
     {{< /feature >}}
 
-    {{< feature icon="fas fa-balance-scale" header="AGPL3.0-Lizenz " >}}
+    {{< feature icon="fas fa-balance-scale" header="AGPL-3.0-Lizenz " >}}
         Der Quelltext des ICC ist auf GitHub öffentlich. Herunterladen, Nutzen und Weitergeben sind explizit erlaubt. Jeder ist willkommen, das ICC weiter zu verbessern.
     {{< /feature >}}
 {{< /features >}}

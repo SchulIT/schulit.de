@@ -77,7 +77,7 @@
         <section class="bg-primary mb-4">
             <div class="container py-5">
                 <div class="row align-items-center">
-                    <div class="{{ if and (isset .Page.Params "gallery") (eq .Page.Params.gallery true) }}col-md-6{{ else }}col-md-12{{ end }} text-center text-md-left mb-n4">
+                    <div class="{{ if and (isset .Page.Params "gallery") }}col-md-8{{ else }}col-md-12{{ end }} text-center text-md-left mb-n4">
                         <h1 class="text-white font-weight-bold mb-4">
                             {{ if (isset .Page.Params "icon")}}
                                 <i class="{{ .Page.Params.icon }}"></i>
@@ -99,18 +99,36 @@
                                         <i class="fab fa-github"></i> GitHub
                                     </a>
                                 {{ end }}
+
+                                {{ if (isset .Page.Params "download" )}}
+                                    <a class="btn btn-info" href="{{ .Page.Params.download }}" target="_blank">
+                                        <i class="fas fa-download"></i> Download
+                                    </a>
+                                {{ end }}
+
+                                {{ if (isset .Page.Params "license" )}}
+                                    <a class="btn btn-info" href={{ .Page.Params.license.link }} target="_blank">
+                                        <i class="fas fa-balance-scale"></i> {{ .Page.Params.license.text }}
+                                    </a>
+                                {{ end }}
             
                                 {{ if (isset .Page.Params "docs")}}
                                     <a class="btn btn-success" href="{{ .Page.Params.docs }}" target="_blank">
-                                        <i class="fa fa-book"></i> Dokumentation
+                                        <i class="fas fa-book"></i> Dokumentation
                                     </a>
                                 {{ end }}
                             {{ end }}
                         </div>
                     </div>
         
-                    <div class="col-md-6">
-                        {{ block "header_gallery" . }} {{ end }}
+                    <div class="col-md-4 d-none d-md-block">
+                        {{ block "header_gallery" . }}
+                            <div class="story-slider">
+                                {{ range .Page.Params.gallery }}
+                                    <img src="{{ . }}" alt="" />
+                                {{ end }}
+                            </div>
+                        {{ end }}
                     </div>
                 </div>
             </div>
