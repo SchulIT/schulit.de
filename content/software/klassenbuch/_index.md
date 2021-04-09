@@ -7,6 +7,10 @@ license:
     text: AGPL-3.0
     link: https://github.com/SchulIT/klassenbuch/blob/master/LICENSE.md
 summary: (vsl. ab Sommer 2021) Mit dem digitalen Klassenbuch wandert das analoge Klassenbuch ins Web.
+menu:
+    main:
+        parent: Software
+        weight: 3
 ---
 
 {{< construction >}}
