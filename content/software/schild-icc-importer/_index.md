@@ -1,5 +1,5 @@
 ---
-title: Schild ICC Importer
+title: SchILD ICC Importer
 type: section
 ordering: 32
 github: https://github.com/schulit/schild-icc-importer
@@ -26,7 +26,11 @@ menu:
         Die Unterstützung für MySQL kann durch eine Erweiterung der SchildExport-Datenbank ermöglicht werden.
     {{< /feature >}}
 
-    {{< feature icon="fab fa-windows" header="Windows 10 & Server" >}}
-        Das Programm ist sowohl unter Windows 10 als auch unter Windows Server 2016/2019 lauffähig.
+    {{< feature icon="fab fa-windows" header="SchILD 2.x" >}}
+        Das Tool unterstützt stets die aktuelle Version von SchILD. Aktuell unterstützt das Tool die neuesten Versionen aus dem 2.x-Zweig.
     {{< /feature >}}
 {{< /features >}}
+
+{{< callout type="info" title="Disclaimer">}}
+    Diese Software wird weder vom <a href="https://www.svws.nrw.de/">Ministerium für Schule und Bildung des Landes Nordrhein-Westfalens</a> entwickelt noch offiziell unterstützt.
+{{< /callout >}}
