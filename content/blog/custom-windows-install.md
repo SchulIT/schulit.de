@@ -1,7 +1,7 @@
 ---
 title: Angepasste Windows-Installation erstellen
 date: 2021-02-10T00:00:00
-tags: ["intune", "mdm", "osd"]
+tags: [ "windows", "intune", "mdm", "osd"]
 author: "Marcel Marnitz"
 type: post
 archive: "2021/02"

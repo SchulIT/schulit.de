@@ -22,7 +22,11 @@ summary: ' '
     {{< /feature >}}
 {{< /features >}}
 
+{{< story header="Open Source-Lizenz von JetBrains" description="Vielen Dank an JetBrains, die mir ihre IDE PhpStorm kostenfrei lizensieren." button="Zu JetBrains" link="https://www.jetbrains.com/de-de/">}}
+
+{{< /story >}}
+
+
 {{< story header="Erstellt mit Hugo" description="Dieser Blog wird mithilfe des statischen Websitegenerator Hugo erstellt." button="gohugo.io" link="https://gohugo.io">}}
-    {{< img src="/images/about/hugo.png" caption="© Hugo Authors" >}}
 {{< /story >}}
 
