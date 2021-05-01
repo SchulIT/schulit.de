@@ -31,8 +31,12 @@ menu:
     {{< /feature >}}
 {{< /features >}}
 
-{{< story header="Einstellungsmöglichkeiten" description="Der Import von Klausurschreibenden wird genauso untersützt wie das Überschreiben von Fächerkürzeln (falls eine Angleichung nicht möglich ist).">}}
-    {{< img src="/images/software/untis-icc-importer/settings.png" zoom=true >}}
+{{< story header="Klausurschreibende importieren" description="Auf Wunsch können Klausurschreibende entweder aus Untis übernommen werden oder vom ICC ermittelt werden (durch die Kursbelegung). Es ist ebenso möglich, Ausnahmen zu definieren, sodass man anhand des Klausurnamens die Klausurschreiber entweder aus Untis übernimmt oder vom ICC ermitteln lässt.">}}
+    {{< img src="/images/software/untis-icc-importer/settings-1.png" zoom=true >}}
+{{< /story >}}
+
+{{< story header="Fächer und Klassen überschreiben" description="Manchmal ist es nicht möglich, dass die Fachbezeichnungen in Untis und der Schulverwaltungssoftware gleich zu halten. Daher ist es möglich, Fächer vor dem Hochladen umzubenennen, damit das ICC diese wiedererkennt. Sind Klassen- oder Jahrgangsstufen-übergreifende Kurse in Untis anders eingepflegt als in der Schulverwaltungssoftware, so lässt sich auch dies über den Importer angeben. So werden die Kurse vom ICC wiedererkannt." align=right >}}
+    {{< img src="/images/software/untis-icc-importer/settings-2.png" zoom=true >}}
 {{< /story >}}
 
 {{< callout type="info" title="Disclaimer">}}
