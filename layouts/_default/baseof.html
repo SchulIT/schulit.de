@@ -95,25 +95,25 @@
                         <div class="buttons mb-4">
                             {{ block "header_buttons" . }}
                                 {{ if (isset .Page.Params "github")}}
-                                    <a class="btn btn-info" href="{{ .Page.Params.github }}" target="_blank">
+                                    <a class="btn btn-info mt-1" href="{{ .Page.Params.github }}" target="_blank">
                                         <i class="fab fa-github"></i> GitHub
                                     </a>
                                 {{ end }}
 
                                 {{ if (isset .Page.Params "download" )}}
-                                    <a class="btn btn-info" href="{{ .Page.Params.download }}" target="_blank">
+                                    <a class="btn btn-info mt-1" href="{{ .Page.Params.download }}" target="_blank">
                                         <i class="fas fa-download"></i> Download
                                     </a>
                                 {{ end }}
 
                                 {{ if (isset .Page.Params "license" )}}
-                                    <a class="btn btn-info" href={{ .Page.Params.license.link }} target="_blank">
+                                    <a class="btn btn-info mt-1" href={{ .Page.Params.license.link }} target="_blank">
                                         <i class="fas fa-balance-scale"></i> {{ .Page.Params.license.text }}
                                     </a>
                                 {{ end }}
             
                                 {{ if (isset .Page.Params "docs")}}
-                                    <a class="btn btn-success" href="{{ .Page.Params.docs }}" target="_blank">
+                                    <a class="btn btn-success mt-1" href="{{ .Page.Params.docs }}" target="_blank">
                                         <i class="fas fa-book"></i> Dokumentation
                                     </a>
                                 {{ end }}
