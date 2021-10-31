@@ -24,9 +24,9 @@
             {{ $paginator := .Paginate .Data.Pages }}
             {{ range $paginator.Pages }}
             <div class="blog-post">
-                    <h2 class="post-title">
+                    <h3 class="post-title">
                         <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
-                    </h2>
+                    </h3>
 
                     <p class="post-meta">
                         <i class="fa fa-calendar"></i> {{ .Date.Day }}. {{ index $.Site.Data.months (printf "%d" .Date.Month) }} {{ .Date.Year }}
