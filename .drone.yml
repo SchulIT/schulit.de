@@ -24,6 +24,7 @@ steps:
           from_secret: ssh_user
         port:
           from_secret: ssh_port
+        args: "-O"
         source: ./output/
         target: /srv/http/schulit
         recursive: true
