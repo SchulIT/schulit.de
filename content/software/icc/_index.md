@@ -111,7 +111,10 @@ menu:
 {{< /story >}}
 
 {{< story header="Krankmeldungen" description="Eltern können über das ICC ihr Kind krankmelden. Die Krankmeldung löst eine E-Mail an die Klassenleitung sowie ein beliebiges Postfach aus. In der Tagesübersicht werden Krankmeldungen berücksichtigt." align="right">}}
-    {{< img src="/images/software/icc/krankmeldung.png" zoom=true >}}
+    {{< slider >}}
+        {{< img src="/images/software/icc/krankmeldung.png" zoom=true >}}
+        {{< img src="/images/software/icc/krankmeldung-uebersicht.png" zoom=true >}}
+    {{< /slider >}}
 {{< /story >}}
 
 {{< story header="Unterrichtsbücher" description="Das digitale Klassen- und Kursbuch gibt es als Unterrichtsbuch im ICC. So lässt sich der Unterricht digital dokumentieren. Komfortfunktionen wie fehlende Einträge oder Entschuldigungen inklusive. In der Lernendenübersicht wird für jeden Lernenden dargestellt, wie viele Kommentare, Fehlstunden (entschuldigt/unentschuldigt) oder Verspätungen gesammelt wurden." >}}
