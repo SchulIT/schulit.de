@@ -1,7 +1,7 @@
 var Encore = require('@symfony/webpack-encore');
 const GoogleFontsPlugin = require("@beyonk/google-fonts-webpack-plugin");
 
-var ManifestPlugin = require('webpack-manifest-plugin');
+const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
 
 Encore
     // directory where compiled assets will be stored
@@ -50,7 +50,7 @@ Encore
     )
 
     .addPlugin(
-        new ManifestPlugin({
+        new WebpackManifestPlugin({
             fileName: '../../data/manifest.json'
         })
     )
