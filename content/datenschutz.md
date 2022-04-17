@@ -63,9 +63,9 @@ möglich.
 
 Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:
 
-Marcel Marnitz \\
-Mörgensstr. 1 \\
-52064 Aachen \\
+Marcel Marnitz  
+Veltmanplatz 8c  
+52062 Aachen
 E-Mail: [marcelmarnitz@outlook.com](mailto:marcelmarnitz@outlook.com)
 
 Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen über
