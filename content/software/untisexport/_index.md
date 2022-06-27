@@ -9,6 +9,7 @@ license:
 docs: https://github.com/schulit/untisexport#readme
 download: https://www.nuget.org/packages/SchulIT.UntisExport/
 summary: Mithilfe der UntisExport-Bibliothek kann die Untis GPN-Datei ausgelesen werden.
+deprecated: true
 ---
 
 {{< features >}}

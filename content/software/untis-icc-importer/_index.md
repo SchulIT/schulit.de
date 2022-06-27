@@ -11,10 +11,7 @@ license:
 summary: Das Importtool für den Datenimport für das ICC aus Untis (Stunden-, Vertretungs- und Klausurplan, Räume)
 gallery:
     - /images/software/untis-icc-importer/programm.png
-menu:
-    main:
-        parent: Software
-        weight: 32
+deprecated: true
 ---
 
 {{< features >}}

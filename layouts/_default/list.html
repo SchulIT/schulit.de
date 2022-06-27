@@ -32,7 +32,13 @@
                         <div class="card-body">
                             <h5 class="card-title">
                                 <a href="{{ .URL }}">{{ .LinkTitle }}</a>
+
+                                {{ if and (isset .Params "deprecated") (.Params.deprecated) }}
+                                    <span class="badge badge-warning">nicht mehr unterstützt</span>
+                                {{ end }}
                             </h5>
+
+                            
 
                             <p class="card-text">
                                 {{ .Summary }}
