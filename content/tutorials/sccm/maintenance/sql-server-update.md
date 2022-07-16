@@ -16,6 +16,21 @@ Jeden Monat erscheint ein Service Release für den SQL Server 2017, welches man 
 
 Das Update von der Microsoft-Webseite [hier](https://support.microsoft.com/de-de/help/4047329) herunterladen. 
 
+# Dienste stoppen
+
+Die folgenden ConfigMgr-Dienste sollten vor dem Update gestoppt werden:
+
+* SMS Agent Host
+* SMS_EXECUTIVE
+* SMS_NOTIFICATION_SERVER
+* SMS_SITE_BACKUP
+* SMS_COMPONENT_MANAGER
+* SMS_SITE_SQL_BACKUP
+* SMS_SITE_VSS WRITER
+
+{{< img src="/images/sccm/maintenance/sql-update/services.png" caption="Alle ConfigMgr-Dienste stoppen" >}}
+
+
 # Installation
 
 Bei der Installation ist im Grunde nicht viel zu machen. Man startet die Installationsdatei und folgt dem Assistenten:
