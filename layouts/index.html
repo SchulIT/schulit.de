@@ -51,14 +51,15 @@
 
 {{ $blog := first 2 (where .Site.RegularPages "Section" "blog").ByPublishDate.Reverse}}
 
-<main class="container">
+<main class="container mb-4">
     <h3 class="h5">
         <i class="fas fa-rss"></i> Aus dem Blog
     </h3>
 
-    <div class="card-deck">
+    <div class="row row-cols-1 row-cols-md-2 g-4">
         {{ range $blog }}
-            <div class="card blog-post mb-3">
+        <div class="col">
+            <div class="card blog-post mb-3 h-100">
                 <div class="card-body">
                     <h5 class="card-title">
                         <a href="{{ .URL }}">{{ .LinkTitle }}</a>
@@ -74,7 +75,7 @@
                 </div>
             </div>
 
-            <div class="w-100 d-none d-sm-block d-md-none"><!-- wrap every 1 on sm--></div>
+        </div>
         {{ end }}
     </div>
 </main>

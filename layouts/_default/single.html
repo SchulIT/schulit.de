@@ -3,7 +3,7 @@
 <main class="container">
     <div class="blog-post">
         {{ if and (eq .Type "static") (ne .Params.toc false)  }}
-        <div class="table-of-contents float-right">
+        <div class="table-of-contents float-end ms-4 mb-4">
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Inhalt</h5>

@@ -157,10 +157,6 @@ menu:
         Stunden-, Klausur- und Terminplan sind exportierbar und können somit in Outlook oder Google Calender eingebunden werden. Kurslisten sind als CSV-Datei exportierbar.
     {{< /feature >}}
 
-    {{< feature icon="fas fa-download" header="Exportmöglichkeiten" >}}
-        Stunden-, Klausur- und Terminplan sind exportierbar und können somit in Outlook oder Google Calender eingebunden werden. Kurslisten sind als CSV-Datei exportierbar.
-    {{< /feature >}}
-
     {{< feature icon="fas fa-code" header="API-Schnittstelle" >}}
         Die Stammdaten können aus SchILD NRW importiert werden. Pläne können aus Untis importiert werden.
     {{< /feature >}}

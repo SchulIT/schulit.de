@@ -1,6 +1,6 @@
 <div class="row mb-4">
     <div class="col-lg-7 align-self-center {{ if and (.Get "align") (eq (.Get "align") "right") }}order-1{{ end }}">
-        <h3>{{ .Get "header" }}</h2>
+        <h3>{{ .Get "header" }}</h3>
         <p>{{ .Get "description" }}</p>
         {{ if .Get "button" }}
             <a href="{{ .Get "link" }}" target="_blank" class="btn btn-info"><i class="fas fa-arrow-right"></i> {{ .Get "button" }}</a>

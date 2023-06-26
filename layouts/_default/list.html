@@ -7,38 +7,39 @@
 
     {{ if .Pages }}
         <div class="pages">
-            {{ range (sort .RegularPages "Params.ordering") }}
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title"><a href="{{ .URL }}">{{ .LinkTitle }}</a></h5>
-                        <p class="card-text">
-                            {{ .Summary }}
-                        </p>
-                        <a href="{{ .URL }}" class="card-link">weiterlesen</a>
+            <div class="row row-cols-1 row-cols-md-2 g-4 mb-4">
+                {{ range (sort .RegularPages "Params.ordering") }}
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title"><a href="{{ .URL }}">{{ .LinkTitle }}</a></h5>
+                                <p class="card-text">
+                                    {{ .Summary }}
+                                </p>
+                                <a href="{{ .URL }}" class="card-link">weiterlesen</a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            {{ end }}
+                {{ end }}
+            </div>
         </div>
     {{ end }}
 
     {{ if .Sections }}
         {{ $length := ( len .Sections ) }}
         <div class="pages">
+            <div class="row row-cols-1 row-cols-md-2 g-4 mb-4">
             {{ range $counter, $element := (sort .Sections "Params.ordering") }}
-                {{ if eq (mod $counter 2) 0 }}
-                <div class="card-deck">
-                {{ end }}
-                    <div class="card">
+                <div class="col">
+                    <div class="card h-100">
                         <div class="card-body">
                             <h5 class="card-title">
                                 <a href="{{ .URL }}">{{ .LinkTitle }}</a>
 
                                 {{ if and (isset .Params "deprecated") (.Params.deprecated) }}
-                                    <span class="badge badge-warning">nicht mehr unterstützt</span>
+                                    <span class="badge bg-warning">nicht mehr unterstützt</span>
                                 {{ end }}
                             </h5>
-
-                            
 
                             <p class="card-text">
                                 {{ .Summary }}
@@ -49,13 +50,11 @@
                             <a href="{{ .URL }}" class="card-link" title="{{ trim (plainify .Summary) "\n" }}">{{ .LinkTitle }}</a>
                             {{ end }}
                             {{ if gt $numPages 5 }}
-                            <a href="{{ .URL }}"><span class="badge badge-primary">+{{ sub (len .Pages)  5 }} weitere</span></a>
+                            <a href="{{ .URL }}"><span class="badge bg-primary">+{{ sub (len .Pages)  5 }} weitere</span></a>
                             {{ end }}
                         </div>
                     </div>
-                {{ if or (eq (mod $counter 2) 1) (eq $counter $length) }}
                 </div>
-                {{ end }}
                 {{ end }}
             </div>
         </div>

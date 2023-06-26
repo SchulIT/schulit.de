@@ -1,9 +1,12 @@
 $font-size-base: 1rem;
 $enable-responsive-font-sizes: true;
+$web-font-path: false;
 
-@import '../../node_modules/bootswatch/dist/flatly/variables';
-@import '../../node_modules/bootstrap/scss/bootstrap';
-@import 'flatly';
+@import "@fontsource/lato";
+
+@import "~bootswatch/dist/flatly/variables";
+@import "~bootstrap/scss/bootstrap";
+@import "~bootswatch/dist/flatly/bootswatch";
 
 // Import FontAwesome
 @import '../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome';
@@ -12,13 +15,11 @@ $enable-responsive-font-sizes: true;
 @import '../../node_modules/@fortawesome/fontawesome-free/scss/brands';
 
 @import '../../node_modules/aos/dist/aos.css';
-@import '../../node_modules/slick-carousel/slick/slick';
-@import '../../node_modules/slick-carousel/slick/slick-theme';
 
 @import "../../node_modules/zoom-vanilla.js/dist/zoom.css";
 
 body {
-  height: 100vh;
+  	height: 100vh;
 }
 
 // Import Callouts
@@ -38,6 +39,21 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a.navbar-brand:hover,
+a.nav-link:hover,
+a.dropdown-item:hover,
+a.btn:hover {
+	text-decoration: none;
+}
+
 main.container {
 	margin-top: 10px;
 
@@ -45,13 +61,7 @@ main.container {
 		background: none;
 		padding-left: 0;
 	}
-
-
-
-	.card-deck {
-		margin-bottom: 10px;
-	}
-
+	
 	.widgets {
 		.card {
 			+.card {
@@ -139,4 +149,23 @@ nav.pagination {
 
 #search-results {
 	margin-top: 10px;
+}
+
+.tns-nav {
+	text-align: center;
+	margin: 10px 0;
+
+	& > [aria-controls] {
+		width: 9px;
+		height: 9px;
+		padding: 0;
+		margin: 0 5px;
+		border-radius: 50%;
+		background: #ddd;
+		border: 0;
+	}
+
+	& .tns-nav-active { 
+		background: #999;
+	}
 }

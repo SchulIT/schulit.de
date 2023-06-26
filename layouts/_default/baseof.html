@@ -6,8 +6,7 @@
     <title>{{ .Site.Title }} {{ with .Title }} | {{ . }}{{ end }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="{{ (index .Site.Data.manifest "fonts.css") | absURL }}">
-    <link rel="stylesheet" href="{{ (index .Site.Data.manifest "app.css") | absURL }}">
+    <link rel="stylesheet" href="{{ (index .Site.Data.manifest "app.css") | absURL }}" type="text/css">
 </head>
 
 <body class="d-flex flex-column">
@@ -20,13 +19,13 @@
                 <i class="fas fa-bars"></i>
             </button>
             <div class="collapse navbar-collapse" id="menu">
-                <ul class="navbar-nav ml-auto">
+                <ul class="navbar-nav ms-auto">
                     {{ $currentPage := . }}
                     {{ range .Site.Menus.main }}
                         {{ $isCurrent := or ( and (ne .URL "/") (hasPrefix $currentPage.URL .URL)) (eq $currentPage.URL .URL) }}
                         {{ if .HasChildren }}
                         <li class="nav-item dropdown {{ if $isCurrent }}active{{ end }}">
-                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="{{ .URL }}" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="{{ .URL }}" aria-expanded="false">
                                 {{ if (ne .Page nil ) }}
                                     {{ if (isset .Page.Params "icon") }}
                                     <i class="{{ .Page.Params.icon }}"></i>
@@ -77,7 +76,7 @@
         <section class="bg-primary mb-4">
             <div class="container py-5">
                 <div class="row align-items-center">
-                    <div class="{{ if and (isset .Page.Params "gallery") }}col-md-8{{ else }}col-md-12{{ end }} text-center text-md-left mb-n4">
+                    <div class="{{ if and (isset .Page.Params "gallery") }}col-md-8{{ else }}col-md-12{{ end }} text-md-left mb-n4">
                         <h1 class="text-white font-weight-bold mb-4">
                             {{ if (isset .Page.Params "icon")}}
                                 <i class="{{ .Page.Params.icon }}"></i>
@@ -155,41 +154,59 @@
     </div>
 
     <footer class="bg-light">
-        <div class="container py-4 d-flex align-items-center flex-wrap">
-            <ul class="list-inline flex-fill m-0">
-                <li class="list-inline-item">
-                    <a href="https://schulit.readthedocs.org" target="_blank" title="Dokumentation" class="text-muted">
-                        <i class="fa fa-book"></i> Dokumentation
-                    </a>
-                </li>
-                <li class="list-inline-item">
-                    <a href="https://github.com/schulit" target="_blank" title="GitHub" class="text-muted">
-                        <i class="fab fa-github"></i> GitHub
-                    </a>
-                </li>
-                <li class="list-inline-item">
-                    <a href="{{ "/datenschutz" | absURL }}" title="Datenschutz" class="text-muted">
-                        <i class="fas fa-user-secret"></i> Datenschutz
-                    </a>
-                </li>
-                <li class="list-inline-item">
-                    <a href="{{ "/impressum" | absURL }}" title="Impressum" class="text-muted">
-                        <i class="fas fa-info-circle"></i> Impressum
-                    </a>
-                </li>
-            </ul>
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-6 col-md-3 mb-3">
+                    <h5>Rechtliches</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2">
+                            <a href="{{ "/datenschutz" | absURL }}" title="Datenschutz" class="text-muted">
+                                <i class="fas fa-user-secret"></i> Datenschutz
+                            </a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="{{ "/impressum" | absURL }}" title="Impressum" class="text-muted">
+                                <i class="fas fa-info-circle"></i> Impressum
+                            </a>
+                        </li>
+                    </ul>
+                </div>
 
-            <p class="m-0 mr-2">
-                made with <i class="fas fa-heart text-danger"></i> in Aachen
-            </p>
+                <div class="col-6 col-md-3 mb-3">
+                    <h5>Loslegen</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2">
+                            <a href="https://schulit.readthedocs.org" target="_blank" title="Dokumentation" class="text-muted">
+                                <i class="fa fa-book"></i> Dokumentation
+                            </a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="https://github.com/schulit" target="_blank" title="GitHub" class="text-muted">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </li>
+                    </ul>
+                </div>
 
-            <p class="m-0 text-muted mr-2">
-                <i class="fas fa-paint-roller"></i> by <a href="https://github.com/thomaspark/bootswatch/blob/v4/LICENSE" target="_blank">Thomas Park</a>
-            </p>
+                <div class="col-md-5 offset-md-1 mb-3 text-end text-muted">
+                    <h5>&nbsp;</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2">
+                            made with <i class="fas fa-heart text-danger"></i> in Aachen
+                        </li>
+                        <li class="nav-item mb-2">
+                            <i class="fas fa-paint-roller"></i> von <a href="https://github.com/thomaspark/bootswatch/blob/v4/LICENSE" target="_blank">Thomas Park</a>
+                        </li>
 
-            <p class="m-0">
-                © {{ dateFormat "2006" now }} SchulIT
-            </p>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    © {{ dateFormat "2006" now }} SchulIT
+                </div>
+            </div>
         </div>
     </footer>
     

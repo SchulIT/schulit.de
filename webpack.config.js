@@ -1,5 +1,4 @@
 var Encore = require('@symfony/webpack-encore');
-const GoogleFontsPlugin = require("@beyonk/google-fonts-webpack-plugin");
 
 const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
 
@@ -40,28 +39,9 @@ Encore
     .disableSingleRuntimeChunk()
 
     .addPlugin(
-        new GoogleFontsPlugin({
-            fonts: [
-                { family: "Lato", variants: ["300", "400", "400italic", "600", "700", "700italic", "800"] }
-            ],
-            local: true,
-            path: "fonts/"
-        })
-    )
-
-    .addPlugin(
         new WebpackManifestPlugin({
             fileName: '../../data/manifest.json'
         })
-    )
-
-    .addLoader(
-        {
-            test: /bootstrap\.native/,
-            use: {
-                loader: 'bootstrap.native-loader'
-            }
-        }
     )
 ;
 

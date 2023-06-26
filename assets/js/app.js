@@ -1,63 +1,11 @@
 require('../scss/app.scss');
+require('../../node_modules/tiny-slider/src/tiny-slider.scss');
 
-import 'bootstrap'
-import jQuery from 'jquery'
+import { Tooltip, Dropdown, Carousel } from 'bootstrap';
 import AOS from 'aos';
-import 'slick-carousel';
+import { tns } from "tiny-slider";
 
 require('../../node_modules/zoom-vanilla.js/dist/zoom-vanilla.min.js');
-
-(function ($) {
-    'use strict';
-
-    // ----------------------------
-    // AOS
-    // ----------------------------
-    AOS.init({
-        once: true
-    });
-
-
-    $(window).on('scroll', function () {
-        //.Scroll to top show/hide
-        var scrollToTop = $('.scroll-top-to'),
-            scroll = $(window).scrollTop();
-        if (scroll >= 200) {
-            scrollToTop.fadeIn(200);
-        } else {
-            scrollToTop.fadeOut(100);
-        }
-    });
-    // scroll-to-top
-    $('.scroll-top-to').on('click', function () {
-        $('body,html').animate({
-            scrollTop: 0
-        }, 500);
-        return false;
-    });
-
-    $(document).ready(function() {
-
-        // navbarDropdown
-        if ($(window).width() < 992) {
-            $('.main-nav .dropdown-toggle').on('click', function () {
-                $(this).siblings('.dropdown-menu').animate({
-                    height: 'toggle'
-                }, 300);
-            });
-        }
-
-        $('.story-slider').slick({
-            slidesToShow: 1,
-            infinite: true,
-            arrows: false,
-            autoplay: true,
-            autoplaySpeed: 2000,
-            dots: true
-        });
-    });
-
-})(jQuery);
 
 function createElementFromHtml(html) {
     var template = document.createElement("template");
@@ -73,6 +21,28 @@ document.addEventListener('DOMContentLoaded', function() {
         if(id !== null) {
             let link = '<a href="#' + id + '" class="heading-link"><i class="fa fa-link"></i></a>';
             el.appendChild(createElementFromHtml(link));
+        }
+    });
+
+    // ----------------------------
+    // AOS
+    // ----------------------------
+    AOS.init({
+        once: true
+    });
+
+    document.querySelectorAll('.story-slider').forEach(function(element) {
+        if(element.children.length > 0) {
+            let slider = tns({
+                container: element,
+                items: 1,
+                prevButton: false,
+                nextButton: false,
+                autoplay: true,
+                navPosition: 'bottom',
+                controls: false,
+                autoplayButtonOutput: false
+            });
         }
     });
 });

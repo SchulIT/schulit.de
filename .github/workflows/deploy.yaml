@@ -35,10 +35,10 @@ jobs:
         node-version: '16'
 
     - name: Download dependencies
-      run: yarn install --production --no-progress
+      run: npm install
 
     - name: Build assets
-      run: yarn encore production
+      run: npm run build
  
     - name: Build
       run: hugo --minify
