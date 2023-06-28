@@ -3,7 +3,7 @@ title: Benutzerverwaltung & Single-Sign-On
 ordering: 1
 type: chapter
 github: https://github.com/schulit/idp
-docs: https://schulit-idp.readthedocs.io/en/latest/
+docs: https://docs.schulit.de/idp
 license:
     text: AGPL-3.0
     link: https://github.com/SchulIT/idp/blob/master/LICENSE
