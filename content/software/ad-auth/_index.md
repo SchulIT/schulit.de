@@ -4,6 +4,7 @@ ordering: 20
 type: section
 github: https://github.com/SchulIT/adauth-server
 docs: https://github.com/SchulIT/adauth-server/blob/master/README.md
+download: https://github.com/SchulIT/adauth-server/releases
 license:
     text: MIT
     link: https://github.com/SchulIT/adauth-server/blob/master/LICENSE.md
