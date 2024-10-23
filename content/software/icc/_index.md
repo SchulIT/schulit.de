@@ -3,7 +3,7 @@ title: Information & Communication Center
 ordering: 2
 type: section
 github: https://github.com/schulit/icc
-docs: https://icc.readthedocs.org/
+docs: https://docs.schulit.de/icc
 license:
     text: AGPL-3.0
     link: https://github.com/SchulIT/icc/blob/master/LICENSE
