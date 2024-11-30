@@ -1,11 +1,8 @@
 ---
 title: Datenschutz-Einstellungen
 type: static
+summary: Die folgenden GPOs sollen helfen, den Informationsfluss von Windows und Office 2016 in Richtung Microsoft zu verringern. Diese Liste ist möglicherweise nicht vollständig und wird von Zeit zu Zeit aktualisiert, sobald neue GPOs dazukommen.
 ---
-
-Die folgenden GPOs sollen helfen, den Informationsfluss von Windows und Office 2016 in Richtung Microsoft zu verringern. Diese Liste ist möglicherweise nicht vollständig und wird von Zeit zu Zeit aktualisiert, sobald neue GPOs dazukommen.
-
-<!--more-->
 
 ## Windows 10
 

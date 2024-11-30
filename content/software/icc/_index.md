@@ -59,7 +59,7 @@ menus:
     {{< /feature >}}
 
     {{< feature icon="fas fa-book-open" header="Unterrichtsbücher" >}}
-        In Unterrichtsbüchern kann der Unterricht digital dokumentiert werden.
+        In Unterrichtsbüchern kann der Unterricht digital dokumentiert werden. Dies ersetzt das analoge führen von Klassenbüchern bzw. Kursheften.
     {{< /feature >}}
 
     {{< feature icon="fas fa-cloud-upload-alt" header="Import aus Schulverwaltung" >}}
@@ -159,7 +159,7 @@ menus:
         Stunden-, Klausur- und Terminplan sind exportierbar und können somit in Outlook oder Google Calender eingebunden werden. Kurslisten sind als CSV-Datei exportierbar.
     {{< /feature >}}
 
-    {{< feature icon="fas fa-code" header="API-Schnittstelle" >}}
+    {{< feature icon="fas fa-upload" header="Import aus SchILD und Untis" >}}
         Die Stammdaten können aus SchILD NRW importiert werden. Pläne können aus Untis importiert werden.
     {{< /feature >}}
 

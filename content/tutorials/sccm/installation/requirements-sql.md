@@ -2,11 +2,8 @@
 title: SQL-Server installieren
 ordering: 2
 type: static
+summary: Das SCCM benötigt einen SQL Server als Datenbank-Backend. Hier wird dessen Installation beschrieben.
 ---
-
-Das SCCM benötigt einen SQL Server als Datenbank-Backend. Hier wird dessen Installation beschrieben.
-
-<!--more-->
 
 # SQL Server installieren
 

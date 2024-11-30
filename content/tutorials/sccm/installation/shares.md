@@ -2,11 +2,8 @@
 title: Netzwerk-Freigaben
 type: static
 ordering: 6
+summary: Das SCCM benötigt einige Netzwerkfreigaben, auf denen Dateien freigegeben werden.
 ---
-
-Das SCCM benötigt einige Netzwerkfreigaben, auf denen Dateien freigegeben werden.
-
-<!--more-->
 
 Alle Freigaben befinden sich im Ordner `C:\SCCM`. Hier kann natürlich ein beliebiger Ordner gewählt werden (gerne auch auf einer anderen Festplatte/Partition). 
 

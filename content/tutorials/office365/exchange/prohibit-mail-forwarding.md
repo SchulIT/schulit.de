@@ -1,11 +1,8 @@
 ---
 title: E-Mail Weiterleitungen deaktivieren
 type: static
+summary: Es kann sinnvoll sein, E-Mail-Weiterleitungen global (oder für einzelne Benutzer bzw. Benutzergruppen) zu deaktivieren. Das Weiterleiten von Dienstmails an private E-Mail Adressen wäre ein solches Beispiel.
 ---
-
-Es kann sinnvoll sein, E-Mail-Weiterleitungen global (oder für einzelne Benutzer bzw. Benutzergruppen) zu deaktivieren. Das Weiterleiten von Dienstmails an private E-Mail Adressen wäre ein solches Beispiel.
-
-<!--more-->
 
 Microsoft selbst bietet [mehrere Wege](https://techcommunity.microsoft.com/t5/exchange-team-blog/the-many-ways-to-block-automatic-email-forwarding-in-exchange/ba-p/607579) an, E-Mail-Benachrichtigungen zu deaktivieren. Alle haben Vor- und Nachteile.
 

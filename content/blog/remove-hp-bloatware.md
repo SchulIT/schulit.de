@@ -5,13 +5,8 @@ author: "Marcel Marnitz"
 type: post
 archive: "2020/04"
 tags: [ "windows", "hp", "mdm", "intune" ]
+summary: Unsere neuen Leihgeräte für Schülerinnen und Schüler sind Geräte von HP. Diese beinhalten jedoch einige HP Software, die weder die Schule noch unsere Schülerinnen und Schüler benötigen. Einige Software ist zusätzlich sehr aufdringlich. Da wir die Laptops nicht händisch sauber neuinstallieren wollen, soll die Software über Intune entfernt werden.
 ---
-
-Unsere neuen Leihgeräte für Schülerinnen und Schüler sind Geräte von HP. Diese beinhalten jedoch
-einige HP Software, die weder die Schule noch unsere Schülerinnen und Schüler benötigen. Einige
-Software ist zusätzlich sehr aufdringlich. Da wir die Laptops nicht händisch sauber neuinstallieren wollen, soll die Software über Intune entfernt werden.
-
-<!--more-->
 
 # Idee
 

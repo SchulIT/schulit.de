@@ -2,11 +2,8 @@
 title: Prototyp aufzeichnen
 type: static
 ordering: 3
+summary: Ist die Windows-Installation etwas komplizierter (oder man möchte viele Nicht-MSI-Programme installieren), bietet es sich an, zunächst einen Prototypen zu erstellen und diesen im Anschluss aufzuzeichnen.
 ---
-
-Ist die Windows-Installation etwas komplizierter (oder man möchte viele Nicht-MSI-Programme installieren), bietet es sich an, zunächst einen Prototypen zu erstellen und diesen im Anschluss aufzuzeichnen.
-
-<!--more-->
 
 Das Vorgehen lässt sich in die folgenden Schritte aufteilen:
 

@@ -2,11 +2,8 @@
 title: SQL Server aktualisieren
 ordering: 4
 type: static
+summary: Jeden Monat erscheint ein Service Release für den SQL Server 2017, welches man zeitnah einspielen sollte. Hat man SQL Server 2016 im Einsatz, so gilt diese Anleitung ebenfalls.
 ---
-
-Jeden Monat erscheint ein Service Release für den SQL Server 2017, welches man zeitnah einspielen sollte. Hat man SQL Server 2016 im Einsatz, so gilt diese Anleitung ebenfalls.
-
-<!--more-->
 
 # Vorbereitungen
 

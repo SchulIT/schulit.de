@@ -5,11 +5,8 @@ author: "Marcel Marnitz"
 type: post
 archive: "2020/01"
 tags: [ "windows", "msi", "sccm" ]
+summary: Nicht immer lässt sich das Erstellen von Verknüpfungen auf dem Desktop oder im Startmenü durch Schalter beim MSI-Installationsprogramm abschalten. Dann ist die Erstellung einer Transformationsdatei möglich, um das Installationsprogramm während der Installation zu verändern.
 ---
-
-Nicht immer lässt sich das Erstellen von Verknüpfungen auf dem Desktop oder im Startmenü durch Schalter beim MSI-Installationsprogramm abschalten. Dann ist die Erstellung einer Transformationsdatei möglich, um das Installationsprogramm während der Installation zu verändern.
-
-<!--more-->
 
 # Orca installieren
 

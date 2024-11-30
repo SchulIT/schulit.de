@@ -2,11 +2,8 @@
 title: ADK aktualisieren
 ordering: 2
 type: static
+summary: Das ADK muss mit jeder neuen Windows 10 Version ebenfalls aktualisiert werden, damit die neue Version von Windows 10 verteilt werden kann.
 ---
-
-Das ADK muss mit jeder neuen Windows 10 Version ebenfalls aktualisiert werden, damit die neue Version von Windows 10 verteilt werden kann.
-
-<!--more-->
 
 # Altes Windows ADK deinstallieren
 

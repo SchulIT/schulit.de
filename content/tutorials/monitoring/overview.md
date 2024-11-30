@@ -2,11 +2,8 @@
 title: Übersicht
 type: static
 ordering: 1
+summary: Das Monitoring besteht in der Regel aus drei Komponenten, die hier näher erläutert werden sollen.
 ---
-
-Das Monitoring besteht in der Regel aus drei Komponenten, die hier näher erläutert werden sollen.
-
-<!--more-->
 
 # Telegraf
 

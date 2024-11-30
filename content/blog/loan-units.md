@@ -5,11 +5,8 @@ tags: ["windows", "mdm", "intune", "autopilot" ]
 author: "Marcel Marnitz"
 type: post
 archive: "2019/11"
+summary: Bereits länger planen wir, einzelnen Schülerinnen und Schülern bei Bedarf ein schulisches Leihgerät auszuhändigen, mit dem sie zuhause digital arbeiten können. Dies ist insbesondere bei der Facharbeit in der Qualifikationsphase notwendig. Da kürzlich die erste Anfrage zu einem Leihgerät eingegangen ist, musste ein technisches Konzept her.
 ---
-
-Bereits länger planen wir, einzelnen Schülerinnen und Schülern bei Bedarf ein schulisches Leihgerät auszuhändigen, mit dem sie zuhause digital arbeiten können. Dies ist insbesondere bei der Facharbeit in der Qualifikationsphase notwendig. Da kürzlich die erste Anfrage zu einem Leihgerät eingegangen ist, musste ein technisches Konzept her.
-
-<!--more-->
 
 Für die Rechner in der Schule ist dank SCCM bereits ein Konzept vorhanden, wie Geräte aufgesetzt werden. Die Besonderheit von Leihgeräten ist jedoch, dass sie auch außerhalb der Schule funktionieren müssen. Dennoch sollten sie möglichst einfach aufsetzbar und anschließend administrierbar sein.
 

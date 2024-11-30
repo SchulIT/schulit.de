@@ -1,11 +1,8 @@
 ---
 title: Deutsche Sprache beim PXE-Boot
 type: static
+summary: Standardmäßig ist die Windows PE-Umgebung beim Booten von PXE auf Englisch (mit englischer Tastatur). Mit den folgenden Kniffen lässt sich das jedoch auf Deutsch ändern.
 ---
-
-Standardmäßig ist die Windows PE-Umgebung beim Booten von PXE auf Englisch (mit englischer Tastatur). Mit den folgenden Kniffen lässt sich das jedoch auf Deutsch ändern.
-
-<!--more-->
 
 ### Vorbereitung
 

@@ -5,11 +5,8 @@ tags: ["hyperv"]
 author: "Marcel Marnitz"
 type: post
 archive: "2019/01"
+summary: Bei VHDX-Festplatten mit dynamischer Größe wächst die eigentliche Größe auf dem Datenträger mit der Belegung der virtuellen Festplatte. Löscht man Dateien in der virtuellen Festplatte, wird der Speicherplatz jedoch nicht auf dem Host-Betriebssystem freigegeben (die VHDX-Datei wird nicht kleiner).
 ---
-
-Bei VHDX-Festplatten mit dynamischer Größe wächst die eigentliche Größe auf dem Datenträger mit der Belegung der virtuellen Festplatte. Löscht man Dateien in der virtuellen Festplatte, wird der Speicherplatz jedoch nicht auf dem Host-Betriebssystem freigegeben (die VHDX-Datei wird nicht kleiner).
-
-<!--more-->
 
 Mit einem PowerShell-Cmdlet lässt sich jedoch die VHDX-Datei auf die eigentliche Größe komprimieren:
 

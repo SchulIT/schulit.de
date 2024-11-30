@@ -3,11 +3,8 @@ title: Treiber ins SCCM importieren
 type: static
 toc: false
 ordering: 1
+summary: Diese Anleitung zeigt, wie man neue Treiber in das SCCM importiert.
 ---
-
-Diese Anleitung zeigt, wie man neue Treiber in das SCCM importiert.
-
-<!--more-->
 
 # Vorbereitung
 

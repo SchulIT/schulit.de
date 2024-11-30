@@ -1,11 +1,8 @@
 ---
 title: Office aktivieren
 type: static
+summary: Office erstellt bei der Installation eine Installations-ID für den aktuellen Computer. Hat man Office bereits in das Betriebssystemabbild integriert, so muss diese ID nun erneuert werden (sonst wird die ID auf allen Computern verwendet). 
 ---
-
-Office erstellt bei der Installation eine Installations-ID für den aktuellen Computer. Hat man Office bereits in das Betriebssystemabbild integriert, so muss diese ID nun erneuert werden (sonst wird die ID auf allen Computern verwendet). 
-
-<!--more-->
 
 {{< callout type="warning" title="Wichtig" >}}
     Diese Anleitung bezieht sich auf Office 2016 (32-bit) auf einem 64-bit Betriebssystem. Es ergeben sich folgende Änderungen, falls eine andere Konfiguration genutzt wird:

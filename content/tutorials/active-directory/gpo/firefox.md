@@ -1,11 +1,8 @@
 ---
 title: Einstellungen für Mozilla Firefox
 type: static
+summary: Seit Firefox 60 unterstützt dieser auch die Konfiguration mittels GPOs. 
 ---
-
-Seit Firefox 60 unterstützt dieser auch die Konfiguration mittels GPOs. 
-
-<!--more-->
 
 # Download und Installation
 

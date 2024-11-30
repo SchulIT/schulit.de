@@ -2,9 +2,8 @@
 title: Office aktualisieren
 ordering: 3
 type: static
+summary: Das Einspielen von Updates bedarf leider einiger regelmäßiger Handgriffe, wenn man die Updates zentral steuern möchte und nicht über das Office CDN herunterladen möchte oder kann.
 ---
-
-<!--more-->
 
 # Vorbereitung
 

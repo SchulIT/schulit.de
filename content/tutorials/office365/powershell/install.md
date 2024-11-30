@@ -1,11 +1,8 @@
 ---
 title: Einrichten
 type: static
+summary: Um die PowerShell für Office 365 nutzen zu können, müssen einige PowerShell-Module installiert werden.
 ---
-
-Um die PowerShell für Office 365 nutzen zu können, müssen einige PowerShell-Module installiert werden.
-
-<!--more-->
 
 # Installation der Module
 

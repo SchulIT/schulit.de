@@ -1,11 +1,9 @@
 ---
 title: Einstellungen für Google Chrome
 type: static
+summary: Google Chrome lässt sich lobenswerterweise mittels GPOs steuern, sodass mittels GPO Einstellungen vom Administrator vorgenommen werden können, welche nicht durch den Nutzer änderbar sind.
 ---
 
-Google Chrome lässt sich lobenswerterweise mittels GPOs steuern, sodass mittels GPO Einstellungen vom Administrator vorgenommen werden können, welche nicht durch den Nutzer änderbar sind.
-
-<!--more-->
 
 # Download und Installation
 

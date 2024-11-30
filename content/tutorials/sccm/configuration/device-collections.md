@@ -1,11 +1,8 @@
 ---
 title: Gerätesammlungen anlegen
 type: static
+summary: Gerätesammlungen sind eine sehr wichtige Komponente im SCCM. Mithilfe von Gerätesammlungen können später Anwendungen, Updates und Co gezielt an bestimmte Computer verteilt werden.
 ---
-
-Gerätesammlungen sind eine sehr wichtige Komponente im SCCM. Mithilfe von Gerätesammlungen können später Anwendungen, Updates und Co gezielt an bestimmte Computer verteilt werden.
-
-<!--more-->
 
 # Standard-Gerätesammlungen
 

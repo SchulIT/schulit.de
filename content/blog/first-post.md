@@ -4,11 +4,8 @@ date: 2019-01-07T10:00:00
 author: "Marcel Marnitz"
 type: post
 archive: "2019/01"
+summary: Nach sehr langer Zeit im Aufbau soll nun endlich die Webseite zu schulischer IT an den Start gehen!
 ---
-
-Nach sehr langer Zeit im Aufbau soll nun endlich die Webseite zu schulischer IT an den Start gehen!
-
-<!--more-->
 
 # Worum gehts hier?
 

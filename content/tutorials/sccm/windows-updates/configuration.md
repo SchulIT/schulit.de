@@ -2,11 +2,8 @@
 title: Konfiguration
 type: static
 ordering: 2
+summary: Im Anschluss an die Installation muss die Rolle konfiguriert werden. Hier wird gezeigt, welche Möglichkeiten der Konfiguration es gibt.
 ---
-
-Im Anschluss an die Installation muss die Rolle konfiguriert werden. Hier wird gezeigt, welche Möglichkeiten der Konfiguration es gibt.
-
-<!--more-->
 
 Zur Konfiguration muss in der Konsole zu "Verwaltung" > "Übersicht" > "Standortkonfiguration" > "Standorte" navigiert werden. Dort klickt man auf den SCCM-Server und klickt oben im Ribbon auf den Button "Standortkomponenten konfigurieren" und dort auf "Softwareupdatepunkt".
 

@@ -5,11 +5,8 @@ tags: ["windows", "kms"]
 author: "Marcel Marnitz"
 type: post
 archive: "2022/05"
+summary: Üblicherweise hostet man einen KMS-Dienst auf einem Windows Server. Man kann jedoch auch einen Windows Client zu einem KMS-Host hochstufen und auf eine zusätzliche Windows Server-Installation verzichten.
 ---
-
-Üblicherweise hostet man einen KMS-Dienst auf einem Windows Server. Man kann jedoch auch einen Windows Client zu einem KMS-Host hochstufen und auf eine zusätzliche Windows Server-Installation verzichten.
-
-<!--more-->
 
 Wie Microsoft selbst schreibt, kann man auch einen Windows Client als KMS-Host verwenden. Damit lassen sich dann entweder Office oder Windows Clients aktivieren, Windows Server lassen sich so nicht aktivieren.
 

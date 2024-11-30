@@ -2,11 +2,8 @@
 title: Installation
 ordering: 5
 type: static
+summary: Sind alle Voraussetzungen erfüllt, kann nun das SCCM installiert werden.
 ---
-
-Sind alle Voraussetzungen erfüllt, kann nun das SCCM installiert werden.
-
-<!--more-->
 
 Zur Installation zunächst das Installationsprogramm starten. 
 

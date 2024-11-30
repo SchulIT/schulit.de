@@ -1,11 +1,8 @@
 ---
 title: Teams erstellen
 type: static
+summary: Wir erstellen alle Teams zentral mittels PowerShell. Damit auch Klassenteams erstellt werden können, muss die Modul-Vorschau des PowerShell-Moduls installiert sein.
 ---
-
-Wir erstellen alle Teams zentral mittels PowerShell. Damit auch Klassenteams erstellt werden können, muss die Modul-Vorschau des PowerShell-Moduls installiert sein.
-
-<!--more-->
 
 # Vorbereitung
 

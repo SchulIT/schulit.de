@@ -3,11 +3,8 @@ title: Verteilung
 ordering: 2
 type: static
 toc: false
+summary: Die Verteilung von Office 2019 ist mithilfe des SCCMs mit wenigen Mausklicks erledigt. 
 ---
-
-Die Verteilung von Office 2019 ist mithilfe des SCCMs mit wenigen Mausklicks erledigt. 
-
-<!--more-->
 
 In der SCCM Konsole navigiert man zu "Softwarebibliothek" > "Übersicht" > "Office 365-Clientverwaltung". Hier darf man sich nicht davon täuschen lassen, dass überall von Office 365 gesprochen wird. 
 

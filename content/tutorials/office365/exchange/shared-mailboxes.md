@@ -2,11 +2,8 @@
 title: Gemeinsame Postfächer
 type: static
 draft: true
+summary: Für manche Bereiche (Vertretungsplan, Stundenplan, ...) werden in der Schule häufig mehrere Personen beauftragt. Sinnvollerweise richtet man für solche Bereiche eigene E-Mail Adressen ein, auf die alle daran beteiligen Personen Zugriff besitzen. In Exchange (Online) sind dies "Freigebene Postfächer".
 ---
-
-Für manche Bereiche (Vertretungsplan, Stundenplan, ...) werden in der Schule häufig mehrere Personen beauftragt. Sinnvollerweise richtet man für solche Bereiche eigene E-Mail Adressen ein, auf die alle daran beteiligen Personen Zugriff besitzen. In Exchange (Online) sind dies "Freigebene Postfächer".
-
-<!--more-->
 
 # Erstellen des Postfaches
 

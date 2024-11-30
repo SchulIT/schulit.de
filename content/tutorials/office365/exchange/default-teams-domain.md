@@ -1,11 +1,9 @@
 ---
 title: E-Mail Domäne für Teams festlegen
 type: static
+summary: Da beim Erstellen eines Teams auch eine E-Mail Adresse angelegt wird, möchten wir die Standarddomain für Teams auf eine Subdomain ändern. So müllt man sich die Hauptdomain nicht zu.
 ---
 
-Da beim Erstellen eines Teams auch eine E-Mail Adresse angelegt wird, möchten wir die Standarddomain für Teams auf eine Subdomain ändern. So müllt man sich die Hauptdomain nicht zu.
-
-<!--more-->
 
 # Vorbereitung
 

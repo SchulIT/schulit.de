@@ -2,11 +2,8 @@
 title: Windows ADK installieren
 ordering: 4
 type: static
+summary: Eine weitere Voraussetzung ist das Windows ADK, welches das SCCM zum reibungslosen Betrieb benötigt.
 ---
-
-Eine weitere Voraussetzung ist das Windows ADK, welches das SCCM zum reibungslosen Betrieb benötigt.
-
-<!--more-->
 
 Das Windows ADK sollte in der aktuellsten Version von der [Microsoft Website](https://docs.microsoft.com/en-us/windows-hardware/get-started/adk-install) heruntergeladen werden. Dabei sowohl das Windows ADK an sich als auch das Windows PE add-on herunterladen.
 

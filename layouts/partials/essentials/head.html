@@ -4,8 +4,7 @@
 <title>{{ .Site.Title }} {{ with .Title }} | {{ . }}{{ end }}</title>
 
 {{- $styles := resources.Get "css/styles.css" | postCSS -}}
-{{- if hugo.IsServer }}
-{{ else }}
+{{- if not hugo.IsServer }}
 {{ $styles = $styles | minify | fingerprint | resources.PostProcess }}
 {{ end -}}
 <link rel="stylesheet" href="{{ $styles.RelPermalink }}">

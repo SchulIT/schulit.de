@@ -5,11 +5,8 @@ tags: [ "windows", "intune", "mdm", "osd"]
 author: "Marcel Marnitz"
 type: post
 archive: "2021/02"
+summary: Da wir unsere mobilen Endgeräte aus dem Active Directory entfernen und mittels Intune (MDM) verwalten möchten, müssen diese neu aufgesetzt werden. Eigentlich ist vorgesehen, dass die Geräte nach dem Kauf mittels Autopilot registriert und direkt über Intune aufgesetzt werden. Da wir jedoch bereits ein eigenes Windows-Abbild installiert hatten, müssen die Geräte händisch installiert werden.
 ---
-
-Da wir unsere mobilen Endgeräte aus dem Active Directory entfernen und mittels Intune (MDM) verwalten möchten, müssen diese neu aufgesetzt werden. Eigentlich ist vorgesehen, dass die Geräte nach dem Kauf mittels Autopilot registriert und direkt über Intune aufgesetzt werden. Da wir jedoch bereits ein eigenes Windows-Abbild installiert hatten, müssen die Geräte händisch installiert werden.
-
-<!--more-->
 
 Bisher haben wir die Geräte mittels ConfigMgr installiert -- auch unsere Tablets. Diese wollen wir jedoch aus dem Active Directory entfernen und ausschließlich mittels Intune verwalten. Dazu müssen die Geräte jedoch neu installiert werden, allerdings ohne ConfigMgr-Infrastruktur, da diese sehr eng mit dem Active Directory gekoppelt ist (sprich: es findet ein domain-join statt oder es hagelt fehler mangels Zugriffsrechten). 
 

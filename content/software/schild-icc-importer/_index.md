@@ -34,5 +34,5 @@ menus:
 {{< /features >}}
 
 {{< callout type="info" title="Disclaimer">}}
-    Diese Software wird weder vom <a href="https://www.svws.nrw.de/">Ministerium für Schule und Bildung des Landes Nordrhein-Westfalens</a> entwickelt noch offiziell unterstützt.
+    Diese Software wird weder vom <a class="font-semibold underline hover:no-underline" href="https://www.svws.nrw.de/">Ministerium für Schule und Bildung des Landes Nordrhein-Westfalens</a> entwickelt noch offiziell unterstützt.
 {{< /callout >}}

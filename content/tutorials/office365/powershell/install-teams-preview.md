@@ -1,11 +1,8 @@
 ---
 title: Vorschau des Teams PowerShell-Modul installieren
 type: static
+summary: Möchte man auch Teams vom Typ Kurs anlegen, so benötigt man die Vorschau des Microsoft Teams Moduls.
 ---
-
-Möchte man auch Teams vom Typ Kurs anlegen, so benötigt man die Vorschau des Microsoft Teams Moduls.
-
-<!--more-->
 
 # Vorbereitungen
 

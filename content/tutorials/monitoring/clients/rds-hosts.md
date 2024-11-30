@@ -1,11 +1,9 @@
 ---
 title: RDS-Hosts
 type: static
+summary: Für Remotedesktopsitzungs-Hosts kann Telegraf unter anderem die Anzahl der angemeldeten Benutzer abfragen und in die InfluxDB speichern. 
 ---
 
-Für Remotedesktopsitzungs-Hosts kann Telegraf unter anderem die Anzahl der angemeldeten Benutzer abfragen und in die InfluxDB speichern. 
-
-<!--more-->
 
 # Einrichtung
 

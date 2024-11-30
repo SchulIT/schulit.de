@@ -3,11 +3,8 @@ title: Betriebssystemabbild importieren
 ordering: 1
 type: static
 toc: false
+summary: Um ein Betriebssystem installieren zu können, muss das entsprechende Betriebssystemabbild (WIM-Datei) in das SCCM importiert werden.
 ---
-
-Um ein Betriebssystem installieren zu können, muss das entsprechende Betriebssystemabbild (WIM-Datei) in das SCCM importiert werden.
-
-<!--more-->
 
 # Vorbereitungen
 

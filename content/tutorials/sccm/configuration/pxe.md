@@ -2,11 +2,9 @@
 title: PXE
 ordering: 4
 type: static
+static: Das Booten vom Netzwerk wird auch vom SCCM unterstützt. In diesem Artikel wird beschrieben, wie man PXE im SCCM konfiguriert.
 ---
 
-Das Booten vom Netzwerk wird auch vom SCCM unterstützt. In diesem Artikel wird beschrieben, wie man PXE im SCCM konfiguriert.
-
-<!--more-->
 
 # Konfiguration
 

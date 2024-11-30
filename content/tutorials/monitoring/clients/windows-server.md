@@ -1,11 +1,8 @@
 ---
 title: Windows Server
 type: static
+summary: Diese Anleitung zeigt, wie man Telegraf auf Windows Servern einrichtet.
 ---
-
-Diese Anleitung zeigt, wie man Telegraf auf Windows Servern einrichtet.
-
-<!--more-->
 
 # Download und Installation
 

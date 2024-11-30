@@ -1,11 +1,8 @@
 ---
 title: Installationsdateien aktualisieren
 type: static
+summary: Grundsätzlich aktualisieren sich unsere Programme entweder eigenständig (im Falle von Chrome und Firefox), über das SCCM (Windows, Office, Adobe Reader, Flash) oder eben gar nicht. Um die Menge an Aktualisierungen zu reduzieren und um frische Computer auch mit der neuesten Programmversion auszustatten, sollte man ab und an die Installationsdateien auf dem SCCM durch die neuen Installer ersetzen.
 ---
-
-Grundsätzlich aktualisieren sich unsere Programme entweder eigenständig (im Falle von Chrome und Firefox), über das SCCM (Windows, Office, Adobe Reader, Flash) oder eben gar nicht. Um die Menge an Aktualisierungen zu reduzieren und um frische Computer auch mit der neuesten Programmversion auszustatten, sollte man ab und an die Installationsdateien auf dem SCCM durch die neuen Installer ersetzen.
-
-<!--more-->
 
 Wichtig zu beachten ist dabei, dass hier nur die Installationsdateien aktualisiert werden. Ist ein Programm bereits auf einem Computer installiert, erfolgt kein automatisches Update. Am Beispiel von Google Chrome wird dies demonstriert.
 

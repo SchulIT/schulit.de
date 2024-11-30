@@ -2,11 +2,8 @@
 title: Vorbereitungen im Active Directory
 ordering: 1
 type: static
+summary: Zunächst muss das Active Directory für den Betrieb eines SCCM vorbereitet werden. 
 ---
-
-Zunächst muss das Active Directory für den Betrieb eines SCCM vorbereitet werden. 
-
-<!--more-->
 
 # System Management-Container erstellen
 

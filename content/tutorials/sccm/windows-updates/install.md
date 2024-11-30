@@ -2,11 +2,8 @@
 title: Installation
 type: static
 ordering: 1
+summary: Damit man Updates über das SCCM verteilen kann, muss zunächst die Rolle "Serverupdatepunkt" installiert werden.
 ---
-
-Damit man Updates über das SCCM verteilen kann, muss zunächst die Rolle "Serverupdatepunkt" installiert werden.
-
-<!--more-->
 
 # Vorbereitungen
 

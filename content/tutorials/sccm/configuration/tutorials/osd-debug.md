@@ -1,11 +1,8 @@
 ---
 title: Fehlersuche für OSD einrichten
 type: static
+summary: Beim Deployment eines Betriebssystems geht nicht immer alles reibungslos vonstatten. Daher sollte man sich die Möglichkeit einräumen, während des Deployments (bspw. beim Auftreten eines Fehlers) Anwendungen auszuführen.
 ---
-
-Beim Deployment eines Betriebssystems geht nicht immer alles reibungslos vonstatten. Daher sollte man sich die Möglichkeit einräumen, während des Deployments (bspw. beim Auftreten eines Fehlers) Anwendungen auszuführen.
-
-<!--more-->
 
 {{< callout type="info" title="Hinweis" >}}
     Die folgenden Schritte müssen für alle Startabbilder durchgeführt werden!

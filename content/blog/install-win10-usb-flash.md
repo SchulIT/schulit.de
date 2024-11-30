@@ -5,11 +5,8 @@ author: "Marcel Marnitz"
 type: post
 archive: "2020/04"
 tags: [ "windows", "osd", "uefi" ]
+summary: Leider sind die WIM-Dateien der aktuellen Windows 10-ISOs zu groß, um sie auf einen USB-Stick, der mit FAT32 formatiert ist, zu kopieren. Das ist aber notwendig, wenn man einen USB-Stick erstellen möchte, der im UEFI-Modus bootet.
 ---
-
-Leider sind die WIM-Dateien der aktuellen Windows 10-ISOs zu groß, um sie auf einen USB-Stick, der mit FAT32 formatiert ist, zu kopieren. Das ist aber notwendig, wenn man einen USB-Stick erstellen möchte, der im UEFI-Modus bootet.
-
-<!--more-->
 
 ### GPT-Modus
 

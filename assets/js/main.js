@@ -87,3 +87,23 @@ document.querySelectorAll('.story-slider').forEach(function(element) {
         });
     }
 });
+
+function createElementFromHtml(html) {
+    var template = document.createElement("template");
+    template.innerHTML = html.trim();
+
+    return template.content.firstChild;
+}
+
+for(let el of document.querySelectorAll('.format h1, .format h2, .format h3, .format h4, .format h5, .format h6')) {
+    let id = el.getAttribute('id');
+
+    if(el.classList.contains('not-format')) {
+        continue;
+    }
+
+    if(id !== null) {
+        let link = '<a href="#' + id + '" class="heading-link"><i class="fa fa-link"></i></a>';
+        el.appendChild(createElementFromHtml(link));
+    }
+}

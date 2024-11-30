@@ -1,11 +1,8 @@
 ---
 title: Windows 10 Apps löschen
 type: static
+summary: Die Windows 10 Apps sind lästig und bei unseren verbindlichen Profilen (für Schüler) ohnehin nicht nützlich, sondern verzögern nur unnötig die Anmeldung am Computer. Daher können die Apps beim Aufspielen des Betriebssystems restlos entfernt werden.
 ---
-
-Die Windows 10 Apps sind lästig und bei unseren verbindlichen Profilen (für Schüler) ohnehin nicht nützlich, sondern verzögern nur unnötig die Anmeldung am Computer. Daher können die Apps beim Aufspielen des Betriebssystems restlos entfernt werden.
-
-<!--more-->
 
 # Das Deinstallations-Skript
 

@@ -2,11 +2,8 @@
 title: SCCM aktualisieren
 ordering: 1
 type: static
+summary: Alle sechs Monate veröffentlicht Microsoft die neueste Version des System Center Configuration Manager.
 ---
-
-Alle sechs Monate veröffentlicht Microsoft die neueste Version des System Center Configuration Manager.
-
-<!--more-->
 
 # Vorbereitungen
 

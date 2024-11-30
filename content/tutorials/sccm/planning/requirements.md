@@ -2,11 +2,8 @@
 title: Voraussetzungen
 ordering: 2
 type: static
+summary: Zwar listet Microsoft selbst einige Voraussetzungen an die Hardware des SCCM-Servers, allerdings sind die für Schule sicherlich etwas übertrieben.
 ---
-
-Zwar listet Microsoft selbst einige Voraussetzungen an die Hardware des SCCM-Servers, allerdings sind die für Schule sicherlich etwas übertrieben.
-
-<!--more-->
 
 # Offizielle Voraussetzungen
 

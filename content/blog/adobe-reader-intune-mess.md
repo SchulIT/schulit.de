@@ -5,11 +5,8 @@ tags: ["intune", "mdm", "adobe", "reader"]
 author: "Marcel Marnitz"
 type: post
 archive: "2022/06"
+summary: Verteilt man das falsche Installationsprogramm für den Adobe Reader über Intune, so holt man sich nervige Probleme ins Haus. In diesem Post möchte ich erläutern, welche Version man installieren muss und wie man die "falsche" Installation loswird.
 ---
-
-Verteilt man das falsche Installationsprogramm für den Adobe Reader über Intune, so holt man sich nervige Probleme ins Haus. In diesem Post möchte ich erläutern, welche Version man installieren muss und wie man die "falsche" Installation loswird.
-
-<!--more-->
 
 ### Das Problem
 

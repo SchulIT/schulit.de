@@ -2,11 +2,9 @@
 title: Installation
 type: static
 ordering: 2
+summary: Hier finden sich Anleitungen zur Installation von Grafana in Kombination mit InfluxDB.
 ---
 
-Hier finden sich Anleitungen zur Installation von Grafana in Kombination mit InfluxDB.
-
-<!--more-->
 
 # Voraussetzungen
 

@@ -2,11 +2,8 @@
 title: Installation
 ordering: 2
 type: chapter
+summary: Zur Installation kann folgende Anleitung verwendet werden.
 ---
-
-Zur Installation kann folgende Anleitung verwendet werden!
-
-<!--more-->
 
 {{< callout type="danger" title="Wichtig" icon="exclamation-triangle" >}}
     Zunächst alle Installationsschritte durchlesen. Es ist ratsam, die Installation zunächst in einer Testumgebung durchzuspielen, bevor die produktive Instanz installiert wird!

@@ -5,7 +5,7 @@
     "danger" "text-red-800 border-red-300 bg-red-50 dark:bg-gray-800 dark:text-red-400 dark:border-red-800"
 }}
 
-<div class="not-format p-4 mb-4 border rounded-lg {{ index $class (.Get "type") }}" role="alert">
+<div class="not-format p-4 my-4 border rounded-lg {{ index $class (.Get "type") }}" role="alert">
     {{ if .Get "title" }}
     <div class="flex items-center">
         {{ if .Get "icon"}}

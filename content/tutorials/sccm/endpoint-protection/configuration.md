@@ -2,11 +2,8 @@
 title: Endpoint Protection einrichten
 ordering: 2
 type: static
+static: Mithilfe der Endpoint Protection lässt sich der Windows Defender mithilfe des SCCM verwalten.
 ---
-
-Mithilfe der Endpoint Protection lässt sich der Windows Defender mithilfe des SCCM verwalten.
-
-<!--more-->
 
 # Endpoint Protection freischalten
 

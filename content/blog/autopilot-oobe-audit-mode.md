@@ -5,14 +5,8 @@ tags: ["autopilot", "mdm", "intune"]
 author: "Marcel Marnitz"
 type: post
 archive: "2021/10"
+summary: Neue Geräte können auch ohne AutoPilot-Registrierung seitens des Händler händisch in AutoPilot registriert werden. Dazu sind nur wenige Handgriffe notwendig. Das System bleibt dabei in der OOBE-Umgebung, sodass das Gerät anschließend an den Nutzer ausgegeben werden kann. Der Zeitaufwand beträgt ca. fünf Minuten pro Gerät.
 ---
-
-Neue Geräte können auch ohne AutoPilot-Registrierung seitens des Händler händisch in 
-AutoPilot registriert werden. Dazu sind nur wenige Handgriffe notwendig. Das System bleibt 
-dabei in der OOBE-Umgebung, sodass das Gerät anschließend an den Nutzer ausgegeben werden
-kann. Der Zeitaufwand beträgt ca. fünf Minuten pro Gerät.
-
-<!--more-->
 
 Die Registrierung der Geräte erfolgt im Audit Mode, welcher u.a. das Verändern des Windows 
 Images vor der Auslieferung an den Benutzer erlaubt [1].

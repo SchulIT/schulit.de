@@ -2,11 +2,8 @@
 title: Treiber installieren
 type: static
 toc: false
+summary: Diese Anleitung zeigt, wie man Treiber während des Aufspielens des Betriebssystems automatisch installiert.
 ---
-
-Diese Anleitung zeigt, wie man Treiber während des Aufspielens des Betriebssystems automatisch installiert.
-
-<!--more-->
 
 Im Tasksequenzen-Editor einen neuen Schritt "Treiber automatisch installieren" (unter "Hinzufügen" > "Treiber") auswählen und mindestens in den Bereich "Betriebssystem installieren" (ganz am Schlus) hinzufügen. Bei uns gibt es einen separaten Ordner für die Treiber-Installation (ist nur Kosmetik). Dort ändert man zunächst den Namen des Schrittes und wählt anschließend die Kategorie aus, aus der Treiber installiert werden sollen (siehe [Treiber ins SCCM importieren](/sccm/drivers/import-drivers/)). Es können auch mehrere Kategorien ausgewählt werden:
 

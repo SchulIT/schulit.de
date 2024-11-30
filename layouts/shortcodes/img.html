@@ -1,13 +1,13 @@
-<figure class="figure text-center">
+<figure class="max-w-lg mx-auto">
     {{ with .Get "link" }}
-        <a href="{{.}}">
+        <a href="{{.}}" class="h-auto max-w-full">
     {{ end }}
-        <img class="figure-img img-fluid" src="{{ .Get "src" }}" alt="{{ .Get "caption" }}" {{ if .Get "zoom" }}data-action="zoom"{{ end }} />
+        <img class="h-auto max-w-full" src="{{ .Get "src" }}" alt="{{ .Get "caption" }}" {{ if .Get "zoom" }}data-action="zoom"{{ end }} />
     {{ if .Get "link"}}
         </a>
     {{ end }}
     {{ if .Get "caption" }}
-    <figcaption class="figure-caption">
+    <figcaption class="mt-2 text-sm text-center text-gray-500 dark:text-gray-400">
         {{ .Get "caption" }}
     </figcaption>
     {{ end }}

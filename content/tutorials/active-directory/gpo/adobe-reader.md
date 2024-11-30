@@ -1,11 +1,9 @@
 ---
 title: Einstellungen für Adobe Reader
 type: static
+summary: Der Adobe Reader DC lässt sich lobenswerterweise mittels GPOs steuern, sodass mittels GPO Einstellungen vorgenommen werden können, die das Arbeiten mit dem Adobe Reader erleichtern.
 ---
 
-Der Adobe Reader DC lässt sich lobenswerterweise mittels GPOs steuern, sodass mittels GPO Einstellungen vorgenommen werden können, die das Arbeiten mit dem Adobe Reader erleichtern.
-
-<!--more-->
 
 # Download und Installation
 

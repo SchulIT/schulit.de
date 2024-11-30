@@ -5,11 +5,8 @@ tags: ["intune", "mdm"]
 author: "Marcel Marnitz"
 type: post
 archive: "2021/03"
+summary: "Standardmäßig wird nur der Papierkorb auf dem Windows 10 Desktop angezeigt (Stand: Windows 10 20H2). Für unsere Tablets, die wir nun über Intune verwalten, möchten wir jedoch auch die Verknüpfung *Dieser PC* sowie eine Verknüpfung zu den *Eigenen Dateien* machen."
 ---
-
-Standardmäßig wird nur der Papierkorb auf dem Windows 10 Desktop angezeigt (Stand: Windows 10 20H2). Für unsere Tablets, die wir nun über Intune verwalten, möchten wir jedoch auch die Verknüpfung "Dieser PC" sowie eine Verknüpfung zu den "Eigenen Dateien" machen.
-
-<!--more-->
 
 Laut [Deskmodder](https://www.deskmodder.de/wiki/index.php/Desktopsymboleinstellung_Windows_10) muss man dazu Schlüssel in der Registry bearbeiten. Wie man am Schlüssel-Präfix des Pfades `HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel` erkennen kann, ist es eigentlich eine Einstellung im Kontext eines Benutzers. Da die Policies von Intune -- im Gegensatz zu klassischen GPOs -- nicht grundsätzlich bei jeder Anmeldung angewendet werden, ist das unpraktikabel.
 

@@ -2,11 +2,8 @@
 title: Windows nach Rezept installieren (Task-Sequenz)
 ordering: 2
 type: static
+summary: Grundsätzlich wird ein Betriebssystem mithilfe einer Task-Sequenz verteilt. Eine Task-Sequenz besteht dabei aus mehreren Schritten, welche sich als eine Rezept zusammenstellen lassen.
 ---
-
-Grundsätzlich wird ein Betriebssystem mithilfe einer Task-Sequenz verteilt. Eine Task-Sequenz besteht dabei aus mehreren Schritten, welche sich als eine Rezept zusammenstellen lassen.
-
-<!--more-->
 
 # Task-Sequenz erstellen
 

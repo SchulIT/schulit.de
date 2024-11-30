@@ -2,11 +2,8 @@
 title: Abhängigkeiten installieren
 ordering: 3
 type: static
+summary: Das SCCM benötigt einige Serverrollen, um einwandfrei zu funktionieren. Daher sind die folgenden Rollen und Features auf dem SCCM-Server zu installieren.
 ---
-
-Das SCCM benötigt einige Serverrollen, um einwandfrei zu funktionieren. Daher sind die folgenden Rollen und Features auf dem SCCM-Server zu installieren.
-
-<!--more-->
 
 Über den Server-Manager folgende Rollen und Features hinzufügen:
 

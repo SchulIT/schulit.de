@@ -5,11 +5,8 @@ tags: ["software", "sccm"]
 author: "Marcel Marnitz"
 type: post
 archive: "2019/10"
+summary: An der Schule verwenden wir die Dokumentenkamera [VIS-360](https://www.sg-versand.de/visualizer/vis-360/). Diese werden mit der Software VIS angesprochen. Leider wird diese standardmäßig nach `C:\Users\<benutzername>\AppData\Local\VIS` installiert, was in einem Mehrbenutzersystem unpraktikabel ist. 
 ---
-
-An der Schule verwenden wir die Dokumentenkamera [VIS-360](https://www.sg-versand.de/visualizer/vis-360/). Diese werden mit der Software VIS angesprochen. Leider wird diese standardmäßig nach `C:\Users\<benutzername>\AppData\Local\VIS` installiert, was in einem Mehrbenutzersystem unpraktikabel ist. 
-
-<!--more-->
 
 Die Downloadseite der Software enthält ein Beispiel zur stillen Installation des Tools mithilfe der Parameter `/VERYSILENT /SP-`. Da es sich bei dem Installer um den [Inno Setup](http://www.jrsoftware.org/isinfo.php) handelt, waren weitere Parameter zur stillen Installation schnell [gefunden](http://www.jrsoftware.org/ishelp/index.php?topic=setupcmdline). Der Parameter `/DIR` legt den Installationsort fest.
 

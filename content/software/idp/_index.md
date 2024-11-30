@@ -7,7 +7,7 @@ docs: https://docs.schulit.de/idp
 license:
     text: AGPL-3.0
     link: https://github.com/SchulIT/idp/blob/master/LICENSE
-summary: Über die Benutzerverwaltung werden alle Benutzer der SchulIT Suite eingeplegt. Das Single-Sign-On erlaubt das Anmelden an den verschiedenen Anwendungen.
+summary: Die Benutzerverwaltung ist das Herzstück für SchulIT Anwendungen, da hierüber alle Benutzer verwaltet werden. Das Single-Sign-On erlaubt das Anmelden an den verschiedenen Anwendungen.
 menus:
     main:
         parent: software

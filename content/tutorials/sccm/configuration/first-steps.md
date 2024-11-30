@@ -1,11 +1,8 @@
 ---
 title: Erste Schritte
 type: static
+summary: Nach der Installation des SCCM steht die SCCM Konsole auf dem Server zur Verfügung.
 ---
-
-Nach der Installation des SCCM steht die SCCM Konsole auf dem Server zur Verfügung.
-
-<!--more-->
 
 # Fehlermeldung beim ersten Start
 

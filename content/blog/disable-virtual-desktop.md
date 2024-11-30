@@ -5,11 +5,8 @@ author: "Marcel Marnitz"
 type: post
 archive: "2020/01"
 tags: [ "windows" ]
+summary: Mit Windows 10 wurden virtuelle Desktops eingeführt. Mithilfe dieser lassen sich mehrere Desktops für verschiedene Bereiche anlegen. Unsere Schülerinnen und Schüler machen leider auch davon Gebrauch und nutzen das Feature, um Blödsinn zu machen. Leider lassen sich die virtuellen Desktops nicht mithilfe von Windows-Boardmitteln abschalten, sodass man zu externen Tools greifen muss.
 ---
-
-Mit Windows 10 wurden virtuelle Desktops eingeführt. Mithilfe dieser lassen sich mehrere Desktops für verschiedene Bereiche anlegen. Unsere Schülerinnen und Schüler machen leider auch davon Gebrauch und nutzen das Feature, um Blödsinn zu machen. Leider lassen sich die virtuellen Desktops nicht mithilfe von Windows-Boardmitteln abschalten, sodass man zu externen Tools greifen muss.
-
-<!--more-->
 
 Wir nutzen das Tool [AutoHotkey](https://www.autohotkey.com/), um die Shortcuts zu überschreiben, mit denen man (a) virtuelle Desktops erstellen und (b) zwischen diesen wechseln kann.
 

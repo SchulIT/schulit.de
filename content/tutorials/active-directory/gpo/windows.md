@@ -1,11 +1,8 @@
 ---
 title: GPOs für Windows 10
 type: static
+summary: Hier werden weitere GPOs speziell für Windows 10 gesammelt.
 ---
-
-Hier werden weitere GPOs speziell für Windows 10 gesammelt.
-
-<!--more-->
 
 # Anmeldebildschirm
 ## Animation verhindern

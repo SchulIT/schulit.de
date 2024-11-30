@@ -2,11 +2,8 @@
 title: Treiber in Boot-Image einbinden
 type: static
 ordering: 2
+summary: Manchmal kann es notwendig sein, einen Treiber bereits ins Boot-Image einzubinden, sodass der Treiber bereits während der Installation des Betriebssystems genutzt werden kann.
 ---
-
-Manchmal kann es notwendig sein, einen Treiber bereits ins Boot-Image einzubinden, sodass der Treiber bereits während der Installation des Betriebssystems genutzt werden kann.
-
-<!--more-->
 
 Um den Treiber ins Boot-Image einzubinden, im SCCM zu "Softwarebibliothek" > "Übersicht" > "Betriebssysteme" > "Startabbilder" navigieren. Dort das gewünschte Boot-Image doppelt anklicken und in den Tab "Treiber" wechseln. Auf den "Hinzufügen"-Button klicken:
 

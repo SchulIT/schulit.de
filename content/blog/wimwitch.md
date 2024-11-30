@@ -5,12 +5,8 @@ author: "Marcel Marnitz"
 type: post
 archive: "2020/04"
 tags: [ "windows", "osd", "mdm", "intune" ]
+summary: Um viele identische Geräte mit einem frischen Windows 10 zu installieren, kann man WIM Witch verwenden. Die mit WIM Witch erstellte WIM-Datei lässt sich anschließend per USB Stick installieren.
 ---
-
-Um viele identische Geräte mit einem frischen Windows 10 zu installieren, kann man WIM Witch verwenden. 
-Die mit WIM Witch erstellte WIM-Datei lässt sich anschließend per USB Stick installieren.
-
-<!--more-->
 
 # Idee
 

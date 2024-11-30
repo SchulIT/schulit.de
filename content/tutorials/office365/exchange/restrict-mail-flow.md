@@ -1,14 +1,13 @@
 ---
 title: E-Mail Verkehr einschränken
 type: static
+summary: Es kann sinnvoll sein, den E-Mail-Verkehr von Schülerinnen und Schülern einzuschränken. 
 ---
 
-Es kann sinnvoll sein, den E-Mail-Verkehr von Schülerinnen und Schülern einzuschränken. Beispielsweise um zu verhindern, dass
+Beispielsweise um zu verhindern, dass
 
 * Schülerinnen und Schüler keine E-Mails an Personen außerhalb der Organisation (Schule) senden dürfen
-* Schülerinnen und Schüler keine E-Mails von Personen außerhalb der Organisation (Schule) empfangen dürfen
-
-<!--more-->
+* Schülerinnen und Schüler keine E-Mails von Personen außerhalb der Organisation (Schule) empfangen dürfen.
 
 Um den Nachrichtenfluss zu steuern, muss das Exchange Admin Center aufgesucht werden. Dort gibt es links den Punkt *Nachrichtenfluss*. Dort lassen sich entsprechend Regeln erstellen.
 
