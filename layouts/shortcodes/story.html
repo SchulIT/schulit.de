@@ -1,13 +1,15 @@
-<div class="row mb-4">
-    <div class="col-lg-7 align-self-center {{ if and (.Get "align") (eq (.Get "align") "right") }}order-1{{ end }}">
-        <h3>{{ .Get "header" }}</h3>
-        <p>{{ .Get "description" }}</p>
-        {{ if .Get "button" }}
-            <a href="{{ .Get "link" }}" target="_blank" class="btn btn-info"><i class="fas fa-arrow-right"></i> {{ .Get "button" }}</a>
-        {{ end }}
+<section class="bg-white py-8 antialiased dark:bg-gray-900 md:py-8">
+    <div class="mx-auto grid max-w-screen-xl pb-8 md:grid-cols-12 lg:gap-12 lg:pb-8">
+        <div class="content-center justify-self-start md:col-span-7 md:text-start {{ if and (.Get "align") (eq (.Get "align") "right") }}order-1{{ end }}">
+            <h1 class="mb-4 text-2xl font-extrabold leading-none tracking-tight dark:text-white md:max-w-2xl md:text-4xl">
+                {{ .Get "header" }}
+            </h1>
+            <p class="mb-4 max-w-2xl text-gray-500 dark:text-gray-400 md:mb-12 mb-3 lg:mb-5">
+                {{ .Get "description" }}
+            </p>
+        </div>
+        <div class="md:col-span-5 md:mt-0 md:flex">
+            {{ .Inner }}
+        </div>
     </div>
-
-    <div class="col-lg-5 mt-5 mt-lg-0">
-        {{ .Inner }}
-    </div>
-</div>
+</section>

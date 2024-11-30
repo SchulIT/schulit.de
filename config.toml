@@ -15,7 +15,7 @@ enableGitInfo = true
     tags = "/blog/tags/:slug/"
     archive = "/blog/:slug/"
 
-[[menu.main]]
+[[menus.main]]
     identifier = "index"
     name = "Start"
     url = "/"
@@ -24,3 +24,29 @@ enableGitInfo = true
 [outputs]
     home = [ "HTML", "JSON", "RSS" ]
     section = [ "HTML" ]
+
+[[module.mounts]]
+source = "node_modules/@fortawesome/fontawesome-free/css"
+target = "static/assets/fontawesome/css"
+
+[[module.mounts]]
+source = "node_modules/@fortawesome/fontawesome-free/webfonts"
+target = "static/assets/fontawesome/webfonts"
+
+[[module.mounts]]
+source = "node_modules/inter-ui"
+target = "static/assets/inter"
+includeFiles = [ "**/*.woff2", "*.css" ]
+
+[[module.mounts]]
+source = "node_modules/zoom-vanilla.js/dist"
+target = "static/assets/zoom-vanilla"
+
+[[module.mounts]]
+source = "node_modules/tiny-slider/dist"
+target = "static/assets/tiny-slider"
+includeFiles = "*.css"
+
+[[module.mounts]]
+source = "static_files"
+target = "static"

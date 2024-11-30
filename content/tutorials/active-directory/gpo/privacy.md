@@ -7,9 +7,9 @@ Die folgenden GPOs sollen helfen, den Informationsfluss von Windows und Office 2
 
 <!--more-->
 
-# Windows 10
+## Windows 10
 
-## Computerrichtlinien
+### Computerrichtlinien
 
 | Richtlinie | Einstellung |
 |---|---|
@@ -95,7 +95,7 @@ Folgende Einstellungen wurden für Office 2016 vorgenommen. Sie lassen sich verm
 | Microsoft Office 2016/Telemetriedashboard > Telemetrie-Datensammlung aktivieren | Deaktiviert |
 
 ---
-Quellen: 
+### Quellen
 
 * https://docs.microsoft.com/de-de/windows/privacy/configure-windows-diagnostic-data-in-your-organization
 * https://docs.microsoft.com/en-us/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services#how-to-configure-each-setting

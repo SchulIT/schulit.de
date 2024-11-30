@@ -9,10 +9,13 @@ license:
     text: MIT
     link: https://github.com/SchulIT/adconnect-client/blob/master/LICENSE.md
 summary: Mithilde des Active Directory Connect Clients können Benutzer aus dem lokalen Active Directory in das Sigle-Sign-On synchronisiert werden.
-menu:
+menus:
     main:
-        parent: Software
+        parent: software
         weight: 21
+        params:
+            short_summary: Bereitstellung von Benutzern aus vorhandenem Active Directory in die zentrale Benutzerverwaltung.
+
 ---
 
 {{< features >}}

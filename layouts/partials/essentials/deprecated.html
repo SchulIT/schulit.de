@@ -1,0 +1,9 @@
+{{ if and (isset .Page.Params "deprecated") (.Page.Params.deprecated)}}
+    <section class="py-8 px-4 mx-auto max-w-screen-xl text-center text-yellow-800 bg-yellow-50 dark:bg-gray-800 dark:text-yellow-300 xl:rounded-lg">
+        <i class="fa fa-exclamation-triangle"></i>
+            Dieses Projekt wird nicht mehr unterstützt.
+            {{ if (isset .Page.Params "followup" )}}
+                Bitte den Nachfolger <a class="font-semibold underline hover:no-underline" href="{{ .Page.Params.followup.url }}">{{ .Page.Params.followup.name}}</a> verwenden.
+            {{ end }}
+    </section>
+{{ end }}

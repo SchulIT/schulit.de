@@ -1,223 +1,65 @@
 <!DOCTYPE html>
-<html lang="{{ $.Site.LanguageCode | default "en" }}">
+<html lang="{{ $.Site.LanguageCode | default "de" }}">
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{{ .Site.Title }} {{ with .Title }} | {{ . }}{{ end }}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <link rel="stylesheet" href="{{ (index .Site.Data.manifest "app.css") | absURL }}" type="text/css">
+    {{ partial "essentials/head.html" . }}
 </head>
 
-<body class="d-flex flex-column">
-    <nav class="navbar navbar-light bg-light navbar-expand-lg">
-        <div class="container">
-            <a class="navbar-brand" href="/">
-                <i class="fa fa-box-open"></i> SchulIT
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
-                <i class="fas fa-bars"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="menu">
-                <ul class="navbar-nav ms-auto">
-                    {{ $currentPage := . }}
-                    {{ range .Site.Menus.main }}
-                        {{ $isCurrent := or ( and (ne .URL "/") (hasPrefix $currentPage.URL .URL)) (eq $currentPage.URL .URL) }}
-                        {{ if .HasChildren }}
-                        <li class="nav-item dropdown {{ if $isCurrent }}active{{ end }}">
-                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="{{ .URL }}" aria-expanded="false">
-                                {{ if (ne .Page nil ) }}
-                                    {{ if (isset .Page.Params "icon") }}
-                                    <i class="{{ .Page.Params.icon }}"></i>
-                                    {{ end }}
-                                {{ end }}
-                                {{ .Name }}
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a class="dropdown-item" href="{{ .URL }}">Übersicht</a>
-                                </li>
-                                {{ range .Children }}
-                                <li>
-                                    <a class="dropdown-item" href="{{ .URL }}">{{ .Name }}</a>
-                                </li>
-                                {{ end }}
-                            </ul>
-                        </li>
-                        {{ else }}
-                        <li class="nav-item {{ if $isCurrent }}active{{ end }}">
-                            <a class="nav-link" href="{{ .URL }}">
-                                {{ if (ne .Page nil ) }}
-                                    {{ if (isset .Page.Params "icon") }}
-                                    <i class="{{ .Page.Params.icon }}"></i>
-                                    {{ end }}
-                                {{ end }}
-                                {{ if eq .Name "Start" }}
-                                    <i class="fas fa-home"></i>
-                                {{ end }}
-                                {{ .Name }} 
-                            </a>
-                        </li>
-                        {{ end }}
+<body class="antialiased bg-gray-50 dark:bg-gray-900">
+    {{ partial "essentials/menu.html" . }}
+    
+    {{ block "header" . }}
+    
+    <section class="bg-white dark:bg-gray-900">
+        <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-6">
+            <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+                {{ block "header_title" . }}
+                    {{ .Title }}
+                {{ end }}
+            </h1>
+            {{ block "header_description" . }}
+                {{ if .Summary }}
+                    <div class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">
+                        {{ .Summary }}
+                    </div>
+                {{ end }}
+            {{ end }}
+            {{ block "header_buttons" . }}
+                {{ if or (isset .Page.Params "download" ) (isset .Page.Params "github") (isset .Page.Params "license" ) (isset .Page.Params "docs")}}
+                <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
+                    {{ if (isset .Page.Params "download" ) }}
+                        <a class="inline justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900" href="{{ .Page.Params.download }}" target="_blank">
+                            <i class="fas fa-download"></i> Download
+                        </a>
                     {{ end }}
 
-                    <li class="nav-item">
-                        <a class="nav-link" target="_blank" href="https://github.com/schulit" title="Zeige SchulIT auf GitHub">
+                    {{ if (isset .Page.Params "github")}}
+                        <a class="inline justify-center items-center py-3 px-5 text-base font-medium text-center text-gray-900 rounded-lg border border-gray-300 hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800" href="{{ .Page.Params.github }}" target="_blank">
                             <i class="fab fa-github"></i> GitHub
                         </a>
-                    </li>
-                </ul>
-            </div>
+                    {{ end }}
+
+                    {{ if (isset .Page.Params "license" )}}
+                        <a class="inline justify-center items-center py-3 px-5 text-base font-medium text-center text-gray-900 rounded-lg border border-gray-300 hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800" href={{ .Page.Params.license.link }} target="_blank">
+                            <i class="fas fa-balance-scale"></i> {{ .Page.Params.license.text }}
+                        </a>
+                    {{ end }}
+
+                    {{ if (isset .Page.Params "docs")}}
+                        <a class="inline justify-center items-center py-3 px-5 text-base font-medium text-center text-gray-900 rounded-lg border border-gray-300 hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800" href="{{ .Page.Params.docs }}" target="_blank">
+                            <i class="fas fa-book"></i> Dokumentation
+                        </a>
+                    {{ end }}
+                </div>
+                {{ end }}
+            {{ end }}
         </div>
-    </nav>
-    
-    <div class="flex-grow-1">
-        {{ block "header" . }}
-        <section class="bg-primary mb-4">
-            <div class="container py-5">
-                <div class="row align-items-center">
-                    <div class="{{ if and (isset .Page.Params "gallery") }}col-md-8{{ else }}col-md-12{{ end }} text-md-left mb-n4">
-                        <h1 class="text-white font-weight-bold mb-4">
-                            {{ if (isset .Page.Params "icon")}}
-                                <i class="{{ .Page.Params.icon }}"></i>
-                            {{ end }}
-                            {{ block "header_title" . }}
-                                {{ .Title }}
-                            {{ end }}
-                        </h1>
-        
-                        <div class="text-white mb-4">
-                            {{ block "header_description" . }}
-                                {{ .Summary}}
-                            {{ end }}
-                        </div>
-                        <div class="buttons mb-4">
-                            {{ block "header_buttons" . }}
-                                {{ if (isset .Page.Params "github")}}
-                                    <a class="btn btn-info mt-1" href="{{ .Page.Params.github }}" target="_blank">
-                                        <i class="fab fa-github"></i> GitHub
-                                    </a>
-                                {{ end }}
+    </section>
+    {{ end }}
 
-                                {{ if (isset .Page.Params "download" )}}
-                                    <a class="btn btn-info mt-1" href="{{ .Page.Params.download }}" target="_blank">
-                                        <i class="fas fa-download"></i> Download
-                                    </a>
-                                {{ end }}
+    {{ partial "essentials/deprecated.html" . }}
 
-                                {{ if (isset .Page.Params "license" )}}
-                                    <a class="btn btn-info mt-1" href={{ .Page.Params.license.link }} target="_blank">
-                                        <i class="fas fa-balance-scale"></i> {{ .Page.Params.license.text }}
-                                    </a>
-                                {{ end }}
-            
-                                {{ if (isset .Page.Params "docs")}}
-                                    <a class="btn btn-success mt-1" href="{{ .Page.Params.docs }}" target="_blank">
-                                        <i class="fas fa-book"></i> Dokumentation
-                                    </a>
-                                {{ end }}
-                            {{ end }}
-                        </div>
-                    </div>
-        
-                    <div class="col-md-4 d-none d-md-block">
-                        {{ block "header_gallery" . }}
-                            <div class="story-slider">
-                                {{ range .Page.Params.gallery }}
-                                    <img src="{{ . }}" alt="" />
-                                {{ end }}
-                            </div>
-                        {{ end }}
-                    </div>
-                </div>
-            </div>
-        </section>
-        {{ end }}
+    {{ block "main" . }}{{ end }}
 
-        {{ if and (isset .Page.Params "deprecated") (.Page.Params.deprecated)}}
-            <section class="bg-warning mt-n4 mb-4">
-                <div class="container py-3">
-                    <div class="row no-gutters">
-                        <span>
-                            <i class="fa fa-exclamation-triangle"></i>
-                            Dieses Projekt wird nicht mehr unterstützt.
-                            {{ if (isset .Page.Params "followup" )}}
-                                Bitte den Nachfolger <a href="{{ .Page.Params.followup.url }}" class="text-white">{{ .Page.Params.followup.name}}</a> verwenden.
-                            {{ end }}
-                        </span>
-                    </div>
-                </section>
-            </section>
-        {{ end }}
-
-        {{ block "main" . }}{{ end }}
-    </div>
-
-    <footer class="bg-light">
-        <div class="container py-4">
-            <div class="row">
-                <div class="col-6 col-md-3 mb-3">
-                    <h5>Rechtliches</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2">
-                            <a href="{{ "/datenschutz" | absURL }}" title="Datenschutz" class="text-muted">
-                                <i class="fas fa-user-secret"></i> Datenschutz
-                            </a>
-                        </li>
-                        <li class="nav-item mb-2">
-                            <a href="{{ "/impressum" | absURL }}" title="Impressum" class="text-muted">
-                                <i class="fas fa-info-circle"></i> Impressum
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="col-6 col-md-3 mb-3">
-                    <h5>Loslegen</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2">
-                            <a href="https://schulit.readthedocs.org" target="_blank" title="Dokumentation" class="text-muted">
-                                <i class="fa fa-book"></i> Dokumentation
-                            </a>
-                        </li>
-                        <li class="nav-item mb-2">
-                            <a href="https://github.com/schulit" target="_blank" title="GitHub" class="text-muted">
-                                <i class="fab fa-github"></i> GitHub
-                            </a>
-                        </li>
-                        <li class="nav-item mb-2">
-                            <a href="https://discord.gg/AMgRVXrCwz" target="_blank" title="Discord" class="text-muted">
-                                <i class="fab fa-discord"></i> Support (Discord)
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="col-md-5 offset-md-1 mb-3 text-end text-muted">
-                    <h5>&nbsp;</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2">
-                            made with <i class="fas fa-heart text-danger"></i> in Aachen
-                        </li>
-                        <li class="nav-item mb-2">
-                            <i class="fas fa-paint-roller"></i> von <a href="https://github.com/thomaspark/bootswatch/blob/v4/LICENSE" target="_blank">Thomas Park</a>
-                        </li>
-
-                    </ul>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col">
-                    © {{ dateFormat "2006" now }} SchulIT
-                </div>
-            </div>
-        </div>
-    </footer>
-    
-    <script src="{{ (index .Site.Data.manifest "app.js") | absURL }}"></script>
-
-    {{ block "javascript" . }}{{ end }}
+    {{ partial "essentials/footer.html" . }}
 </body>
-
 </html>

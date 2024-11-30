@@ -1,8 +1,10 @@
 ---
 title: Über
 type: static
-menu: main
-weight: 6
+menus: 
+    main:
+        identifier: about
+        weight: 7
 toc: false
 icon: fas fa-user-friends
 summary: ' '

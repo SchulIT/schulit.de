@@ -8,10 +8,12 @@ license:
     text: MIT
     link: https://github.com/SchulIT/wlan-codes/blob/master/LICENSE
 summary: Bietet eine einfache Plattform für Lehrkräfte, um WLAN Codes für das Captive Portal der pfSense abzurufen. Die Codes werden durch den Administrator eingetragen und werden nicht mehr zum Abruf bereitgestellt, sobald sie eine Lehrkraft angefordert hat.
-menu:
+menus:
     main:
-        parent: Software
+        parent: software
         weight: 11
+        params:
+            short_summary: Voucher vom Captive Portal der pfSense im Kollegium bereitstellen.
 
 ---
 

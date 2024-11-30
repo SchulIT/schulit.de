@@ -8,10 +8,12 @@ license:
     text: AGPL-3.0
     link: https://github.com/SchulIT/idp/blob/master/LICENSE
 summary: Über die Benutzerverwaltung werden alle Benutzer der SchulIT Suite eingeplegt. Das Single-Sign-On erlaubt das Anmelden an den verschiedenen Anwendungen.
-menu:
+menus:
     main:
-        parent: Software
+        parent: software
         weight: 1
+        params:
+            short_summary: Die zentrale Benutzerplattform für SchulIT Anwendungen und viele weitere Software (bspw. Wordpress, Snipe IT, uvm.).
 ---
 
 {{< features >}}

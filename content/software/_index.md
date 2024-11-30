@@ -1,11 +1,18 @@
 ---
 title: Software
+identifier: software
 type: section
-menu: main
-weight: 5
+menus: 
+    main:
+        weight: 6
+        identifier: software
+        params: 
+            summary: SchulIT stellt noch viel mehr Software kostenlos und Open Source zur Verfügung.
+            
 icon: "fas fa-box-open"
 summary: ' '
 github: https://github.com/schulit
+
 ---
 
 {{< features >}}

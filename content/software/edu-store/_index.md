@@ -7,10 +7,12 @@ license:
     text: MIT
     link: https://github.com/SchulIT/windows-edu/blob/master/LICENSE
 summary: Bindet den Kivuto-Onlineshop für Schülerinnen und Schüler an die SchulIT Suite an.
-menu:
+menus:
     main:
-        parent: Software
+        parent: software
         weight: 10
+        params:
+            short_summary: Bindet den Kivuto-Onlineshop für Schülerinnen und Schüler an die SchulIT Suite an.
 
 ---
 

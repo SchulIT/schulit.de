@@ -8,10 +8,12 @@ license:
     text: AGPL-3.0
     link: https://github.com/SchulIT/icc/blob/master/LICENSE
 summary: Das ICC ist die zentrale Organisationsplatform für den schulischen Alltag. Es bildet den Schulalltag online ab und verknüpft alle verfügbaren Daten zu einer persönlichen Tagesagenda. 
-menu:
+menus:
     main:
-        parent: Software
+        parent: software
         weight: 2
+        params:
+            short_summary: Die zentrale Organisationsplattform für den Schulalltag, u.a. mit Stunden-, Vertretungs-, Klausur- und Terminplan, Mitteilungen, Klassenbuch uvm.
 
 ---
 

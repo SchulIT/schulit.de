@@ -1,8 +1,7 @@
-<div class="col-lg-4 col-md-6 mt-5 mt-md-0">
-    <h3 class="mt-4 h5">
-        <i class="{{ .Get "icon" }}"></i> {{ .Get "header" }}
+<div>
+    <h3 class="mb-2 text-xl font-bold dark:text-white">
+        <i class="{{ .Get "icon" }}"></i>  
+        {{ .Get "header" }}
     </h3>
-    <p class="regular">
-        {{ .Inner }}
-    </p>
+    <p class="text-gray-500 dark:text-gray-400">{{ .Inner }}</p>
 </div>

@@ -1,7 +1,9 @@
 ---
 title: Blog
-menu: main
 type: blog
-weight: 1
+menus:
+    main:
+        weight: 1
+        identifier: blog
 icon: "fas fa-rss"
 ---

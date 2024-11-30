@@ -11,10 +11,12 @@ license:
 gallery:
     - /images/software/schild-icc-importer/programm.png
 summary: Das Importtool für den Datenimport ins ICC aus SchILD NRW (Lernende, Lehrkräfte, Klassen, Klassenleitungen, Lerngruppen, Unterrichte).
-menu:
+menus:
     main:
-        parent: Software
+        parent: software
         weight: 32
+        params:
+            short_summary: Software zum Importieren von Stammdaten aus SchILD NRW ins ICC.
 ---
 
 {{< features >}}

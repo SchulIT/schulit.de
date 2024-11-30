@@ -2,7 +2,9 @@
 title: Active Directory
 type: section
 weight: 2
-menu:
+menus:
     main:
-        parent: Anleitungen
+        parent: tutorials
+        params:
+            short_summary: Nützliche GPOs für das Active Directory.
 ---

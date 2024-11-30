@@ -1,64 +1,49 @@
 {{ define "main" }}
 
-<main class="container">
-    <div class="blog-post">
-        {{ .Content }}
-    </div>
+<main class="bg-white dark:bg-gray-900">
+    <div class="py-8 px-4 mx-auto max-w-screen-xl lg:px-6">
+        <div class="font-normal text-black dark:text-gray-400">
+            {{ .Content }}
+        </div>
 
-    {{ if .Pages }}
-        <div class="pages">
-            <div class="row row-cols-1 row-cols-md-2 g-4 mb-4">
+        {{ if .Pages }}
+            <div class="grid grid-cols-1 gap-4 md:grid-cols-2 mb-4">
                 {{ range (sort .RegularPages "Params.ordering") }}
-                    <div class="col">
-                        <div class="card h-100">
-                            <div class="card-body">
-                                <h5 class="card-title"><a href="{{ .URL }}">{{ .LinkTitle }}</a></h5>
-                                <p class="card-text">
-                                    {{ .Summary }}
-                                </p>
-                                <a href="{{ .URL }}" class="card-link">weiterlesen</a>
-                            </div>
+                    {{ partial "component/page_card.html" . }}
+                {{ end }}
+            </div>
+        {{ end }}
+
+        {{ if .Sections }}
+            {{ $length := ( len .Sections ) }}
+            <div class="grid grid-cols-1 gap-4 md:grid-cols-2 mb-4">
+                {{ range $counter, $element := (sort .Sections "Params.ordering") }}
+                    <div class="p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                        <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">
+                            <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
+                            {{ if and (isset .Params "deprecated") (.Params.deprecated) }}
+                            <span class="bg-yellow-100 text-yellow-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-yellow-900 dark:text-yellow-300">
+                                nicht mehr unterstützt
+                            </span>
+                            {{ end }}
+                        </h5>
+
+                        <div class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                            {{ .Summary }}
                         </div>
+
+                        {{ $numPages := len .Pages }}
+                        {{ range first 5 (sort .Pages "Params.ordering" )}}
+                            <a href="{{ .Permalink }}" class="inline-flex mb-1 items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">{{ .LinkTitle }}</a>
+                        {{ end }}
+                        {{ if gt $numPages 5 }}
+                            <a href="{{ .Permalink }}" class="inline-flex font-medium items-center text-blue-600 hover:underline"><span class="badge bg-primary">+{{ sub (len .Pages)  5 }} weitere</span></a>
+                        {{ end }}
                     </div>
                 {{ end }}
             </div>
-        </div>
-    {{ end }}
-
-    {{ if .Sections }}
-        {{ $length := ( len .Sections ) }}
-        <div class="pages">
-            <div class="row row-cols-1 row-cols-md-2 g-4 mb-4">
-            {{ range $counter, $element := (sort .Sections "Params.ordering") }}
-                <div class="col">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                <a href="{{ .URL }}">{{ .LinkTitle }}</a>
-
-                                {{ if and (isset .Params "deprecated") (.Params.deprecated) }}
-                                    <span class="badge bg-warning">nicht mehr unterstützt</span>
-                                {{ end }}
-                            </h5>
-
-                            <p class="card-text">
-                                {{ .Summary }}
-                            </p>
-
-                            {{ $numPages := len .Pages }}
-                            {{ range first 5 (sort .Pages "Params.ordering" )}}
-                            <a href="{{ .URL }}" class="card-link" title="{{ trim (plainify .Summary) "\n" }}">{{ .LinkTitle }}</a>
-                            {{ end }}
-                            {{ if gt $numPages 5 }}
-                            <a href="{{ .URL }}"><span class="badge bg-primary">+{{ sub (len .Pages)  5 }} weitere</span></a>
-                            {{ end }}
-                        </div>
-                    </div>
-                </div>
-                {{ end }}
-            </div>
-        </div>
-    {{ end }}
+        {{ end }}
+    </div>
 </main>
 
 {{ end }}

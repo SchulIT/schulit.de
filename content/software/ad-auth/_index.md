@@ -9,10 +9,12 @@ license:
     text: MIT
     link: https://github.com/SchulIT/adauth-server/blob/master/LICENSE.md
 summary: Mithilfe des AD Auth Servers wird ermöglicht, dass Benutzer den Benutzernamen und das Passwort aus dem Active Directory nutzen können.
-menu:
+menus:
     main:
-        parent: Software
+        parent: software
         weight: 20
+        params:
+            short_summary: Server für Single-Sign-On mit bestehendem Active Directory.
 ---
 
 {{< features >}}

@@ -1,52 +1,36 @@
-{{ define "header" }}
-
-<section class="bg-primary mb-4">
-    <div class="container py-5">
-        <div class="align-items-center">
-            <div class="text-md-left mb-n4">
-                <h1 class="text-white font-weight-bold mb-4">
-                    {{ block "header_title" . }}
-                        {{ .Title }}
-                    {{ end }}
-                </h1>
-
-                {{ if ne .Type "static" }}
-                <div class="text-white">
-                    <i class="fa fa-calendar"></i> {{ .Date.Day }}. {{ index $.Site.Data.months (printf "%d" .Date.Month) }} {{ .Date.Year }}
-
-                    {{ if .Params.tags }}
-                    <i class="fa fa-tags"></i>
-                        {{ $length := (len .Params.tags )}}
-                        {{ range $counter, $tag := .Params.tags }}
-                            <a href="{{ "/blog/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>{{ if ne $counter (sub $length 1) }}, {{ end }}
-                        {{ end }}
-                    {{ end }}
-                </div>
-                {{ end }}
-            </div>
-        </div>
+{{ define "header_description" }}
+    <div class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">
+        {{ range .Params.tags }}
+        <span class="bg-primary-100 text-primary-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-primary-200 dark:text-primary-800">
+            <svg class="mr-1 w-3 h-3" fill="currentColor"  aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M18.045 3.007 12.31 3a1.965 1.965 0 0 0-1.4.585l-7.33 7.394a2 2 0 0 0 0 2.805l6.573 6.631a1.957 1.957 0 0 0 1.4.585 1.965 1.965 0 0 0 1.4-.585l7.409-7.477A2 2 0 0 0 21 11.479v-5.5a2.972 2.972 0 0 0-2.955-2.972Zm-2.452 6.438a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"/>
+            </svg>
+            
+            {{ . }}
+        </span>
+        {{ end }}
     </div>
-</section>
 {{ end }}
+
+{{ define "header_buttons" }} {{ end }}
 
 {{ define "main" }}
 
-<main class="container">
-    <div class="row">
-        <div class="col-md-8">
-            <div class="blog-post">                
-                {{ .Content }}
+<main class="bg-white dark:bg-gray-900">
+    <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+        <div class="md:grid md:grid-cols-4 md:gap-4">
+            <div class="md:col-span-3">
+                <div class="w-full format format-sm sm:format-base lg:format-lg format-blue dark:format-invert">
+                    {{ .Content }}
+                </div>
             </div>
-        </div>
 
-        <div class="col-md-4 widgets">
-            {{ partial "widget-about.html" }}
+            <div>
+                {{ partial "widgets/tags.html" . }}
 
-            {{ partial "widget-tags.html" . }}
-
-            {{ partial "widget-archive.html" . }}
+                {{ partial "widgets/archive.html" . }}
+            </div>
         </div>
     </div>
 </main>
-
 {{ end }}

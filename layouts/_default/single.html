@@ -1,34 +1,10 @@
 {{ define "main" }}
 
-<main class="container">
-    <div class="blog-post">
-        {{ if and (eq .Type "static") (ne .Params.toc false)  }}
-        <div class="table-of-contents float-end ms-4 mb-4">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Inhalt</h5>
-                    
-                    {{.TableOfContents}}
-                </div>
-            </div>
+<main class="bg-white dark:bg-gray-900">
+    <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+        <div class="max-w-none format lg:format-lg dark:format-invert">
+            {{ .Content }}
         </div>
-        {{ end }}
-
-        {{ if ne .Type "static" }}
-        <p class="post-meta">
-            <i class="fa fa-calendar"></i> {{ .Date.Format "2. January 2006" }}
-
-            {{ if .Params.tags }}
-            <i class="fa fa-tags"></i>
-                {{ $length := (len .Params.tags )}}
-                {{ range $counter, $tag := .Params.tags }}
-                    <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>{{ if ne $counter (sub $length 1) }}, {{ end }}
-                {{ end }}
-            {{ end }}
-        </p>
-        {{ end }}
-        
-        {{ .Content }}
     </div>
 </main>
 

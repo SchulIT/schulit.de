@@ -7,10 +7,12 @@ license:
     text: MIT
     link: https://github.com/SchulIT/servicecenter/blob/master/LICENSE
 summary: Mit dem ServiceCenter können Lehrkräfte Probleme mit den IT-Systemen mitteilen. Somit haben sowohl die IT-Abteilung als auch Lehrkräfte die Möglichkeit, sich einen Überblick über den aktuellen Status der IT zu verschaffen.
-menu:
+menus:
     main:
-        parent: Software
+        parent: software
         weight: 3
+        params:
+            short_summary: Ticket-System zum Melden von nicht funktionierenden Geräten im pädagogischen Netzwerk.
 ---
 
 {{< features >}}

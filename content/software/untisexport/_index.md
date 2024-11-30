@@ -40,5 +40,5 @@ deprecated: true
 {{< /features >}}
 
 {{< callout type="info" title="Disclaimer">}}
-    Diese Bibliothek wird weder von der <a href="https://www.untis.at/">Untis GmbH</a> entwickelt noch offiziell unterstützt. 
+    Diese Bibliothek wird weder von der <a href="https://www.untis.at/" class="font-semibold underline hover:no-underline">Untis GmbH</a> entwickelt noch offiziell unterstützt. 
 {{< /callout >}}
