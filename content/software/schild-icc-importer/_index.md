@@ -21,15 +21,27 @@ menus:
 
 {{< features >}}
     {{< feature icon="fas fa-database" header="Import aus MS SQL-Server" >}}
-        Das Programm liest die SchILD-Datenbank direkt über SQL aus. Access-Datenbanken werden nicht unterstützt.
+        Das Programm liest die SchILD-Datenbank direkt über Microsoft SQL ein und 
+        importiert die Daten aus dieser.
     {{< /feature >}}
 
     {{< feature icon="fas fa-code-branch" header="Import aus MySQL-Server" >}}
-        Die Unterstützung für MySQL kann durch eine Erweiterung der SchildExport-Datenbank ermöglicht werden.
+        Das Programm liest die SchILD-Datenbank direkt vom MySQL oder MariaDB-Server ein und
+        importiert die Daten aus dieser.
+    {{< /feature >}}
+
+    {{< feature icon="fas fa-code-branch" header="Import aus Access-Datenbank" >}}
+        Sofern das Access-Passwort für die SchILD-Datenbank bekannt ist, kann die SchILD-Datenbank
+        aus der SchILD-Accessdatei importiert werden.
     {{< /feature >}}
 
     {{< feature icon="fab fa-windows" header="SchILD 2.x" >}}
         Das Tool unterstützt stets die aktuelle Version von SchILD. Aktuell unterstützt das Tool die neuesten Versionen aus dem 2.x-Zweig.
+    {{< /feature >}}
+
+    {{< feature icon="fa-solid fa-triangle-exclamation" header="SchILD 3.x/SVWS" >}}
+        Das Tool wird perspektivisch durch das SVWS Import Tool abgelöst, welches sich noch in der 
+        Entwicklung befindet.
     {{< /feature >}}
 {{< /features >}}
 
