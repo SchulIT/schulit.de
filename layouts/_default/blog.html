@@ -3,7 +3,7 @@
 
 <main class="bg-white dark:bg-gray-900">
     <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
-        <div class="grid grid-cols-4 gap-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
             <div class="col-span-3">
                 {{ range $paginator.Pages }}
                     {{ partial "component/article_card.html" .}}
