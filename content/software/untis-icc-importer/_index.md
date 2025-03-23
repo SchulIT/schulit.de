@@ -1,7 +1,7 @@
 ---
 title: Untis ICC Importer
 type: section
-ordering: 32
+ordering: 1000
 github: https://github.com/SchulIT/untis-icc-importer
 docs: https://github.com/SchulIT/untis-icc-importer/blob/master/README.md
 download: https://github.com/SchulIT/untis-icc-importer/releases

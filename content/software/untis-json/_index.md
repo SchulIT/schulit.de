@@ -1,7 +1,7 @@
 ---
 title: UntisJson
 type: section
-ordering: 1099
+ordering: 100
 github: https://github.com/schulit/untis-json
 docs: '#verwendung'
 license:

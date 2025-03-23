@@ -1,7 +1,7 @@
 ---
 title: UntisExport
 type: section
-ordering: 1000
+ordering: 100
 github: https://github.com/schulit/untisexport
 license:
     text: MIT
