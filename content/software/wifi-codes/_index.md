@@ -30,3 +30,11 @@ menus:
         Über Rollen kann definiert werden, für welche Dauer Codes von einem Benutzer abgerufen werden können.
     {{< /feature >}}
 {{< /features >}}
+
+{{< story header="Übersicht" description="Auf der Übersichtsseite können neue Codes abgerufen werden (rechte Seite) und die bisher angeforderten Codes abgerufen werden." >}}
+    {{< img src="/images/software/wifi-codes/overview.png" zoom=true >}}
+{{< /story >}}
+
+{{< story header="Code-Anzeige" description="Die Codeanzeige kann im Klassenraum gezeigt werden. Hier sind dann auch Instruktionen zu sehen, wie man sich mit dem WLAN verbindet (konfigurierbar)." align="right" >}}
+    {{< img src="/images/software/wifi-codes/show.png" zoom=true >}}
+{{< /story >}}

@@ -3,6 +3,7 @@ title: ServiceCenter
 ordering: 3
 type: section
 github: https://github.com/schulit/servicecenter
+docs: https://docs.schulit.de/sc/
 license:
     text: MIT
     link: https://github.com/SchulIT/servicecenter/blob/master/LICENSE
@@ -35,10 +36,25 @@ menus:
     {{< feature icon="fas fa-chart-pie" header="Auswertung">}}
         IT-Beauftragte können auswerten, welches Gerät oder welcher Problemtyp besonders häufig vorkommt und entsprechende Maßnahmen ergreifen.
     {{< /feature >}}
-
-    {{< feature icon="far fa-list-alt" header="Aushänge">}}
-        Die Belegung von Beamer oder AV-Receivern können im ServiceCenter gesammelt werden. Der anschließende PDF-Export macht einen Papieraushang komfortabel.
-    {{< /feature >}}
 {{< /features >}}
 
-{{< construction >}}
+
+{{< story header="Gesamt-Statusübersicht" description="Mithilfe der Statusübersicht sieht man auf den ersten Blick, in welchen Räumen es Probleme gibt.">}}
+    {{< img src="/images/software/servicecenter/overview.png" zoom=true >}}
+{{< /story >}}
+
+{{< story header="Probleme melden" description="Personen (Lehrkräfte, Mitarbeitende, Lernende, ...) können jederzeit Probleme melden. Für jedes Problem werden Gerät und Problemtyp abgefragt. Bei Bedarf kann auch eine Priorität angegeben werden." align="right" >}}
+    {{< img src="/images/software/servicecenter/new-problem.png" zoom=true >}}
+{{< /story >}}
+
+{{< story header="Problemübersicht" description="In der Übersicht für die IT-Fachlehrkraft werden alle offenen Probleme aufgelistet, sodass diese (hoffentlich zeitnah 😉) bearbeitet werden können." >}}
+    {{< img src="/images/software/servicecenter/overview-admin.png" zoom=true >}}
+{{< /story >}}
+
+{{< story header="Problemdetails" description="Über die Kommentar-Funktion können Rückfragen zum Problem gestellt werden oder es können wichtige Details zum Problem hinterlegt werden (bspw. für spätere Bearbeitung des Problems). Das Hochladen von Screenshots ist ebenfalls möglich." align="right">}}
+    {{< img src="/images/software/servicecenter/show-problem.png" zoom=true >}}
+{{< /story >}}
+
+{{< story header="Wiki" description="Im Wiki kann eine eigene Wissensdatenbank aufgebaut werden, sodass Probleme schneller behoben werden können." >}}
+    {{< img src="/images/software/servicecenter/wiki.png" zoom=true >}}
+{{< /story >}}
