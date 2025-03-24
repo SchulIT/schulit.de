@@ -62,8 +62,8 @@ menus:
         In Unterrichtsbüchern kann der Unterricht digital dokumentiert werden. Dies ersetzt das analoge führen von Klassenbüchern bzw. Kursheften.
     {{< /feature >}}
 
-    {{< feature icon="fas fa-cloud-upload-alt" header="Import aus Schulverwaltung" >}}
-        Die Stammdaten können aus SchILD NRW importiert werden. Pläne können aus Untis importiert werden.
+    {{< feature icon="fas fa-user-graduate" header="Notenmodul" >}}
+        Noten für Klassenarbeiten und Klausuren sowie Noten zur sonstigen Mitarbeit können digital eingepflegt werden.
     {{< /feature >}}
 {{< /features >}}
 
@@ -127,10 +127,14 @@ menus:
 {{< /story >}}
 
 {{< story header="Maximaler Komfort" description="Das ICC arbeitet mit einer großen Datenlage und unterstützt somit Lehrkräfte proaktiv beim Erstellen der Unterrichtsdokumentation. Krank gemeldete Lernende oder Klausurschreibende werden direkt als absent vorgeschlagen. Ebenso wie bereits in vorherigen Stunden als absent gemeldete Lernende. Das ist praktisch." align="right" >}}
-    {{< img src="/images/software/icc/unterrichtsbuch-eintrag.gif" zoom=true >}}
+    {{< img src="/images/software/icc/unterrichtsbuch-eintrag.png" zoom=true >}}
 {{< /story >}}
 
-{{< story header="Public Display" description="Das ICC lässt sich kompakt auf einem öffentlichen Display (bspw. im Lehrerzimmer oder im Eingangsbereich) anzeigen. Dort werden alle Vertretungen, Klausuren und Klausuraufsichten angezeigt. Zusätzlich werden Tagestexte, Absenzen und Termine angezeigt. Es gibt eine Ansicht für Lehrkräfte und eine Ansicht für Lernende." >}}
+{{< story header="Notenmodul" description="Im Notenmodul können Klassenarbeitsnoten und Noten zur sonstigen Mitarbeit abgespeichert werden. Notenkategorien (1. KA, 2. KA, 1. Klausur usw.) können ebenso flexibel festgelegt werden wie Notenkataloge (bspw. Punkte 0-15, Noten 1-6 ohne Tendenz oder Noten 1-6 mit Tendenz)." >}}
+    {{< img src="/images/software/icc/gradebook.png" zoom=true >}}
+{{< /story >}}
+
+{{< story header="Public Display" description="Das ICC lässt sich kompakt auf einem öffentlichen Display (bspw. im Lehrerzimmer oder im Eingangsbereich) anzeigen. Dort werden alle Vertretungen, Klausuren und Klausuraufsichten angezeigt. Zusätzlich werden Tagestexte, Absenzen und Termine angezeigt. Es gibt eine Ansicht für Lehrkräfte und eine Ansicht für Lernende." align="right" >}}
     {{< img src="/images/software/icc/display.png" zoom=true >}}
 {{< /story >}}
 
